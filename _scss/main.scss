@@ -1,6 +1,27 @@
 @import "reset";
 @import "syntax";
+@import "bourbon/bourbon";
+
+// Colors
+$aztec: #3C3530;
+$celeste: #D3D0CB;
+$cutty: #547D71;
+$tuna: #353946;
 
 body {
-    background: white;
+    background: $celeste;
+    font-family: $monospace;
+}
+.title a {
+    color: $cutty;
+    font-size: 2rem;
+}
+
+.posts a {
+    color: $tuna;
+    text-decoration: none;
+
+}
+.posts a:hover {
+    text-decoration: underline;
 }
