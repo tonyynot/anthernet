@@ -2,15 +2,26 @@
 @import "syntax";
 @import "bourbon/bourbon";
 
-// Colors
+// Color Variables
 $aztec: #3C3530;
 $celeste: #D3D0CB;
 $cutty: #547D71;
 $tuna: #353946;
 
+// Google fonts
+@import url(https://fonts.googleapis.com/css?family=Economica);
+@import url(https://fonts.googleapis.com/css?family=Cousine);
+@import url(https://fonts.googleapis.com/css?family=Kanit);
+
+// Font Variables
+$economica: 'Economica', Arial, serif;
+$cousine: 'Cousine';
+$kanit: 'Kanit', sans-serif;
+
 body {
     background: $celeste;
-    font-family: $monospace;
+    font-family: $kanit;
+    font-size: 1rem;
 }
 .title a {
     color: $cutty;

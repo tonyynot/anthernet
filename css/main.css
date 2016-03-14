@@ -4,6 +4,9 @@
 /*
 /*****************************************************************************/
 /* Global Reset */
+@import url(https://fonts.googleapis.com/css?family=Economica);
+@import url(https://fonts.googleapis.com/css?family=Cousine);
+@import url(https://fonts.googleapis.com/css?family=Kanit);
 * {
   margin: 0;
   padding: 0; }
@@ -397,7 +400,8 @@ a:visited {
 /* Literal.Number.Integer.Long */
 body {
   background: #D3D0CB;
-  font-family: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace; }
+  font-family: "Kanit", sans-serif;
+  font-size: 1rem; }
 
 .title a {
   color: #547D71;
