@@ -398,18 +398,85 @@ a:visited {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 body {
-  background: #D3D0CB;
+  background: #FFFFFF;
   font-family: "Kanit", sans-serif;
-  font-size: 1rem; }
+  font-size: 1.2rem; }
+
+.posts li {
+  padding-top: .5rem; }
+
+.posts a {
+  color: #3C3530;
+  text-decoration: none; }
+
+.posts a:hover {
+  color: #353946;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#353946, #353946);
+  background-size: .05em 1px,.05em 1px,1px 1px;
+  background-repeat: no-repeat,no-repeat,repeat-x;
+  text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+  background-position: 0 95%,100% 95%,0 95%; }
+
+.posts span {
+  float: right;
+  padding-left: 2rem; }
+
+#home, #footer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px auto; }
+  #home::after, #footer::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+@media screen and (max-width: 800px) {
+  #main {
+    font-size: .9rem;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%; }
+    #main:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 568px) {
+  #main {
+    font-size: .9rem;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    #main:last-child {
+      margin-right: 0; } }
+
+.footer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .footer:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .footer {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .footer:last-child {
+        margin-right: 0; } }
 
 .title a {
   color: #547D71;
   font-size: 2rem; }
 
-.posts a {
-  color: #353946;
-  text-decoration: none; }
-
-.posts a:hover {
-  text-decoration: underline; }
+.site {
+  font-size: inherit; }

@@ -1,9 +1,12 @@
 @import "reset";
 @import "syntax";
 @import "bourbon/bourbon";
+@import "neat/neat";
+
 
 // Color Variables
 $aztec: #3C3530;
+$white: #FFFFFF;
 $celeste: #D3D0CB;
 $cutty: #547D71;
 $tuna: #353946;
@@ -19,20 +22,54 @@ $cousine: 'Cousine';
 $kanit: 'Kanit', sans-serif;
 
 body {
-    background: $celeste;
+    background: $white;
     font-family: $kanit;
-    font-size: 1rem;
+    font-size: 1.2rem;
+}
+.posts li {
+    padding-top:.5rem;
+}
+.posts a {
+    color: $aztec;
+    text-decoration: none;
+}
+.posts a:hover {
+    color: $tuna;
+    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($tuna, $tuna);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+    background-position: 0 95%,100% 95%,0 95%;
+}
+.posts span {
+    float: right;
+    padding-left: 2rem;
+}
+
+#home, #footer { 
+    @include outer-container(100%);
+    @include pad(10px auto);
+}
+#main{
+      @media screen and (max-width: 800px){
+        font-size: .9rem;
+        @include span-columns(10 of 12);
+}
+@media screen and (max-width: 568px){
+        font-size: .9rem;
+        @include span-columns(6 of 12);
+    }
+}
+.footer {
+    @include span-columns(12);
+    @media screen and (max-width: 768px){
+        @include span-columns(6 of 12);
+    }
 }
 .title a {
     color: $cutty;
     font-size: 2rem;
 }
-
-.posts a {
-    color: $tuna;
-    text-decoration: none;
-
-}
-.posts a:hover {
-    text-decoration: underline;
+.site {
+    font-size: inherit;
 }
