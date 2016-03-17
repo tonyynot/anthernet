@@ -3,7 +3,6 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
-
 // Color Variables
 $aztec: #3C3530;
 $white: #FFFFFF;
@@ -44,6 +43,10 @@ body {
 .posts span {
     float: right;
     padding-left: 2rem;
+    @media screen and (max-width: 568px){
+        display: block;
+        float: none;
+    }
 }
 
 #home, #footer { 
@@ -53,11 +56,12 @@ body {
 #main{
       @media screen and (max-width: 800px){
         font-size: .9rem;
-        @include span-columns(10 of 12);
+        @include span-columns(9 of 12);
+        @include pad(10px auto);
 }
 @media screen and (max-width: 568px){
         font-size: .9rem;
-        @include span-columns(6 of 12);
+        @include span-columns(12 of 12);
     }
 }
 .footer {
@@ -70,6 +74,11 @@ body {
     color: $cutty;
     font-size: 2rem;
 }
+.header a.extra {
+    float: right;
+    margin-right: 2rem;
+}
 .site {
     font-size: inherit;
+     @include outer-container(100%);
 }
