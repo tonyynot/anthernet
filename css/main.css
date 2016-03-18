@@ -7,6 +7,8 @@
 @import url(https://fonts.googleapis.com/css?family=Economica);
 @import url(https://fonts.googleapis.com/css?family=Cousine);
 @import url(https://fonts.googleapis.com/css?family=Kanit);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+@import url(https://fonts.googleapis.com/css?family=Rokkitt);
 * {
   margin: 0;
   padding: 0; }
@@ -406,8 +408,16 @@ html {
 
 body {
   background: #FFFFFF;
-  font-family: "Kanit", sans-serif;
+  font-family: "Rokkitt";
   font-size: 1.2rem; }
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: 600; }
+
+.post_date {
+  padding: 0;
+  color: #474747; }
 
 .posts li {
   padding-top: .5rem; }
@@ -416,7 +426,7 @@ body {
   color: #3C3530;
   text-decoration: none; }
 
-.posts a:hover {
+.posts a:hover, a:hover {
   color: #353946;
   background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#353946, #353946);
   background-size: .05em 1px,.05em 1px,1px 1px;
@@ -425,7 +435,9 @@ body {
   background-position: 0 95%,100% 95%,0 95%; }
 
 .posts span {
-  float: right; }
+  float: right;
+  font-family: "Rokkitt";
+  font-size: 1.2rem; }
   @media screen and (max-width: 568px) {
     .posts span {
       display: block;
@@ -454,7 +466,7 @@ body {
 
 @media screen and (max-width: 568px) {
   #main {
-    font-size: .9rem;
+    font-size: 1rem;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -480,7 +492,8 @@ body {
 
 .title a {
   color: #547D71;
-  font-size: 2rem; }
+  font-size: 1.6rem;
+  font-family: "Kanit", sans-serif; }
 
 .header a.extra {
   float: right;

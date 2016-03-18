@@ -9,21 +9,34 @@ $white: #FFFFFF;
 $celeste: #D3D0CB;
 $cutty: #547D71;
 $tuna: #353946;
+$charcoal: #474747;
 
 // Google fonts
 @import url(https://fonts.googleapis.com/css?family=Economica);
 @import url(https://fonts.googleapis.com/css?family=Cousine);
 @import url(https://fonts.googleapis.com/css?family=Kanit);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+@import url(https://fonts.googleapis.com/css?family=Rokkitt);
 
 // Font Variables
 $economica: 'Economica', Arial, serif;
 $cousine: 'Cousine';
 $kanit: 'Kanit', sans-serif;
+$lora: 'Lora', sans-serif;
+$rokkitt: 'Rokkitt';
 
 body {
     background: $white;
-    font-family: $kanit;
+    font-family: $rokkitt;
     font-size: 1.2rem;
+}
+h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+.post_date {
+    padding: 0;
+    color: $charcoal;
 }
 .posts li {
     padding-top:.5rem;
@@ -32,7 +45,7 @@ body {
     color: $aztec;
     text-decoration: none;
 }
-.posts a:hover {
+.posts a:hover, a:hover {
     color: $tuna;
     background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($tuna, $tuna);
     background-size: .05em 1px,.05em 1px,1px 1px;
@@ -42,6 +55,8 @@ body {
 }
 .posts span {
     float: right;
+    font-family: $rokkitt;
+    font-size: 1.2rem;
     @media screen and (max-width: 568px){
         display: block;
         float: none;
@@ -59,7 +74,7 @@ body {
         @include pad(10px auto);
 }
 @media screen and (max-width: 568px){
-        font-size: .9rem;
+        font-size: 1rem;
         @include span-columns(12 of 12);
     }
 }
@@ -71,7 +86,8 @@ body {
 }
 .title a {
     color: $cutty;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    font-family: $kanit
 }
 .header a.extra {
     float: right;
