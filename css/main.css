@@ -425,13 +425,11 @@ body {
   background-position: 0 95%,100% 95%,0 95%; }
 
 .posts span {
-  float: right;
-  padding-left: 2rem; }
+  float: right; }
   @media screen and (max-width: 568px) {
     .posts span {
       display: block;
-      float: none;
-      padding-left: 0; } }
+      float: none; } }
 
 #home, #footer {
   max-width: 100%;
@@ -449,7 +447,8 @@ body {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%; }
+    width: 100%;
+    padding: 10px auto; }
     #main:last-child {
       margin-right: 0; } }
 
@@ -475,7 +474,7 @@ body {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 48.82117%; }
+      width: 100%; }
       .footer:last-child {
         margin-right: 0; } }
 
@@ -489,6 +488,8 @@ body {
 
 .site {
   font-size: inherit;
+  padding-left: 2rem;
+  padding-right: 2rem;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
