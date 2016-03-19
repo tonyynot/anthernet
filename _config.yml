@@ -16,6 +16,11 @@ author:
 google_analytics: 'UA-60032993-2'
 
 # Build settings
-markdown: redcarpet
-highlighter: pygments # or rouge or null
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+gems:
+  - jekyll-gist
