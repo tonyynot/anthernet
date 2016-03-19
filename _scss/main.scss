@@ -34,6 +34,24 @@ h2 {
     font-size: 1.9rem;
     font-weight: 600;
 }
+a:hover {
+    color: $tuna;
+    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($tuna, $tuna);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+    background-position: 0 95%,100% 95%,0 95%;
+}
+
+// Outermost container
+.site {
+    font-size: inherit;
+    padding-left: 2rem;
+    padding-right: 2rem;
+     @include outer-container(100%);
+}
+
+// Index post listing
 .post_date {
     padding: 0;
     color: $charcoal;
@@ -44,14 +62,17 @@ h2 {
 .posts a {
     color: $aztec;
     text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 2.6rem;
+    @media screen and (max-width: 568px){
+        font-size: 1.2rem;
+    }
 }
-.posts a:hover, a:hover {
-    color: $tuna;
-    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($tuna, $tuna);
-    background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
-    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-    background-position: 0 95%,100% 95%,0 95%;
+// FIX THIS!!
+.post code {
+    border: 1px solid #ddd;
+    background-color: #eef; //CHANGE THIS!
+    padding: 0 .2em;
 }
 .posts span {
     float: right;
@@ -60,6 +81,8 @@ h2 {
     @media screen and (max-width: 568px){
         display: block;
         float: none;
+        padding-top: 1rem;
+        padding-bottom: 0;
     }
 }
 
@@ -68,35 +91,62 @@ h2 {
     @include pad(10px auto);
 }
 #main{
-      @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px){
         font-size: .9rem;
         @include span-columns(12 of 12);
         @include pad(10px auto);
+            }
+        @media screen and (max-width: 568px){
+                font-size: 1rem;
+                @include span-columns(12 of 12);
+            }
 }
-@media screen and (max-width: 568px){
-        font-size: 1rem;
-        @include span-columns(12 of 12);
+
+// Post
+blockquote {
+    letter-spacing: .2rem;
+    margin:0px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0px;
+    text-align: center;
+    position: relative;
+}
+
+// Main title and nav
+.title_nav {
+    @include outer-container;
+
+    $mobile: new-breakpoint(max-width 500px 4);
+    .title {
+        @include span-columns(9);
+
+        @include media($mobile) {
+            @include span-columns(9);
+            margin-bottom: .5rem;
+        }
     }
-}
-.footer {
-    @include span-columns(12);
-    @media screen and (max-width: 768px){
-        @include span-columns(12 of 12);
+    .extra {
+        word-spacing: 3rem;
+        @include span-columns(3);
+
+        @include media($mobile) {
+            @include span-columns(3);
+        }
     }
 }
 .title a {
     color: $cutty;
     font-size: 1.6rem;
-    font-family: $kanit
+    font-family: $kanit;
+    text-decoration: none;
 }
-.header a.extra {
-    float: right;
-    margin-right: 2rem;
-}
-.site {
-    font-size: inherit;
-    padding-left: 2rem;
-    padding-right: 2rem;
-     @include outer-container(100%);
 
+// Footer
+.footer {
+    @include span-columns(12);
+
+    @media screen and (max-width: 768px){
+        @include span-columns(12 of 12);
+    }
 }

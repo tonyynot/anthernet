@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating an Awesome .bash_profile for Your Mac Terminal
+title: Create an Awesome .bash_profile for Your Mac Terminal
 description: Hacking the hidden Mac file known as the 'dot file' or .bash_profile, which can be coded to customize your command line settings by using aliases.
 comments: true
 categories: code productivity

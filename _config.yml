@@ -1,4 +1,16 @@
-name: anthony ramella
+#baseurl: "/" # the subpath of your site, e.g. /blog/
+title: anthony ramella
+url: "http://anthonyramella.com" # the base hostname & protocol for your site
+permalink: "/blog/:title/"
+author:
+  fullname: Anthony Ramella
+  #googleplus: ""
+  github: tonyynot
+  twitter: tonecodes
+  disqus: aramella
+
+google_analytics: 'UA-60032993-2'
+
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
