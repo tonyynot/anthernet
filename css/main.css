@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*****************************************************************************/
 /*
 /* Common
@@ -9,6 +10,7 @@
 @import url(https://fonts.googleapis.com/css?family=Kanit);
 @import url(https://fonts.googleapis.com/css?family=Lora);
 @import url(https://fonts.googleapis.com/css?family=Rokkitt);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 * {
   margin: 0;
   padding: 0; }
@@ -408,12 +410,19 @@ html {
 
 body {
   background: #FFFFFF;
-  font-family: "Rokkitt";
+  font-family: "Merriweather";
   font-size: 1.2rem; }
 
 h2 {
   font-size: 1.9rem;
   font-weight: 600; }
+
+a {
+  text-decoration: none;
+  color: #254055; }
+
+a:visited {
+  color: #254055; }
 
 a:hover {
   color: #353946;
@@ -422,6 +431,22 @@ a:hover {
   background-repeat: no-repeat,no-repeat,repeat-x;
   text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
   background-position: 0 95%,100% 95%,0 95%; }
+
+hr {
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center; }
+
+hr:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white; }
 
 .site {
   font-size: inherit;
@@ -435,40 +460,50 @@ a:hover {
     content: "";
     display: table; }
 
+.title a {
+  color: #254055;
+  font-size: 3rem;
+  font-family: "Rokkitt";
+  text-decoration: none; }
+
 .post_date {
   padding: 0;
   color: #474747; }
 
 .posts li {
   padding-top: .5rem;
-  line-height: 2.6rem; }
+  line-height: 3rem; }
   @media screen and (max-width: 782px) {
     .posts li {
-      line-height: 1.2rem; } }
+      line-height: 1.2rem;
+      text-align: left; } }
+  .posts li span {
+    float: right;
+    font-family: "Rokkitt";
+    font-size: 1.5rem; }
+    @media screen and (max-width: 782px) {
+      .posts li span {
+        display: block;
+        float: none;
+        padding-top: 1rem;
+        padding-bottom: .3rem; } }
+  .posts li a {
+    color: #3B4145;
+    text-decoration: none;
+    font-size: 1.2rem; }
+    @media screen and (max-width: 782px) {
+      .posts li a {
+        font-size: 1.2rem; } }
 
-.posts a {
-  color: #3C3530;
-  text-decoration: none;
-  font-size: 1.5rem; }
-  @media screen and (max-width: 782px) {
-    .posts a {
-      font-size: 1.2rem; } }
-
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em; }
-
-.posts span {
-  float: right;
-  font-family: "Rokkitt";
-  font-size: 1.2rem; }
-  @media screen and (max-width: 782px) {
-    .posts span {
-      display: block;
-      float: none;
-      padding-top: 1rem;
-      padding-bottom: .3rem; } }
+.post {
+  color: #3B4145; }
+  .post p {
+    line-height: 2.2rem;
+    color: #3B4145; }
+  .post code {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .2em; }
 
 #home, #footer {
   max-width: 100%;
@@ -522,7 +557,7 @@ blockquote {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 74.41059%; }
+    width: 65.88078%; }
     .title_nav .title:last-child {
       margin-right: 0; }
     @media screen and (max-width: 664px) {
@@ -530,32 +565,32 @@ blockquote {
         float: left;
         display: block;
         margin-right: 7.42297%;
-        width: 234.27871%;
+        width: 207.42297%;
         margin-bottom: .5rem; }
         .title_nav .title:last-child {
           margin-right: 0; } }
+    .title_nav .title a:hover {
+      text-decoration: none; }
   .title_nav .extra {
-    word-spacing: 3rem;
+    word-spacing: 1rem;
+    text-align: right;
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%; }
+    width: 31.76157%; }
     .title_nav .extra:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 664px) {
+      .title_nav .extra {
+        text-align: left; } }
     @media screen and (max-width: 664px) {
       .title_nav .extra {
         float: left;
         display: block;
         margin-right: 7.42297%;
-        width: 73.14426%; }
+        width: 100%; }
         .title_nav .extra:last-child {
           margin-right: 0; } }
-
-.title a {
-  color: #547D71;
-  font-size: 1.6rem;
-  font-family: "Kanit", sans-serif;
-  text-decoration: none; }
 
 .footer {
   float: left;

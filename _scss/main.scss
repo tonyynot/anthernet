@@ -8,8 +8,10 @@ $aztec: #3C3530;
 $white: #FFFFFF;
 $celeste: #D3D0CB;
 $cutty: #547D71;
+$regal: #254055;
 $tuna: #353946;
 $charcoal: #474747;
+$charade: #3B4145;
 
 // Google fonts
 @import url(https://fonts.googleapis.com/css?family=Economica);
@@ -17,6 +19,7 @@ $charcoal: #474747;
 @import url(https://fonts.googleapis.com/css?family=Kanit);
 @import url(https://fonts.googleapis.com/css?family=Lora);
 @import url(https://fonts.googleapis.com/css?family=Rokkitt);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 
 // Font Variables
 $economica: 'Economica', Arial, serif;
@@ -24,18 +27,26 @@ $cousine: 'Cousine';
 $kanit: 'Kanit', sans-serif;
 $lora: 'Lora', sans-serif;
 $rokkitt: 'Rokkitt';
+$merriweather: 'Merriweather';
 
 // Media Queries
 $mobile: new-breakpoint(max-width 664px 4);
 
 body {
     background: $white;
-    font-family: $rokkitt;
+    font-family: $merriweather;
     font-size: 1.2rem;
 }
 h2 {
     font-size: 1.9rem;
     font-weight: 600;
+}
+a {
+    text-decoration: none;
+    color: $regal;
+}
+a:visited {
+    color: $regal;
 }
 a:hover {
     color: $tuna;
@@ -44,6 +55,22 @@ a:hover {
     background-repeat: no-repeat,no-repeat,repeat-x;
     text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
     background-position: 0 95%,100% 95%,0 95%;
+}
+hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
 }
 
 // Outermost container
@@ -55,44 +82,65 @@ a:hover {
      @include outer-container(100%);
 }
 
+.title a {
+    color: $regal;
+    font-size: 3rem;
+    font-family: $rokkitt;
+    text-decoration: none;
+}
+
 // Index post listing
 .post_date {
     padding: 0;
     color: $charcoal;
 }
-.posts li {
+.posts {
+    li {
     padding-top:.5rem;
-    line-height: 2.6rem;
+    line-height: 3rem;
 
     @media screen and (max-width: 782px){
-        line-height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: left;
     }
-}
-.posts a {
-    color: $aztec;
-    text-decoration: none;
-    font-size: 1.5rem;
+        span {
+        float: right;
+        font-family: $rokkitt;
+        font-size: 1.5rem;
 
-    @media screen and (max-width: 782px){
+        @media screen and (max-width: 782px){
+            display: block;
+            float: none;
+            padding-top: 1rem;
+            padding-bottom: .3rem;
+            }
+        }
+
+        a {
+        color: $charade;
+        text-decoration: none;
         font-size: 1.2rem;
+        
+        @media screen and (max-width: 782px){
+            font-size: 1.2rem;
+        }
+        }
     }
 }
-// FIX THIS!!
-.post code {
+.post {
+
+    color: $charade;
+
+    p {
+    line-height: 2.2rem;
+    color: $charade;
+    }
+
+    // Fix this!!!
+    code {
     border: 1px solid #ddd;
     background-color: #eef; //CHANGE THIS!
     padding: 0 .2em;
-}
-.posts span {
-    float: right;
-    font-family: $rokkitt;
-    font-size: 1.2rem;
-
-    @media screen and (max-width: 782px){
-        display: block;
-        float: none;
-        padding-top: 1rem;
-        padding-bottom: .3rem;
     }
 }
 
@@ -129,29 +177,31 @@ blockquote {
     @include outer-container;
 
     .title {
-        @include span-columns(9);
+        @include span-columns(8);
 
         @include media($mobile) {
-            @include span-columns(9);
+            @include span-columns(8);
             margin-bottom: .5rem;
+        }
+
+        a:hover {
+            text-decoration: none;
         }
     }
     .extra {
-        word-spacing: 3rem;
+        word-spacing: 1rem;
+        text-align: right;
+        @include span-columns(4);
 
-        @include span-columns(3);
-
+        @media screen and (max-width: 664px){
+            text-align: left;
+        }
         @include media($mobile) {
-            @include span-columns(3);
+            @include span-columns(4);
         }
     }
 }
-.title a {
-    color: $cutty;
-    font-size: 1.6rem;
-    font-family: $kanit;
-    text-decoration: none;
-}
+
 
 // Footer
 .footer {

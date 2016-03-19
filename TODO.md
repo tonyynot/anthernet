@@ -1,9 +1,9 @@
 - Make images responsive
 - Blockquote styling (almost done)
-- Style links in posts
 - Style nav
 - Footer
 - Random quote JS
 - Add border styles below header and above footer
 - Fix "Blog Posts" on index
 - Fix Sublime Text post
+- ::selector

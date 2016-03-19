@@ -9,6 +9,6 @@ Whether you are someone who is looking to start learning Ruby or an experienced 
 
 Being that Ruby is an object oriented programming language, the lessons constantly reinforce how everything is an object in Ruby which can be seen throughout each koan. You will also learn perhaps one of the key elements of programming which is problem solving. Ruby Koans uses [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) as a Mantra. There is a constant repetition in running path_to_enlightenment.rb after saving your code as it will tell you if your code has passed or failed, as well as the expected answer. Through this method, you learn by failing, refactoring and working your way through errors.
 
-If you feel you are ready to discover the path_to_enlightenment, more information on Neo Ruby Koans as well as installation instructions can be found [here](http://www.rubykoans.com).
+If you feel you are ready to discover the path\_to\_enlightenment, more information on Neo Ruby Koans as well as installation instructions can be found [here](http://www.rubykoans.com).
 
 Remember, "mountains are merely mountains".
