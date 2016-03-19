@@ -440,14 +440,17 @@ a:hover {
   color: #474747; }
 
 .posts li {
-  padding-top: .5rem; }
+  padding-top: .5rem;
+  line-height: 2.6rem; }
+  @media screen and (max-width: 782px) {
+    .posts li {
+      line-height: 1.2rem; } }
 
 .posts a {
   color: #3C3530;
   text-decoration: none;
-  font-size: 1.2rem;
-  line-height: 2.6rem; }
-  @media screen and (max-width: 568px) {
+  font-size: 1.5rem; }
+  @media screen and (max-width: 782px) {
     .posts a {
       font-size: 1.2rem; } }
 
@@ -460,12 +463,12 @@ a:hover {
   float: right;
   font-family: "Rokkitt";
   font-size: 1.2rem; }
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 782px) {
     .posts span {
       display: block;
       float: none;
       padding-top: 1rem;
-      padding-bottom: 0; } }
+      padding-bottom: .3rem; } }
 
 #home, #footer {
   max-width: 100%;
@@ -488,7 +491,7 @@ a:hover {
     #main:last-child {
       margin-right: 0; } }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 782px) {
   #main {
     font-size: 1rem;
     float: left;
@@ -522,7 +525,7 @@ blockquote {
     width: 74.41059%; }
     .title_nav .title:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 664px) {
       .title_nav .title {
         float: left;
         display: block;
@@ -539,7 +542,7 @@ blockquote {
     width: 23.23176%; }
     .title_nav .extra:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 664px) {
       .title_nav .extra {
         float: left;
         display: block;

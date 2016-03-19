@@ -25,6 +25,9 @@ $kanit: 'Kanit', sans-serif;
 $lora: 'Lora', sans-serif;
 $rokkitt: 'Rokkitt';
 
+// Media Queries
+$mobile: new-breakpoint(max-width 664px 4);
+
 body {
     background: $white;
     font-family: $rokkitt;
@@ -48,6 +51,7 @@ a:hover {
     font-size: inherit;
     padding-left: 2rem;
     padding-right: 2rem;
+
      @include outer-container(100%);
 }
 
@@ -58,13 +62,18 @@ a:hover {
 }
 .posts li {
     padding-top:.5rem;
+    line-height: 2.6rem;
+
+    @media screen and (max-width: 782px){
+        line-height: 1.2rem;
+    }
 }
 .posts a {
     color: $aztec;
     text-decoration: none;
-    font-size: 1.2rem;
-    line-height: 2.6rem;
-    @media screen and (max-width: 568px){
+    font-size: 1.5rem;
+
+    @media screen and (max-width: 782px){
         font-size: 1.2rem;
     }
 }
@@ -78,11 +87,12 @@ a:hover {
     float: right;
     font-family: $rokkitt;
     font-size: 1.2rem;
-    @media screen and (max-width: 568px){
+
+    @media screen and (max-width: 782px){
         display: block;
         float: none;
         padding-top: 1rem;
-        padding-bottom: 0;
+        padding-bottom: .3rem;
     }
 }
 
@@ -93,10 +103,11 @@ a:hover {
 #main{
     @media screen and (max-width: 800px){
         font-size: .9rem;
+
         @include span-columns(12 of 12);
         @include pad(10px auto);
             }
-        @media screen and (max-width: 568px){
+        @media screen and (max-width: 782px){
                 font-size: 1rem;
                 @include span-columns(12 of 12);
             }
@@ -117,7 +128,6 @@ blockquote {
 .title_nav {
     @include outer-container;
 
-    $mobile: new-breakpoint(max-width 500px 4);
     .title {
         @include span-columns(9);
 
@@ -128,6 +138,7 @@ blockquote {
     }
     .extra {
         word-spacing: 3rem;
+
         @include span-columns(3);
 
         @include media($mobile) {
