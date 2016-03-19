@@ -1,5 +1,6 @@
 @import "reset";
 @import "syntax";
+@import "404";
 @import "bourbon/bourbon";
 @import "neat/neat";
 
@@ -9,6 +10,7 @@ $white: #FFFFFF;
 $celeste: #D3D0CB;
 $cutty: #547D71;
 $regal: #254055;
+$brick: #A44A3F;
 $tuna: #353946;
 $charcoal: #474747;
 $charade: #3B4145;
@@ -40,13 +42,15 @@ body {
 h2 {
     font-size: 1.9rem;
     font-weight: 600;
+    text-align: left;
+    line-height: 2.2rem;
 }
 a {
     text-decoration: none;
-    color: $regal;
+    color: $brick;
 }
 a:visited {
-    color: $regal;
+    color: $brick;
 }
 a:hover {
     color: $tuna;
@@ -62,6 +66,7 @@ hr {
     border-top: medium double #333;
     color: #333;
     text-align: center;
+    margin-top: 2rem;
 }
 hr:after {
     content: "§";
@@ -90,6 +95,10 @@ hr:after {
 }
 
 // Index post listing
+.page_subtitle {
+    margin-bottom: 2rem;
+    text-align: center;
+}
 .post_date {
     padding: 0;
     color: $charcoal;
@@ -134,6 +143,9 @@ hr:after {
     p {
     line-height: 2.2rem;
     color: $charade;
+        @media screen and (max-width: 782px){
+            text-align: left;
+        }
     }
 
     // Fix this!!!
@@ -175,6 +187,7 @@ blockquote {
 // Main title and nav
 .title_nav {
     @include outer-container;
+    margin-bottom: 3.6rem;
 
     .title {
         @include span-columns(8);

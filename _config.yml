@@ -1,5 +1,9 @@
-#baseurl: "/" # the subpath of your site, e.g. /blog/
+# Site settings
 title: anthony ramella
+description: >
+  a curated web developer blog with resources, articles and opinions by Anthony Ramella
+
+# Baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://anthonyramella.com" # the base hostname & protocol for your site
 permalink: "/blog/:title/"
 author:
@@ -11,6 +15,7 @@ author:
 
 google_analytics: 'UA-60032993-2'
 
+# Build settings
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]

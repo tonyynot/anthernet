@@ -1,18 +1,21 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if page.title %} {{ page.title }} — {{ page.subtitle }} &raquo; {% endif %} {{ site.title }}</title>
+        <title>{% if page.title %} {{ page.title }} / {{ page.subtitle }} / {% endif %} {{ site.title }}</title>
         <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-        {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+        
+        {% if page.tags %}
+        <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+        {% endif %}
 
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
         <meta name="viewport" content="width=device-width">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        {% include externals/styles.html %}
 
-        <!-- Fonts -->
-        <link href='https://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+        {% include externals/social.html %}
+
+        {% include externals/google_analytics.html %}
 
     </head>

@@ -3,34 +3,19 @@
 
 {% include head.html %}
    
-    <body>
-
-        <div class="site">
-          <div class="title_nav">
-            <h1 class="title"><a href="/">{{ site.title }}</a></h1>
-            <div class="extra">
-            <a href="{{ '/' | prepend: site.baseurl }}">home</a> <a href="{{ '/about' | prepend: site.baseurl }}">about</a> <a href="{{ '/about' | prepend: site.baseurl }}">about</a>
-            </div>
-          </div>
-          
-          {{ content }}
-          <div id="footer">
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name is<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
+  <body>
+    <div class="site">
+      <div class="title_nav">
+        <h1 class="title"><a href="/">{{ site.title }}</a></h1>
+        <div class="extra">
+        <a href="{{ '/' | prepend: site.baseurl }}">home</a> <a href="{{ '/about' | prepend: site.baseurl }}">about</a> <a href="{{ '/about' | prepend: site.baseurl }}">about</a>
         </div>
-</div>
-    </body>
+      </div>
+      
+      {{ content }}
+
+      {% include footer.html %}
+
+    </div>
+  </body>
 </html>
