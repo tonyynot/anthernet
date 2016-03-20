@@ -42,6 +42,4 @@ Since I have been relatively busy the past month or so, I haven't had much time 
 
 "Innovation is like climbing a mountain. Most teams fail because they pick the wrong mountain to climb" -Sebastian Thrun
 
-“Dude, suckin' at something is the first step to being sorta good at something.” -Jake, "Adventure Time"
-
 "Simplicity is prerequisite for reliability.Simplicity is prerequisite for reliability." -Edsger W. Dijkstra

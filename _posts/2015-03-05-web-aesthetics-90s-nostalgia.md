@@ -33,6 +33,4 @@ This entire site functions as a wiki, meaning faculty, students, alumni and staf
 
 Further information on how the page functions as a wiki without becoming too out of hand can be found in their [about page](http://art.yale.edu/AboutThisSite). It is also mentioned that the site is programmed using Ruby on Rails.
 
-*******
-
 What sites bring you back to the primitive web? [Tweet](http://www.twitter.com/tonecodes) them to me or comment below, I'd love to see what type of whacky stuff is out there.

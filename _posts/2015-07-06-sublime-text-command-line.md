@@ -10,7 +10,8 @@ tags: productivity tools
 Sublime Text 3 comes with a command line tool called <code>subl</code> which can be used to open files in Sublime Text. However, you first have to do some configurations in order to enable this tool. If you are a heavy command line user, this tool is an absolute life saver.
 
 ### Setting up the load $PATH
-The first step is to create a [symlink](https://en.wikipedia.org/wiki/Symbolic_link) that will allow you to run <code>subl</code> from the command line. In the documentation on this tool, it is assumed you have <code>~/bin</code> (or <code>/Users/username/</code>) in your load path, which <i>would</i> be located in <code>/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl</code>. However, since the <code>/usr/local/bin</code> is already in your load path by default on OS X, it serves as a better place to assign the <code>subl</code> symlink.
+The first step is to create a [symlink](https://en.wikipedia.org/wiki/Symbolic_link) that will allow you to run <code>subl</code> from the command line. In the documentation on this tool, it is assumed you have <code>~/bin</code> (or <code>/Users/username/</code>) in your load path, which <i>would</i> be located in 
+<code>/Applications/Sublime Text.app Contents/SharedSupport/bin/subl</code>. However, since the <code>/usr/local/bin</code> is already in your load path by default on OS X, it serves as a better place to assign the <code>subl</code> symlink.
 
 To check your load $PATH, you want to run <code>echo $PATH</code> in the terminal.
 
