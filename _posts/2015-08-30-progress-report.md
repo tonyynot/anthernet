@@ -3,7 +3,7 @@ layout: post
 title: Progress Report - Month 3 On the Job
 description: My progress learning code from working as a web developer over the last 3-4 months. I share some resources, notes and tips I've acquired since my last report.
 comments: true
-categories: learning productivity
+tags: learning productivity
 ---
 
 ### Learning to Learn

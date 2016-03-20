@@ -853,7 +853,21 @@ a:hover {
   background-position: 0 95%,100% 95%,0 95%; }
 
 hr {
-  border-top: 3px double #8c8b8b; }
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 0 auto 2rem auto;
+  height: 0.25rem; }
+
+.hzfade {
+  background: #FFFFFF;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #ccc, rgba(255, 255, 255, 0));
+  height: 1px;
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+  @media screen and (max-width: 664px) {
+    .hzfade {
+      margin-top: 3rem; } }
 
 .site {
   font-size: inherit;
@@ -884,7 +898,7 @@ hr {
 .posts li {
   padding-top: .5rem;
   line-height: 3rem; }
-  @media screen and (max-width: 782px) {
+  @media screen and (max-width: 664px) {
     .posts li {
       line-height: 1.2rem;
       text-align: left; } }
@@ -892,26 +906,28 @@ hr {
     float: right;
     font-family: "Rokkitt";
     font-size: 1.5rem; }
-    @media screen and (max-width: 782px) {
+    @media screen and (max-width: 664px) {
       .posts li span {
         display: block;
         float: none;
-        padding-top: 1rem;
+        padding-top: 1.7rem;
         padding-bottom: .3rem; } }
   .posts li a {
     color: #3B4145;
     text-decoration: none;
     font-size: 1.2rem; }
-    @media screen and (max-width: 782px) {
+    @media screen and (max-width: 664px) {
       .posts li a {
         font-size: 1.2rem; } }
 
 .post {
-  color: #3B4145; }
+  color: #3B4145;
+  margin-top: 3rem;
+  margin-bottom: 6rem; }
   .post p {
     line-height: 2.2rem;
     color: #3B4145; }
-    @media screen and (max-width: 782px) {
+    @media screen and (max-width: 664px) {
       .post p {
         text-align: left; } }
   .post code {
@@ -948,7 +964,7 @@ hr {
     #main:last-child {
       margin-right: 0; } }
 
-@media screen and (max-width: 782px) {
+@media screen and (max-width: 664px) {
   #main {
     font-size: 1rem;
     float: left;
@@ -970,8 +986,7 @@ blockquote {
 .title_nav {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3.6rem; }
+  margin-right: auto; }
   .title_nav::after {
     clear: both;
     content: "";
@@ -996,6 +1011,7 @@ blockquote {
       text-decoration: none; }
   .title_nav .extra {
     word-spacing: 1rem;
+    padding-top: 1rem;
     text-align: right;
     float: left;
     display: block;
@@ -1030,3 +1046,5 @@ blockquote {
       width: 100%; }
       .footer:last-child {
         margin-right: 0; } }
+  .footer .fa {
+    font-size: 2rem; }

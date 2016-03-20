@@ -35,7 +35,23 @@ a:hover {
     background-position: 0 95%,100% 95%,0 95%;
 }
 hr {
- border-top: 3px double #8c8b8b;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 0 auto 2rem auto;
+  height: 0.25rem;
+}
+.hzfade {
+    background: $white;
+    background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(#ccc),to(rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+    background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+    height: 1px;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 664px){
+        margin-top: 3rem;
+    }
 }
 
 // Outermost container
@@ -68,7 +84,7 @@ hr {
     padding-top:.5rem;
     line-height: 3rem;
 
-    @media screen and (max-width: 782px){
+    @media screen and (max-width: 664px){
     line-height: 1.2rem;
     text-align: left;
     }
@@ -77,10 +93,10 @@ hr {
         font-family: $rokkitt;
         font-size: 1.5rem;
 
-        @media screen and (max-width: 782px){
+        @media screen and (max-width: 664px){
             display: block;
             float: none;
-            padding-top: 1rem;
+            padding-top: 1.7rem;
             padding-bottom: .3rem;
             }
         }
@@ -90,20 +106,22 @@ hr {
         text-decoration: none;
         font-size: 1.2rem;
         
-        @media screen and (max-width: 782px){
+        @media screen and (max-width: 664px){
             font-size: 1.2rem;
         }
         }
     }
 }
+
 .post {
 
     color: $charade;
-
+    margin-top: 3rem;
+    margin-bottom: 6rem;
     p {
     line-height: 2.2rem;
     color: $charade;
-        @media screen and (max-width: 782px){
+        @media screen and (max-width: 664px){
             text-align: left;
         }
     }
@@ -135,7 +153,7 @@ hr {
         @include span-columns(12 of 12);
         @include pad(10px auto);
             }
-        @media screen and (max-width: 782px){
+        @media screen and (max-width: 664px){
                 font-size: 1rem;
                 @include span-columns(12 of 12);
             }
@@ -155,7 +173,6 @@ blockquote {
 // Main title and nav
 .title_nav {
     @include outer-container;
-    margin-bottom: 3.6rem;
 
     .title {
         @include span-columns(8);
@@ -171,6 +188,7 @@ blockquote {
     }
     .extra {
         word-spacing: 1rem;
+        padding-top: 1rem;
         text-align: right;
         @include span-columns(4);
 
@@ -190,5 +208,9 @@ blockquote {
 
     @media screen and (max-width: 768px){
         @include span-columns(12 of 12);
+    }
+
+    .fa {
+        font-size: 2rem;
     }
 }

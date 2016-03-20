@@ -24,3 +24,6 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 gems:
   - jekyll-gist
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
+  - font-awesome-sass

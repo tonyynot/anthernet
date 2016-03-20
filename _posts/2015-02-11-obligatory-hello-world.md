@@ -4,7 +4,7 @@ title: Obligatory "Hello world!"
 description: An introduction to my blog with a progress report and some lessons learned after my first 4 months of programming.
 comments: true
 post_author: Anthony Ramella
-categories: learning
+tags: learning
 ---
 
 I have never been much of a blogger before. I made a Wordpress blog in 2012 to document my [adventures in South Korea](https://neonseoul.wordpress.com/) but it became too much of a chore for me to keep updating it while I was there. Now that I have moved on to a new adventure, I will be making efforts to blog my progress, challenges and lessons in learning to code.

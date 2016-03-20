@@ -3,7 +3,7 @@ layout: post
 title: Jekyll is Cool
 description: Get up and running with Jekyll in 4 easy steps. Includes instructions, resources and some additional info on why Jekyll is so great.
 comments: true
-categories: code learning
+tags: code learning
 ---
 
 ### What is Jekyll and Why Should I Care?

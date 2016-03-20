@@ -3,7 +3,7 @@ layout: post
 title: Am I doing this right?
 description: Debugging, modifying other's code and utilizing search methods. A further look into what it means to be a programmer. Complete with some insightful quotes from legendary programmers.
 comments: true
-categories: learning productivity
+tags: learning productivity
 ---
 
 Throughout all the programming courses I've been taking, I would start to worry that after the course I won't be able to type out lines of code as if I'm composing a symphony. However, I now realize this is not a worry that's grounded in the reality of what it is to be a programmer. After reading [this](http://www.reddit.com/r/learnprogramming/comments/30miri/all_i_do_at_work_is_google_how_to_do_things_then/) post on Reddit, I felt more at ease about the fact that I'm constatly searching Google to find code and solutions instead of actually writing code.

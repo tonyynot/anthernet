@@ -3,7 +3,7 @@ layout: post
 title: Developer Resources - Summer 2015
 description: It has been a couple months since I shared some developer resources so I made sure to post some extra worthwhile links for this summer's link dump.
 comments: true
-categories: tools learning productivity
+tags: tools learning productivity
 ---
 
 Just because I haven't shared some cool developer resources in the past couple months doesn't mean I don't have any. These are some of the links that I've bookmarked or shared on my [Twitter](http://www.twitter.com/tonecodes) over the summer. Hopefully you'll find them as awesomely nerdy and useful as I do.

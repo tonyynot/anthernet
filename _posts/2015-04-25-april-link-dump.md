@@ -3,7 +3,7 @@ layout: post
 title: April Link Dump [Chrome Experiments Edition]
 description: I spent some of my downtime this month exploring the Chrome Experiments page. If you are unfamiliar with Chrome Experiments, its basically a virtual playground of nearly 100 various browser based art projects, mostly ran using WebGL.
 comments: true
-categories: design
+tags: design
 ---
 I spent some of my downtime this month exploring the [Chrome Experiments](https://www.chromeexperiments.com/) page. If you are unfamiliar with Chrome Experiments, its basically a virtual playground of nearly 100 various browser based art projects, mostly ran using WebGL. In this month's Link Dump, I am sharing a few of my favorites that I've come across.
 

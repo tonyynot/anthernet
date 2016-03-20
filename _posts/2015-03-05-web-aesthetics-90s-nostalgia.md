@@ -2,7 +2,7 @@
 layout: post
 title: Web Aesthetics - Ling, Yale and 90's Nostalgia
 description: A look into two sites which take us back to a time when websites were comprised of bright colors, animations and midis. The beginnings of the world wide web, when building a website felt like setting a tiny universe into existence.
-categories: design
+tags: design
 comments: true
 ---
 These two sites take us back to a time when websites were comprised of bright colors, animations and midis. The beginnings of the world wide web, when building a website felt like setting a tiny universe into existence.

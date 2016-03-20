@@ -3,7 +3,7 @@ layout: post
 title: March Link Dump [Web Develper Resources]
 description: Various bookmarked web related links from March 2015. The entire alphabet coded in CSS, a nerdy programming flowchart with Lord of the Rings analogies and a guide for selecting an MV* framework.
 comments: true
-categories: tools productivity
+tags: tools productivity
 ---
 All the links in this month's link dump are developer resources that I have bookmarked. I suppose I haven't been looking at much else on the web lately. So here are some cool links for all my web nerd homies out there!<br><br>
 

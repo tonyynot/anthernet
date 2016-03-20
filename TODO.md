@@ -3,11 +3,8 @@
 - Style nav
 - Footer
 - Add twitter button
-
-- Add border styles below header and above footer
-
-- Fix Sublime Text post
+- fix code highlighting in Sublime post
 - ::selector
 - include font-awesome
-
+- Add category posts to bottom of post page
 - 404 redirect?

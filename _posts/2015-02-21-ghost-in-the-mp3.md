@@ -3,7 +3,7 @@ layout: post
 title: Ghost in the MP3
 description: A PHD student creates a music project which demonstrates how much data is lost when compressing music to MP3 format while managing to turn it into it's own song.
 comments: true
-categories: tech
+tags: tech
 ---
 
 [Ryan McGuire](http://ryanmaguiremusic.com/), a PhD student at the [University of Virginia Center for Computer Music](http://music.virginia.edu/), has created this project which demonstrates how much data is lost when compressing music to MP3 format while managing to turn it into it's own song.

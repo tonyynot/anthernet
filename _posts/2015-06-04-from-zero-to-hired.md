@@ -3,7 +3,7 @@ layout: post
 title: From Zero to Hired Web Developer in 5 Months
 description: So you want to be a web developer and have been learning code. At which point are you ready to start applying for jobs? Here's some answers and tips on how to stand out among other developers based on my personal experience.
 comments: true
-categories: learning productivity
+tags: learning productivity
 ---
 
 So I landed my first web developer job after only 5 months of learning code. I didn't think I was anywhere near ready to start applying but it was time to move on from my previous line of work and I was starting to make some progress in my learning so I started applying to about 5 jobs a day. I was surprised to get some calls and emails back pretty quickly and started thinking maybe I have a chance. Not long after, I was offered an internship at a great company with an amazing team, which I gladly accepted. Just 3 weeks later, I left the internship for a salary position that was offered to me at another great company. The reason I am sharing this experience is in hopes that it will help beginners like myself understand what they can do to stand out among other developers.
