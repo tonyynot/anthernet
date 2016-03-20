@@ -23,51 +23,95 @@ a {
     text-decoration: none;
     color: $brick;
 }
+a:hover {
+    color: $brick;
+}
 a:visited {
     color: $brick;
 }
-a:hover {
-    color: $tuna;
-    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($tuna, $tuna);
-    background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
-    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-    background-position: 0 95%,100% 95%,0 95%;
-}
+
 hr {
-  border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  margin: 0 auto 2rem auto;
-  height: 0.25rem;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 29rem;
+    margin-top: 2.9124rem;
 }
-.hzfade {
+hr:after {
+    font-family: "FontAwesome";
+    content: "\f18c";
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    padding: 0 0.25em;
     background: $white;
-    background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(#ccc),to(rgba(255,255,255,0)));
-    background: -webkit-linear-gradient(left,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
-    background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
-    height: 1px;
-    margin-top: 1rem;
+}
+// Header and nav
+.title_nav {
+    background-color: $aztec;
+    z-index: 100;
+    max-width: 100% !important;
+    border-bottom: 1px solid #333;
     margin-bottom: 3rem;
-    @media screen and (max-width: 664px){
-        margin-top: 3rem;
+    -webkit-box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+    -moz-box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+    box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+    @include outer-container;
+
+    .title {
+        margin-bottom: 0;
+        margin-top: 2.2rem;
+        @include span-columns(8);
+
+         @media screen and (max-width: 887px){
+            @include span-columns(12);
+            margin-bottom: .5rem;
+            text-align: center;
+        }
+            a {
+                color: $celeste;
+                font-size: 2.6rem;
+                font-family: $rokkitt;
+                text-decoration: none;
+            }
+                a:hover {
+                    color: $cutty;
+                    text-decoration: none;
+                }
+    }
+    .nav_links {
+        word-spacing: 1rem;
+        font-family: $rokkitt;
+        padding-top: 2.4rem;
+        font-size: 1.5rem;
+        text-align: right;
+        @include span-columns(4);
+
+        @media screen and (max-width: 887px){
+            text-align: center;
+            padding-top: 1rem;
+            @include span-columns(12);
+        }
+        a {
+            color: $cutty;
+        }
     }
 }
 
-// Outermost container
+// Site container
 .site {
+    max-width: 100%;
     font-size: inherit;
-    padding-left: 2rem;
-    padding-right: 2rem;
-
+    margin-top: 0;
      @include outer-container(100%);
-}
-
-.title a {
-    color: $regal;
-    font-size: 3rem;
-    font-family: $rokkitt;
-    text-decoration: none;
+         @media screen and (max-width: 887px){
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
 }
 
 // Index post listing
@@ -79,12 +123,20 @@ hr {
     padding: 0;
     color: $charcoal;
 }
-.posts {
+.posts, .post {
+    a:hover {
+    color: $tuna;
+    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($tuna, $tuna);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+    background-position: 0 95%,100% 95%,0 95%;
+}
     li {
     padding-top:.5rem;
     line-height: 3rem;
 
-    @media screen and (max-width: 664px){
+    @media screen and (max-width: 887px){
     line-height: 1.2rem;
     text-align: left;
     }
@@ -93,7 +145,7 @@ hr {
         font-family: $rokkitt;
         font-size: 1.5rem;
 
-        @media screen and (max-width: 664px){
+        @media screen and (max-width: 887px){
             display: block;
             float: none;
             padding-top: 1.7rem;
@@ -106,7 +158,7 @@ hr {
         text-decoration: none;
         font-size: 1.2rem;
         
-        @media screen and (max-width: 664px){
+        @media screen and (max-width: 887px){
             font-size: 1.2rem;
         }
         }
@@ -117,15 +169,16 @@ hr {
 
     color: $charade;
     margin-top: 3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     p {
     line-height: 2.2rem;
     color: $charade;
-        @media screen and (max-width: 664px){
+        @media screen and (max-width: 887px){
             text-align: left;
         }
     }
-// Change colors to vars
+
+    // Change colors to vars
     code {
     padding: .1em .25em;
     color: #586e75;
@@ -142,23 +195,6 @@ hr {
     }
 }
 
-#home, #footer { 
-    @include outer-container(100%);
-    @include pad(10px auto);
-}
-#main{
-    @media screen and (max-width: 800px){
-        font-size: .9rem;
-
-        @include span-columns(12 of 12);
-        @include pad(10px auto);
-            }
-        @media screen and (max-width: 664px){
-                font-size: 1rem;
-                @include span-columns(12 of 12);
-            }
-}
-
 // Post
 blockquote {
     letter-spacing: .2rem;
@@ -169,41 +205,39 @@ blockquote {
     text-align: center;
     position: relative;
 }
-
-// Main title and nav
-.title_nav {
-    @include outer-container;
-
-    .title {
-        @include span-columns(8);
-
-        @include media($mobile) {
-            @include span-columns(8);
-            margin-bottom: .5rem;
-        }
-
-        a:hover {
-            text-decoration: none;
-        }
+.related_posts {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    ul {
+        list-style-type: none;
     }
-    .extra {
-        word-spacing: 1rem;
-        padding-top: 1rem;
-        text-align: right;
-        @include span-columns(4);
-
-        @media screen and (max-width: 664px){
-            text-align: left;
-        }
-        @include media($mobile) {
-            @include span-columns(4);
-        }
+    a:hover {
+    color: $tuna;
+    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($tuna, $tuna);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+    background-position: 0 95%,100% 95%,0 95%;
+    }   
+}
+// About page
+.about_head {
+    text-align: center;
+    h2 {
+        text-align: center;
     }
 }
 
-
 // Footer
 .footer {
+    font-size: 80%;
+    color: $charade;
+    border-top: 4px solid $aztec;
+    margin-top: 2em;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+
     @include span-columns(12);
 
     @media screen and (max-width: 768px){
@@ -211,6 +245,7 @@ blockquote {
     }
 
     .fa {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
     }
 }

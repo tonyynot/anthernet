@@ -3,14 +3,15 @@ layout: default
 ---
 <h2>{{ page.title }}</h2>
 <span class="post_date">{{ page.date | date: '%B %d, %Y' }}</span>
+<hr>
 <div class="post">
 
 {{ content }}
 
 </div>
-
+<hr>
 {% if site.related_posts.size >= 1 %}
-<div>
+<div class="related_posts">
   <h3>Related Posts</h3>
   <ul>
   {% for related_post in site.related_posts limit: 5 %}
@@ -20,4 +21,4 @@ layout: default
 </div>
 {% endif %}
 
-<!-- {% include externals/disqus.html %} -->
+{% include externals/disqus.html %}

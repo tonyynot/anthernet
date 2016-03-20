@@ -1,22 +1,24 @@
+
 <!DOCTYPE html>
 <html>
 
 {% include head.html %}
    
   <body>
-    <div class="site">
-      <div class="title_nav">
-        <h1 class="title"><a href="/">{{ site.title }}</a></h1>
-        <div class="extra">
-        <a href="{{ '/' | prepend: site.baseurl }}">home</a> <a href="{{ '/about' | prepend: site.baseurl }}">about</a> <a href="{{ '/about' | prepend: site.baseurl }}">about</a>
-        </div>
+    <header class="title_nav">
+      <div class="site">
+          <h1 class="title"><a href="/">{{ site.title }}</a></h1>
+          <div class="nav_links">
+          <a href="{{ '/' | prepend: site.baseurl }}">blog</a> <a href="{{ '/about' | prepend: site.baseurl }}">about</a> <a href="http://www.github.com/tonyynot">code</a>
+          </div>
       </div>
-      <div class="hzfade"></div>
-      
-      {{ content }}
+    </header>
 
-      {% include footer.html %}
+    <div class="site">
+        
+        {{ content }}
 
+        {% include footer.html %}
     </div>
   </body>
 </html>

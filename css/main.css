@@ -841,38 +841,102 @@ a {
   text-decoration: none;
   color: #A44A3F; }
 
+a:hover {
+  color: #A44A3F; }
+
 a:visited {
   color: #A44A3F; }
 
-a:hover {
-  color: #353946;
-  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#353946, #353946);
-  background-size: .05em 1px,.05em 1px,1px 1px;
-  background-repeat: no-repeat,no-repeat,repeat-x;
-  text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-  background-position: 0 95%,100% 95%,0 95%; }
-
 hr {
-  border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  margin: 0 auto 2rem auto;
-  height: 0.25rem; }
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 29rem;
+  margin-top: 2.9124rem; }
 
-.hzfade {
-  background: #FFFFFF;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #ccc, rgba(255, 255, 255, 0));
-  height: 1px;
-  margin-top: 1rem;
-  margin-bottom: 3rem; }
-  @media screen and (max-width: 664px) {
-    .hzfade {
-      margin-top: 3rem; } }
+hr:after {
+  font-family: "FontAwesome";
+  content: "\f18c";
+  display: inline-block;
+  position: relative;
+  top: -0.8em;
+  padding: 0 0.25em;
+  background: #FFFFFF; }
+
+.title_nav {
+  background-color: #3C3530;
+  z-index: 100;
+  max-width: 100% !important;
+  border-bottom: 1px solid #333;
+  margin-bottom: 3rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .title_nav::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .title_nav .title {
+    margin-bottom: 0;
+    margin-top: 2.2rem;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .title_nav .title:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 887px) {
+      .title_nav .title {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        margin-bottom: .5rem;
+        text-align: center; }
+        .title_nav .title:last-child {
+          margin-right: 0; } }
+    .title_nav .title a {
+      color: #D3D0CB;
+      font-size: 2.6rem;
+      font-family: "Rokkitt";
+      text-decoration: none; }
+    .title_nav .title a:hover {
+      color: #547D71;
+      text-decoration: none; }
+  .title_nav .nav_links {
+    word-spacing: 1rem;
+    font-family: "Rokkitt";
+    padding-top: 2.4rem;
+    font-size: 1.5rem;
+    text-align: right;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .title_nav .nav_links:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 887px) {
+      .title_nav .nav_links {
+        text-align: center;
+        padding-top: 1rem;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .title_nav .nav_links:last-child {
+          margin-right: 0; } }
+    .title_nav .nav_links a {
+      color: #547D71; }
 
 .site {
+  max-width: 100%;
   font-size: inherit;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  margin-top: 0;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
@@ -880,12 +944,10 @@ hr {
     clear: both;
     content: "";
     display: table; }
-
-.title a {
-  color: #254055;
-  font-size: 3rem;
-  font-family: "Rokkitt";
-  text-decoration: none; }
+  @media screen and (max-width: 887px) {
+    .site {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
 
 .page_subtitle {
   margin-bottom: 2rem;
@@ -895,39 +957,47 @@ hr {
   padding: 0;
   color: #474747; }
 
-.posts li {
+.posts a:hover, .post a:hover {
+  color: #353946;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#353946, #353946);
+  background-size: .05em 1px,.05em 1px,1px 1px;
+  background-repeat: no-repeat,no-repeat,repeat-x;
+  text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+  background-position: 0 95%,100% 95%,0 95%; }
+
+.posts li, .post li {
   padding-top: .5rem;
   line-height: 3rem; }
-  @media screen and (max-width: 664px) {
-    .posts li {
+  @media screen and (max-width: 887px) {
+    .posts li, .post li {
       line-height: 1.2rem;
       text-align: left; } }
-  .posts li span {
+  .posts li span, .post li span {
     float: right;
     font-family: "Rokkitt";
     font-size: 1.5rem; }
-    @media screen and (max-width: 664px) {
-      .posts li span {
+    @media screen and (max-width: 887px) {
+      .posts li span, .post li span {
         display: block;
         float: none;
         padding-top: 1.7rem;
         padding-bottom: .3rem; } }
-  .posts li a {
+  .posts li a, .post li a {
     color: #3B4145;
     text-decoration: none;
     font-size: 1.2rem; }
-    @media screen and (max-width: 664px) {
-      .posts li a {
+    @media screen and (max-width: 887px) {
+      .posts li a, .post li a {
         font-size: 1.2rem; } }
 
 .post {
   color: #3B4145;
   margin-top: 3rem;
-  margin-bottom: 6rem; }
+  margin-bottom: 3rem; }
   .post p {
     line-height: 2.2rem;
     color: #3B4145; }
-    @media screen and (max-width: 664px) {
+    @media screen and (max-width: 887px) {
       .post p {
         text-align: left; } }
   .post code {
@@ -943,37 +1013,6 @@ hr {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch; }
 
-#home, #footer {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px auto; }
-  #home::after, #footer::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-@media screen and (max-width: 800px) {
-  #main {
-    font-size: .9rem;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    padding: 10px auto; }
-    #main:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 664px) {
-  #main {
-    font-size: 1rem;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    #main:last-child {
-      margin-right: 0; } }
-
 blockquote {
   letter-spacing: .2rem;
   margin: 0px;
@@ -983,55 +1022,32 @@ blockquote {
   text-align: center;
   position: relative; }
 
-.title_nav {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
-  .title_nav::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .title_nav .title {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%; }
-    .title_nav .title:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 664px) {
-      .title_nav .title {
-        float: left;
-        display: block;
-        margin-right: 7.42297%;
-        width: 207.42297%;
-        margin-bottom: .5rem; }
-        .title_nav .title:last-child {
-          margin-right: 0; } }
-    .title_nav .title a:hover {
-      text-decoration: none; }
-  .title_nav .extra {
-    word-spacing: 1rem;
-    padding-top: 1rem;
-    text-align: right;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
-    .title_nav .extra:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 664px) {
-      .title_nav .extra {
-        text-align: left; } }
-    @media screen and (max-width: 664px) {
-      .title_nav .extra {
-        float: left;
-        display: block;
-        margin-right: 7.42297%;
-        width: 100%; }
-        .title_nav .extra:last-child {
-          margin-right: 0; } }
+.related_posts {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  .related_posts ul {
+    list-style-type: none; }
+  .related_posts a:hover {
+    color: #353946;
+    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#353946, #353946);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+    background-position: 0 95%,100% 95%,0 95%; }
+
+.about_head {
+  text-align: center; }
+  .about_head h2 {
+    text-align: center; }
 
 .footer {
+  font-size: 80%;
+  color: #3B4145;
+  border-top: 4px solid #3C3530;
+  margin-top: 2em;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -1047,4 +1063,5 @@ blockquote {
       .footer:last-child {
         margin-right: 0; } }
   .footer .fa {
-    font-size: 2rem; }
+    font-size: 2.5rem;
+    margin-bottom: 2rem; }
