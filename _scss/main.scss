@@ -21,13 +21,16 @@ h3 {
 }
 a {
     text-decoration: none;
-    color: $brick;
+    color: $charade;
 }
 a:hover {
-    color: $brick;
+    color: $charade;
 }
 a:visited {
-    color: $brick;
+    color: $charade;
+}
+a:focus {
+    color: $charade;
 }
 
 hr {
@@ -73,14 +76,14 @@ hr:after {
             text-align: center;
         }
             a {
-                color: $celeste;
-                font-size: 2.6rem;
-                font-family: $rokkitt;
-                text-decoration: none;
+            color: $celeste;
+            font-size: 2.6rem;
+            font-family: $rokkitt;
+            text-decoration: none;
             }
                 a:hover {
-                    color: $cutty;
-                    text-decoration: none;
+                color: $cutty;
+                text-decoration: none;
                 }
     }
     .nav_links {
@@ -125,32 +128,38 @@ hr:after {
 }
 .posts, .post {
     a:hover {
-    color: $tuna;
-    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($tuna, $tuna);
-    background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
-    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-    background-position: 0 95%,100% 95%,0 95%;
-}
+        color: $charade;
+        background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($brick, $brick);
+        background-size: .05em 1px,.05em 1px,1px 1px;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+        background-position: 0 95%,100% 95%,0 95%;
+    }
+    a:visited {
+        color: $charade;
+    }
+    img {
+        max-width: 600px;
+    }
     li {
-    padding-top:.5rem;
-    line-height: 3rem;
+        padding-top:.5rem;
+        line-height: 3rem;
 
     @media screen and (max-width: 887px){
-    line-height: 1.2rem;
-    text-align: left;
+        line-height: 1.2rem;
+        text-align: left;
     }
         span {
-        float: right;
-        font-family: $rokkitt;
-        font-size: 1.5rem;
+            float: right;
+            font-family: $rokkitt;
+            font-size: 1.5rem;
 
         @media screen and (max-width: 887px){
             display: block;
             float: none;
             padding-top: 1.7rem;
             padding-bottom: .3rem;
-            }
+        }
         }
 
         a {
@@ -159,7 +168,7 @@ hr:after {
         font-size: 1.2rem;
         
         @media screen and (max-width: 887px){
-            font-size: 1.2rem;
+        font-size: 1.2rem;
         }
         }
     }
@@ -167,9 +176,19 @@ hr:after {
 
 .post {
 
-    color: $charade;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    a, a:hover {
+    color: $brick;
+    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($brick, $brick);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+    background-position: 0 95%,100% 95%,0 95%;
+    }
+
+    a {
+        color: $charade;
+    }
+
     p {
     line-height: 2.2rem;
     color: $charade;
@@ -180,18 +199,18 @@ hr:after {
 
     // Change colors to vars
     code {
-    padding: .1em .25em;
-    color: #586e75;
-    background-color: rgba(253,246,227,.7);
-    border: 1px solid rgba(250,231,179,.7);
-    border-radius: 3px;
+        padding: .1em .25em;
+        color: #586e75;
+        background-color: rgba(253,246,227,.7);
+        border: 1px solid rgba(250,231,179,.7);
+        border-radius: 3px;
     }
     pre {
-    padding: .75em 2em;
-    margin-bottom: 0;
-    background-color: #fdf6e3;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+        padding: .75em 2em;
+        margin-bottom: 0;
+        background-color: #fdf6e3;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
@@ -211,13 +230,16 @@ blockquote {
     ul {
         list-style-type: none;
     }
+    a {
+        color: $brick;
+    }
     a:hover {
-    color: $tuna;
-    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($tuna, $tuna);
-    background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
-    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-    background-position: 0 95%,100% 95%,0 95%;
+        color: $charade;
+        background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($brick, $brick);
+        background-size: .05em 1px,.05em 1px,1px 1px;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+        background-position: 0 95%,100% 95%,0 95%;
     }   
 }
 // About page
@@ -242,6 +264,10 @@ blockquote {
 
     @media screen and (max-width: 768px){
         @include span-columns(12 of 12);
+    }
+
+    a:hover {
+        text-decoration: none;
     }
 
     .fa {

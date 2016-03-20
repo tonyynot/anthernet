@@ -29,7 +29,7 @@ What makes LingsCars stand out is Ling's success in using a 90's web design aest
 This entire site functions as a wiki, meaning faculty, students, alumni and staff are able to add, edit and change the site's content. There are some hilarious background images and features happening on this site. Since it is constantly being edited, I will avoid mentioning specific details, but I would encourage visitors to click around and check out the madness going on there.
 
 <img src="/img/yaleart.jpg">
-<font size="2px">Animated MySpace backgrounds rule! [Source](http://art.yale.edu/StudyAreas)</font>
+<font size="2px">Animated MySpace backgrounds are badass! [Source](http://art.yale.edu/StudyAreas) </font>
 
 Further information on how the page functions as a wiki without becoming too out of hand can be found in their [about page](http://art.yale.edu/AboutThisSite). It is also mentioned that the site is programmed using Ruby on Rails.
 
