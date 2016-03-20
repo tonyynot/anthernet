@@ -1,0 +1,26 @@
+---
+layout: post
+title: Developer Resources - Summer 2015
+description: It has been a couple months since I shared some developer resources so I made sure to post some extra worthwhile links for this summer's link dump.
+comments: true
+tags: tools learning productivity
+---
+
+Just because I haven't shared some cool developer resources in the past couple months doesn't mean I don't have any. These are some of the links that I've bookmarked or shared on my [Twitter](http://www.twitter.com/tonecodes) over the summer. Hopefully you'll find them as awesomely nerdy and useful as I do.
+
+[Alda](http://daveyarwood.github.io/alda/2015/09/05/alda-a-manifesto-and-gentle-introduction/)<br>
+Developer Dave Yarwood has created a CLI to write music via text editor. Alda can be used to create MIDI scores and according to Yarwood, will be updated to include other sounds featuring samples, waveforms and other synthesis. It works by using alphabetical notes on the musical scale with added symbols for changing octaves, adding sharps and flats and changing note lengths. Apparently the language is simple enough for non-programmers to learn quickly.
+
+>I’m envisioning a world where programmers and non-programmers alike can create all sorts of music, from classical to chiptune to experimental soundscapes, using only a text editor and the Alda executable
+
+[Helpful Terminal Utilities for OSX Users](http://www.mitchchn.me/2014/os-x-terminal/)<br>
+For those of you who have been reading this blog, you have seen some command line tricks and tips on here before. This blog post shares several of the many powerful UNIX utilities and scripts the OSX Terminal has to offer. Learning to be a command line ninja will make you a resourceful and productive developer.
+
+[Image Hover Effects](http://miketricking.github.io/dist/)<br>
+I stumbled upon this library of CSS image hover effects while working on my current personal project which is a simple photo gallery to share some of my photography. These hover effects are really clean and pleasant. The CSS code uses overlays, transitions, transforms and gradients. A quick note for those who are learning, anytime you use someone else's code, make sure you understand what the code is doing before copy &amp; pasting it into your project.
+
+[DevTools Tips for Sublime Text Users](https://medium.com/google-developers/devtools-tips-for-sublime-text-users-cdd559ee80f8)<br>
+Sublime Text tricks and tools are something I've shared on this blog before. Since this is a post from the Google Developers [Medium](https://medium.com/google-developers) blog, I think it is an excellent resource which integrates Chrome DevTools with Sublime Text. Although I have learned a few of these tricks, I never realized DevTools had the functionality of a text editor like Sublime. This is a really cool article with animated gifs demoing the various tricks.
+
+[FreeCodeCamp](http://www.freecodecamp.com/)<br>
+Learn code by building sites for non-profits. Being as I code for a non-profit myself, I am a strong supporter of civic hacking and building apps and sites for organizations to better the community. FreeCodeCamp uses your GitHub account to connect with others through chat while you live code in the web app. It's a great way to connect with other developers and learn in a group setting. It also reminds me a civic hacking organization in my city called [Code for Philly](https://codeforphilly.org/) which is very similar in that you collaborate on building apps to help the community in various ways. Not only is this a great way to learn code, but it makes for some excellent resume material.
