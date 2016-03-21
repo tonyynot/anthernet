@@ -7,9 +7,12 @@ layout: default
 <div class="post">
 
 {{ content }}
-
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text={{ page.title }}%20via%20@tonecodes"
+  data-size="large">
+Tweet</a>
 </div>
-<hr>
+<hr> 
 {% if site.related_posts.size >= 1 %}
 <div class="related_posts">
   <h3>Related Posts</h3>

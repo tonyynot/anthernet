@@ -868,6 +868,18 @@ hr:after {
   padding: 0 0.25em;
   background: #FFFFFF; }
 
+::-moz-selection {
+  background: #547D71;
+  /* WebKit/Blink Browsers */ }
+
+::selection {
+  background: #547D71;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #547D71;
+  /* Gecko Browsers */ }
+
 .title_nav {
   background-color: #3C3530;
   z-index: 100;
@@ -1054,7 +1066,8 @@ blockquote {
 
 .related_posts {
   padding-top: 2rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  text-align: left; }
   .related_posts ul {
     list-style-type: none; }
   .related_posts li {

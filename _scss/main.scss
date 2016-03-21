@@ -51,7 +51,12 @@ hr:after {
     padding: 0 0.25em;
     background: $white;
 }
-
+::selection {
+  background: $cutty; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $cutty; /* Gecko Browsers */
+}
 // Header and nav
 .title_nav {
     background-color: $aztec;
@@ -243,6 +248,7 @@ blockquote {
 .related_posts {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    text-align: left;
     ul {
         list-style-type: none;
     }
