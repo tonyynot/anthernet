@@ -7,9 +7,14 @@
   <body>
     <header class="title_nav">
       <div class="site">
-          <h1 class="title"><a href="/">{{ site.title }}</a></h1>
+          <h1 class="title">
+            <a href="/">{{ site.title }}</a>
+          </h1>
+          
           <div class="nav_links">
-          <a href="{{ '/' | prepend: site.baseurl }}">blog</a> <a href="{{ '/about' | prepend: site.baseurl }}">about</a> <a href="http://www.github.com/tonyynot">code</a>
+            <a href="{{ '/' | prepend: site.baseurl }}">blog</a> 
+            <a href="{{ '/about' | prepend: site.baseurl }}">about</a> 
+            <a href="http://www.github.com/{{ site.author.github }}">code</a>
           </div>
       </div>
     </header>
