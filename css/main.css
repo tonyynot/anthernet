@@ -840,7 +840,7 @@ h3 {
 
 a, a:hover, a:visited, a:focus {
   text-decoration: none;
-  color: #3B4145; }
+  color: hz_line; }
 
 hr {
   padding: 0;
@@ -849,15 +849,14 @@ hr {
   color: #333;
   text-align: center;
   margin: 1.9rem 0 0 0; }
-
-hr:after {
-  font-family: "FontAwesome";
-  content: "\f1d0";
-  display: inline-block;
-  position: relative;
-  top: -0.8em;
-  padding: 0 0.25em;
-  background: #FFFFFF; }
+  hr:after {
+    font-family: "FontAwesome";
+    content: "\f1d0";
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    padding: 0 0.25em;
+    background: #FFFFFF; }
 
 ::-moz-selection {
   background: #547D71;
@@ -965,13 +964,15 @@ hr:after {
   padding: 0;
   color: #D3D0CB; }
 
-.posts a:hover, .post a:hover {
-  color: #3B4145;
-  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
-  background-size: .05em 1px,.05em 1px,1px 1px;
-  background-repeat: no-repeat,no-repeat,repeat-x;
-  text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-  background-position: 0 95%,100% 95%,0 95%; }
+.posts a, .post a {
+  color: #3B4145; }
+  .posts a:hover, .post a:hover {
+    color: #A44A3F;
+    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+    background-position: 0 95%,100% 95%,0 95%; }
 
 .posts a:visited, .post a:visited {
   color: #3B4145; }
@@ -1017,15 +1018,20 @@ hr:after {
 .post {
   padding-top: 2.2rem;
   padding-bottom: 1rem; }
-  .post a, .post a:hover {
-    color: #A44A3F;
+  .post a {
+    color: #3B4145;
     background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
     background-size: .05em 1px,.05em 1px,1px 1px;
     background-repeat: no-repeat,no-repeat,repeat-x;
     text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
     background-position: 0 95%,100% 95%,0 95%; }
-  .post a {
-    color: #3B4145; }
+    .post a:hover {
+      color: #A44A3F;
+      background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
+      background-size: .05em 1px,.05em 1px,1px 1px;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+      background-position: 0 95%,100% 95%,0 95%; }
   .post p {
     line-height: 2.2rem;
     color: #3B4145; }
@@ -1070,13 +1076,13 @@ blockquote {
     padding-right: .5rem; }
   .related_posts a {
     color: #A44A3F; }
-  .related_posts a:hover {
-    color: #3B4145;
-    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
-    background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
-    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-    background-position: 0 95%,100% 95%,0 95%; }
+    .related_posts a:hover {
+      color: #3B4145;
+      background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
+      background-size: .05em 1px,.05em 1px,1px 1px;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+      background-position: 0 95%,100% 95%,0 95%; }
 
 .about_head {
   text-align: center; }
@@ -1105,11 +1111,12 @@ blockquote {
       width: 100%; }
       .footer:last-child {
         margin-right: 0; } }
-  .footer a:hover {
-    text-decoration: none;
-    color: #A44A3F; }
   .footer .fa {
     font-size: 2.5rem;
+    color: #3B4145;
     margin-bottom: 2rem;
     padding-left: .5rem;
     padding-top: 1rem; }
+    .footer .fa:hover {
+      text-decoration: none;
+      color: #A44A3F; }

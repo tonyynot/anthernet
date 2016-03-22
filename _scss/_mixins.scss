@@ -1,26 +1,78 @@
-// Color Variables
-$aztec: #3C3530;
-$white: #FFFFFF;
-$celeste: #D3D0CB;
-$cutty: #547D71;
-$regal: #254055;
-$brick: #A44A3F;
-$tuna: #353946;
-$charcoal: #474747;
-$charade: #3B4145;
-$black: #000000;
+@mixin navbox {
+    background-color: $navbar;
+    z-index: 100;
+    max-width: 100% !important;
+    border-bottom: 1px solid #333;
+    margin-bottom: 3rem;
+    -webkit-box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+    -moz-box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+    box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+}
 
-// Google fonts
-// @import url(https://fonts.googleapis.com/css?family=Kanit);
-// @import url(https://fonts.googleapis.com/css?family=Lora);
-@import url(https://fonts.googleapis.com/css?family=Rokkitt);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
+@mixin hz_line {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin: 1.9rem 0 0 0;
 
-// Font Variables
-$kanit: 'Kanit', sans-serif;
-$lora: 'Lora', sans-serif;
-$rokkitt: 'Rokkitt';
-$merriweather: 'Merriweather';
+    &:after {
+        font-family: "FontAwesome";
+        content: "\f1d0";
+        display: inline-block;
+        position: relative;
+        top: -0.8em;
+        padding: 0 0.25em;
+        background: $white;
+    }   
+}
+@mixin hover_effect {
 
-// Media Queries
-$mobile: new-breakpoint(max-width 664px 4);
+        background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($link_hover, $link_hover);
+        background-size: .05em 1px,.05em 1px,1px 1px;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+        background-position: 0 95%,100% 95%,0 95%;
+
+}
+@mixin  post_link_hover {
+    a {
+        color: $text_main;
+
+    &:hover {
+        color: $link_hover;
+        @include hover_effect;
+    }
+}
+}
+
+@mixin related_link_hover {
+    a {
+        color: $link_hover;
+        &:hover {
+            color: $text_main;
+            @include hover_effect;
+        }
+    }
+}
+
+@mixin article_link_hover {
+    a {
+        color: $text_main;
+        @include hover_effect;
+        &:hover {
+            color: $link_hover;
+            @include hover_effect;
+        }
+    }
+}
+
+@mixin image_container {
+    display: block;
+    margin: 0 0 1rem;
+    border-radius: .25rem;
+        -moz-box-shadow:    3px 3px 5px 6px #ccc;
+        -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+        box-shadow:         3px 3px 5px 6px #ccc;
+}

@@ -3,6 +3,7 @@
 @import "404";
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "variables";
 @import "mixins";
 
 // Colors:
@@ -11,6 +12,9 @@ $link_hover: $brick;
 $nav_links: $cutty;
 $title: $celeste;
 $navbar: $aztec;
+
+// Fonts
+
 
 // Base styles
 body {
@@ -30,25 +34,10 @@ h3 {
 }
 a, a:hover, a:visited, a:focus {
     text-decoration: none;
-    color: $text_main;
+    color: hz_line;
 }
-
 hr {
-    padding: 0;
-    border: none;
-    border-top: medium double #333;
-    color: #333;
-    text-align: center;
-    margin: 1.9rem 0 0 0;
-}
-hr:after {
-    font-family: "FontAwesome";
-    content: "\f1d0";
-    display: inline-block;
-    position: relative;
-    top: -0.8em;
-    padding: 0 0.25em;
-    background: $white;
+    @include hz_line;
 }
 ::selection {
   background: $nav_links; /* WebKit/Blink Browsers */
@@ -59,14 +48,8 @@ hr:after {
 
 // Header and nav
 .title_nav {
-    background-color: $navbar;
-    z-index: 100;
-    max-width: 100% !important;
-    border-bottom: 1px solid #333;
-    margin-bottom: 3rem;
-    -webkit-box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
-    -moz-box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
-    box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+
+    @include navbox;
     @include outer-container;
 
     .title {
@@ -136,28 +119,14 @@ hr:after {
     color: $title;
 }
 .posts, .post {
-    a:hover {
-        color: $text_main;
-        background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($link_hover, $link_hover);
-        background-size: .05em 1px,.05em 1px,1px 1px;
-        background-repeat: no-repeat,no-repeat,repeat-x;
-        text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-        background-position: 0 95%,100% 95%,0 95%;
-    }
+    @include post_link_hover;
     a:visited {
         color: $text_main;
     }
     img {
 
         @include outer-container(100%);
-
-        display: block;
-        margin: 0 0 1rem;
-        border-radius: .25rem;
-
-            -moz-box-shadow:    3px 3px 5px 6px #ccc;
-            -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-            box-shadow:         3px 3px 5px 6px #ccc;
+        @include image_container;
     }
     li {
         padding-top:.5rem;
@@ -196,18 +165,8 @@ hr:after {
 .post {
     padding-top: 2.2rem;
     padding-bottom: 1rem;
-    a, a:hover {
-    color: $link_hover;
-    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($link_hover, $link_hover);
-    background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
-    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-    background-position: 0 95%,100% 95%,0 95%;
-    }
 
-    a {
-        color: $text_main;
-    }
+    @include article_link_hover;
 
     p {
     line-height: 2.2rem;
@@ -262,17 +221,7 @@ blockquote {
         color: $text_main;
         padding-right: .5rem;
     }
-    a {
-        color: $link_hover;
-    }
-    a:hover {
-        color: $text_main;
-        background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($link_hover, $link_hover);
-        background-size: .05em 1px,.05em 1px,1px 1px;
-        background-repeat: no-repeat,no-repeat,repeat-x;
-        text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-        background-position: 0 95%,100% 95%,0 95%;
-    }   
+@include related_link_hover;
 }
 
 // About page
@@ -300,15 +249,16 @@ blockquote {
         @include span-columns(12 of 12);
     }
 
-    a:hover {
-        text-decoration: none;
-        color: $link_hover;
-    }
-
     .fa {
         font-size: 2.5rem;
+        color: $text_main;
         margin-bottom: 2rem;
         padding-left: .5rem;
         padding-top: 1rem;
+
+        &:hover {
+            text-decoration: none;
+            color: $link_hover;
+        }   
     }
 }
