@@ -838,17 +838,8 @@ h2 {
 h3 {
   color: #3B4145; }
 
-a {
+a, a:hover, a:visited, a:focus {
   text-decoration: none;
-  color: #3B4145; }
-
-a:hover {
-  color: #3B4145; }
-
-a:visited {
-  color: #3B4145; }
-
-a:focus {
   color: #3B4145; }
 
 hr {
