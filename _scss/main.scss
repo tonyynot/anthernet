@@ -6,20 +6,21 @@
 @import "variables";
 @import "mixins";
 
-// Colors:
+// Color variables:
 $text_main: $charade;
 $link_hover: $brick;
 $nav_links: $cutty;
 $title: $celeste;
 $navbar: $aztec;
 
-// Fonts
-
+// Font variables
+$navbar_font: $rokkitt;
+$base_font: $merriweather;
 
 // Base styles
 body {
     background: $white;
-    font-family: $merriweather;
+    font-family: $base_font;
     font-size: 1.2rem;
 }
 h2 {
@@ -34,16 +35,16 @@ h3 {
 }
 a, a:hover, a:visited, a:focus {
     text-decoration: none;
-    color: hz_line;
 }
 hr {
-    @include hz_line;
+    @include hz_rule;
 }
+// Highlight color
 ::selection {
-  background: $nav_links; /* WebKit/Blink Browsers */
+    background: $nav_links; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: $nav_links; /* Gecko Browsers */
+    background: $nav_links; /* Gecko Browsers */
 }
 
 // Header and nav
@@ -65,7 +66,7 @@ hr {
             a {
             color: $title;
             font-size: 2.6rem;
-            font-family: $rokkitt;
+            font-family: $navbar_font;
             text-decoration: none;
             }
                 a:hover {
@@ -75,7 +76,7 @@ hr {
     }
     .nav_links {
         word-spacing: 1rem;
-        font-family: $rokkitt;
+        font-family: $navbar_font;
         padding-top: 2.4rem;
         font-size: 1.7rem;
         text-align: right;
@@ -138,7 +139,7 @@ hr {
     }
         span {
             float: right;
-            font-family: $rokkitt;
+            font-family: $navbar_font;
             font-size: 1.5rem;
 
         @media screen and (max-width: 887px){

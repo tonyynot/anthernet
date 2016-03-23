@@ -841,8 +841,7 @@ h3 {
   color: #3B4145; }
 
 a, a:hover, a:visited, a:focus {
-  text-decoration: none;
-  color: hz_line; }
+  text-decoration: none; }
 
 hr {
   padding: 0;

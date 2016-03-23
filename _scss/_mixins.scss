@@ -9,7 +9,7 @@
     box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
 }
 
-@mixin hz_line {
+@mixin hz_rule {
     padding: 0;
     border: none;
     border-top: medium double #333;
