@@ -40,16 +40,17 @@
     a {
         color: $text_main;
 
-    &:hover {
-        color: $link_hover;
-        @include hover_effect;
-    }
-}
+        &:hover {
+            color: $text_main;
+            @include hover_effect;
+        }
+    }  
 }
 
 @mixin related_link_hover {
     a {
         color: $link_hover;
+       
         &:hover {
             color: $text_main;
             @include hover_effect;
@@ -61,6 +62,7 @@
     a {
         color: $text_main;
         @include hover_effect;
+        
         &:hover {
             color: $link_hover;
             @include hover_effect;
