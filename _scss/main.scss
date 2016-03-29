@@ -22,6 +22,9 @@ body {
     background: $white;
     font-family: $base_font;
     font-size: 1.2rem;
+    @media screen and (max-width: 887px) {
+        font-size: 1rem;
+    }
 }
 h2 {
     color: $text_main;
@@ -32,6 +35,7 @@ h2 {
 }
 h3 {
     color: $text_main;
+    margin-top: 1.9rem;
 }
 a, a:hover, a:visited, a:focus {
     text-decoration: none;

@@ -827,6 +827,9 @@ body {
   background: #FFFFFF;
   font-family: "Merriweather";
   font-size: 1.2rem; }
+  @media screen and (max-width: 887px) {
+    body {
+      font-size: 1rem; } }
 
 h2 {
   color: #3B4145;
@@ -836,7 +839,8 @@ h2 {
   line-height: 2.2rem; }
 
 h3 {
-  color: #3B4145; }
+  color: #3B4145;
+  margin-top: 1.9rem; }
 
 a, a:hover, a:visited, a:focus {
   text-decoration: none; }

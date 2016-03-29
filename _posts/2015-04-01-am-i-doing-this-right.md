@@ -17,7 +17,7 @@ I kept reading the same expression over and over, "There's no use reinventing th
 >"People think that computer science is the art of geniuses but the actual reality is the opposite, just many people doing things that build on each other, like a wall of mini stones."
 - Donald Knuth
 
-Of course, it's still important to be able to type lines of code from memory, but this will come with experience and repetition. What's important at the beginner and novice level, is having a solid understanding of the language you are working in so you can modify the code and know how to properly run tests and debug.
+Of course, it's still important to be able to type lines of code from memory, but this will come with experience and repetition. What's important at the novice level, is having a solid understanding of the language you are working in so you can modify the code and know how to properly run tests and debug.
 
 > "This is programming. No matter how good we get, we'll spend less time writing code and more time figuring out why the code doesn't work."
 > - Simon Allardice
