@@ -226,7 +226,12 @@ blockquote {
         color: $text_main;
         padding-right: .5rem;
     }
+
 @include related_link_hover;
+}
+
+#disqus_thread a {
+    color: $link_hover;
 }
 
 // About page

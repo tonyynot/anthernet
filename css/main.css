@@ -1087,6 +1087,9 @@ blockquote {
       text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
       background-position: 0 95%,100% 95%,0 95%; }
 
+#disqus_thread a {
+  color: #A44A3F; }
+
 .about_head {
   text-align: center; }
   .about_head h2 {
