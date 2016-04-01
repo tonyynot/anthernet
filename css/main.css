@@ -1044,8 +1044,8 @@ hr {
   .post code {
     padding: .1em .25em;
     color: #586e75;
-    background-color: rgba(253, 246, 227, 0.7);
-    border: 1px solid rgba(250, 231, 179, 0.7);
+    background-color: #fdf6e3;
+    border: 1px solid #e1cfa1;
     border-radius: 3px; }
   .post pre {
     padding: .75em 2em;

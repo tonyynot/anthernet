@@ -31,7 +31,7 @@ $ gem install neat
 $ neat install
 </pre>
 
-Inside my <code>_scss</code> folder, I created a file to store my mixins and another file to store my color and font variables. Inside my <code>_main.scss</code>, the Bourbon and Neat .scss files are included along with <code>_variables.scss</code> and <code>_mixins.scss</code> at the top of the stylesheet as such:
+Inside my <i>_scss</i> folder, I created a file to store my mixins and another file to store my color and font variables. Inside my <i>_main.scss</i>, the Bourbon and Neat .scss files are included along with <i>_variables.scss</i> and <i>_mixins.scss</i> at the top of the stylesheet as such:
 <pre>
 @import "bourbon/bourbon";
 @import "neat/neat";
@@ -45,8 +45,8 @@ With everything setup in just a few minutes, I was able to start designing with 
 Avoiding tons of nested divs with long lists of classes such as <code>small-12 medium-10 large-6 columns</code> kept my markup semantic and clean. The Neat grid makes it as simple as using <code>@include span-columns(12);</code> inside the class itself. For media breakpoints, just throw in <code>@media screen and (max-width: 887px){...}</code>.
 
 ### Theming Made Easy with Sass
-When I was downloading and modifying other Jekyll themes, I found that the things I wanted to change most were font and color variations. With that in mind, I designed this theme so that the colors and fonts could easily be changed without having to replace every instance of that color/font in the document. I did this by making variables targeting each element that could be modified. 
+When I was downloading and modifying other Jekyll themes, I found that the things I wanted to change most were font and color variations. With that in mind, I designed this site so that the colors and fonts could easily be changed without having to replace every instance of that color/font in the document. I did this by making variables targeting each property that could be modified. 
 
-For example, lets say I defined the <code>$red</code> variable in my <code>_variables.scss</code> as <code>#FF0000</code>. At the top of my <code>_main.scss</code>, I can assign the <code>$red</code> variable to <code>$base_font</code> so in order to change the base font color, just assign any color variable defined in <code>_variables.scss</code> to <code>$base_font</code>. This will change the color in any class that has <code>$base_font</code> set as its color instead of having to do a find/replace all.
+With my color and font variables in place, I can assign one variable for multiple classes on the page. For example, let's say we declared <code>$link_color: $red</code>. By having the variable <code>$link_color</code> assigned as the color to multiple classes, changing the declared color variable will also change the color of every property where <code>$link_color</code> is assigned instead of having to do a find/replace all. Easy peasy!
 
 That's all there is to it! If you have any questions or comments, feel free to [tweet](http://www.twitter.com/tonecodes) at me or comment below.
