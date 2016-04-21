@@ -5,9 +5,9 @@ description: Using Jekyll, Bourbon, Gulp and a lot of free time, I redesigned my
 comments: true
 tags: design code jekyll gulp tutorials
 ---
-### Setting up Jekyll and Gulp
 It has been well over a year that I've been using Jekyll as a static site generator for my blog and up until now, I've been downloading and modifying various themes. I decided to start with a fresh base install of Jekyll and roll my own theme using Sass to process my CSS.
 
+### Setting up Jekyll and Gulp
 I wanted to use a task runner for my build, specifically Gulp.js to handle my Sass compiling and BrowserSync to auto refresh my changes on each save. I came across [this](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync) Github repo which provided an excellent gulpfile with the default Jekyll build files. In order to get my build system up and running, I ran the following installations:
 
 Jekyll - <code>$ gem install jekyll</code><br>
