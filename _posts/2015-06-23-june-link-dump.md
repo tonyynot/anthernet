@@ -3,7 +3,7 @@ layout: post
 title: May-June Link Dump [Web Developer Resources]
 description:
 comments: true
-tags: tools productivity
+tags: tools productivity links
 ---
 
 Bookmarks from May and June consisting of developer tools, resources and some tech news. Since I didn't share any links from last month, I made an effort to post some quality resources I've bookmarked from the last 2 months. I hope you find these links as useful as I have. Happy clicking!<br><br>
