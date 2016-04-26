@@ -1044,8 +1044,8 @@ hr {
   .post code {
     padding: .1em .25em;
     color: #586e75;
-    background-color: rgba(253, 246, 227, 0.7);
-    border: 1px solid rgba(250, 231, 179, 0.7);
+    background-color: #fdf6e3;
+    border: 1px solid #e1cfa1;
     border-radius: 3px; }
   .post pre {
     padding: .75em 2em;
@@ -1086,6 +1086,9 @@ blockquote {
       background-repeat: no-repeat,no-repeat,repeat-x;
       text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
       background-position: 0 95%,100% 95%,0 95%; }
+
+#disqus_thread a {
+  color: #A44A3F; }
 
 .about_head {
   text-align: center; }

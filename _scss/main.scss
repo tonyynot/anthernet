@@ -26,6 +26,7 @@ body {
         font-size: 1rem;
     }
 }
+
 h2 {
     color: $text_main;
     font-size: 1.9rem;
@@ -33,16 +34,20 @@ h2 {
     text-align: left;
     line-height: 2.2rem;
 }
+
 h3 {
     color: $text_main;
     margin-top: 1.9rem;
 }
+
 a, a:hover, a:visited, a:focus {
     text-decoration: none;
 }
+
 hr {
     @include hz_rule;
 }
+
 // Highlight color
 ::selection {
     background: $nav_links; /* WebKit/Blink Browsers */
@@ -78,6 +83,7 @@ hr {
                 text-decoration: none;
                 }
     }
+
     .nav_links {
         word-spacing: 1rem;
         font-family: $navbar_font;
@@ -108,6 +114,7 @@ hr {
     font-size: inherit;
     margin-top: 0;
      @include outer-container(100%);
+
          @media screen and (max-width: 887px){
             padding-left: 2rem;
             padding-right: 2rem;
@@ -125,6 +132,7 @@ hr {
 }
 .posts, .post {
     @include post_link_hover;
+
     a:visited {
         color: $text_main;
     }
@@ -185,14 +193,14 @@ hr {
     code {
         padding: .1em .25em;
         color: #586e75;
-        background-color: rgba(253,246,227,.7);
-        border: 1px solid rgba(250,231,179,.7);
+        background-color: $smoke;
+        border: 1px solid $lilac;
         border-radius: 3px;
     }
     pre {
         padding: .75em 2em;
         margin-bottom: 0;
-        background-color: #fdf6e3;
+        background-color: $smoke;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
@@ -226,7 +234,12 @@ blockquote {
         color: $text_main;
         padding-right: .5rem;
     }
+
 @include related_link_hover;
+}
+
+#disqus_thread a {
+    color: $link_hover;
 }
 
 // About page
