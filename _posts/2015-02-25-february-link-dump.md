@@ -4,7 +4,7 @@ title: February Link Dump
 description: A collection of bookmarks from February 2015 that I found useful or interesting. Mostly just some cool resources for developers.
 comments: true
 post_author: Anthony Ramella
-tags: tools productivity
+tags: tools productivity links
 ---
 A collection of bookmarks from this month that may or may not be worth sharing. Mostly just some cool resources for developers.
 

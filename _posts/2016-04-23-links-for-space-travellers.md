@@ -1,0 +1,28 @@
+---
+layout: post
+title: Link Roundup for Space Travellers
+description: 
+comments: true
+tags: space links
+---
+These are some of the many noteworthy links I've saved over the past few months. Going through my various bookmarks I realized I had a number of space related links so I decided to share them for a link roundup. If you are even <i>remotely</i> interested in space related things, you should enjoy at least 1 of these sites!
+
+[In Space We Trust](http://inspacewetrust.org/en/)<br>
+This is an interactive site that lets you relive the history of space exploration. I should warn you, it takes a little while to load but it's well worth it. After browsing around on this site, I actually learned some interesting new facts—like in 1957 the first dog went into orbit! I wonder if he got lonely up in that space kennel.
+
+[No Man's Sky (Preview)](https://www.youtube.com/watch?v=D-uMFHoF8VA)<br>
+I haven't been this excited for a video game in a while. No Man's Sky is a space survival/exploration game in which players can freely roam around an open universe which includes 18 quintillion randomly generated planets. In this video, lead developer Sean Murray gives a walkthrough explaining what it is you actually do in this game. It's worth mentioning that the universe in the game is so expansive that 99.8% of all the planets will go undiscovered. If you don't follow video games, just know this is pretty groundbreaking stuff.
+
+[Apollo 11 Lunar Landing in Real Time](http://www.firstmenonthemoon.com/)<br>
+On this site, you can watch the first moon landing in real time, with audio from Houston as well as the Lunar and Command Module. I imagine the hours of fun I'd have with this as a kid. Even as an adult I find it pretty cool as a temporary distraction. This is definitely worth checking out for a few minutes at least.<br>
+Bonus link: [Appolo 17 in Real Time](http://apollo17.org/)
+
+[Lightyear.fm](http://www.lightyear.fm/)<br> 
+<!-- FIX THIS -->
+Here is a site where you can view many lightyears a hit song from the past has travelled. Radio broadcasts actually leave Earth at the speed of light. It's not a site I spent a lot of time on, but I did enjoy seeing how far back I could go in space to see how far the songs travelled. It's a pretty cool little experiment that combines music with space exploration.
+
+[How Big Is Space](http://www.bbc.com/future/bespoke/20140304-how-big-is-space-interactive/index.html)<br>
+Another interactive site from BBC that gives an idea of how our solar system scales to other massive occurances that have taken place on Earth. Spoiler alert: It's bigger than you can comprehend.
+
+>"Space is big. Really big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist, but that's just peanuts to space."
+-Douglas Adams
