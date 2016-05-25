@@ -1,3 +1,4 @@
+// Styesheets
 @import "reset";
 @import "syntax";
 @import "404";
@@ -154,12 +155,12 @@ hr {
             font-family: $navbar_font;
             font-size: 1.5rem;
 
-        @media screen and (max-width: 887px){
-            display: block;
-            float: none;
-            padding-top: 1.7rem;
-            padding-bottom: .3rem;
-        }
+            @media screen and (max-width: 887px){
+                display: block;
+                float: none;
+                padding-top: 1.7rem;
+                padding-bottom: .3rem;
+            }
         }
 
         a {
@@ -167,9 +168,9 @@ hr {
         text-decoration: none;
         font-size: 1.2rem;
         
-        @media screen and (max-width: 887px){
-        font-size: 1.2rem;
-        }
+            @media screen and (max-width: 887px){
+            font-size: 1.2rem;
+            }
         }
     }
 }
