@@ -267,7 +267,7 @@ blockquote {
     @media screen and (max-width: 768px){
         @include span-columns(12 of 12);
     }
-
+ 
     .fa {
         font-size: 2.5rem;
         color: $text_main;
