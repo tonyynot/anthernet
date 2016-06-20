@@ -987,11 +987,18 @@ hr {
   display: block;
   margin: 0 0 1rem;
   border-radius: .25rem;
-  box-shadow: 3px 3px 5px 6px #ccc; }
+  box-shadow: 3px 3px 5px 6px #ccc;
+  text-align: center;
+  margin: auto;
+  display: block; }
   .posts img::after, .post img::after {
     clear: both;
     content: "";
     display: table; }
+
+.posts small, .post small {
+  text-align: center;
+  display: block; }
 
 .posts li, .post li {
   padding-top: .5rem;

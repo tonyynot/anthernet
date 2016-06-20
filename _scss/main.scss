@@ -141,6 +141,13 @@ hr {
 
         @include outer-container(100%);
         @include image_container;
+        text-align: center;
+        margin: auto;
+        display: block;
+    }
+    small {
+        text-align: center;
+        display: block;
     }
     li {
         padding-top:.5rem;
