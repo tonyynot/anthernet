@@ -24,5 +24,3 @@ It is important to note that imposter syndrome is just <i>your feeling</i> and n
 
 ### The Cure for Imposter Syndrome is Within You
 Be mindful of your knowledge and abilities, don't downplay what you do know and don't be afraid of what you don't know. Recognize when you don't know something and realize that anything can be learned. You are a valuable asset because of your ability to learn and problem solve, so if there is something you don't know, you will figure out a way to get it done!
-
-Please share any other 
