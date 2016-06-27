@@ -73,8 +73,8 @@
 @mixin image_container {
     display: block;
     margin: 0 0 1rem;
-    border-radius: .25rem;
-        -moz-box-shadow:    3px 3px 5px 6px #ccc;
-        -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-        box-shadow:         3px 3px 5px 6px #ccc;
+    // border-radius: .25rem;
+    //     -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    //     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    //     box-shadow:         3px 3px 5px 6px #ccc;
 }
