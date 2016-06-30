@@ -17,12 +17,13 @@ $black: #000000;
 // @import url(https://fonts.googleapis.com/css?family=Lora);
 @import url(https://fonts.googleapis.com/css?family=Rokkitt);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
-
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
 // Font Variables
 $kanit: 'Kanit', sans-serif;
 $lora: 'Lora', sans-serif;
 $rokkitt: 'Rokkitt';
 $merriweather: 'Merriweather';
+$inconsolata: 'Inconsolata';
 
 // Media Queries
 $mobile: new-breakpoint(max-width 664px 4);
