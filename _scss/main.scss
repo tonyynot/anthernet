@@ -75,7 +75,7 @@ hr {
         }
             a {
             color: $title;
-            font-size: 2.6rem;
+            font-size: 2.2rem;
             font-family: $navbar_font;
             text-decoration: none;
             }
@@ -89,7 +89,7 @@ hr {
         word-spacing: 1rem;
         font-family: $navbar_font;
         padding-top: 2.4rem;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         text-align: right;
         font-weight: 600;
         @include span-columns(4);
@@ -160,7 +160,7 @@ hr {
         span {
             float: right;
             font-family: $navbar_font;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
 
             @media screen and (max-width: 887px){
                 display: block;
