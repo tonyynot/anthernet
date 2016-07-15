@@ -15,7 +15,7 @@ $title: $celeste;
 $navbar: $aztec;
 
 // Font variables
-$navbar_font: $inconsolata;
+$navbar_font: $rokkitt;
 $base_font: $merriweather;
 
 // Base styles
@@ -75,7 +75,7 @@ hr {
         }
             a {
             color: $title;
-            font-size: 2.2rem;
+            font-size: 2.7rem;
             font-family: $navbar_font;
             text-decoration: none;
             }
@@ -89,7 +89,7 @@ hr {
         word-spacing: 1rem;
         font-family: $navbar_font;
         padding-top: 2.4rem;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         text-align: right;
         font-weight: 600;
         @include span-columns(4);

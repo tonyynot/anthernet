@@ -7,6 +7,7 @@
 @import url(https://fonts.googleapis.com/css?family=Rokkitt);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
+@import url(https://fonts.googleapis.com/css?family=Secular+One);
 * {
   margin: 0;
   padding: 0; }
@@ -909,17 +910,17 @@ hr {
           margin-right: 0; } }
     .title_nav .title a {
       color: #D3D0CB;
-      font-size: 2.2rem;
-      font-family: "Inconsolata";
+      font-size: 2.7rem;
+      font-family: "Rokkitt";
       text-decoration: none; }
     .title_nav .title a:hover {
       color: #A44A3F;
       text-decoration: none; }
   .title_nav .nav_links {
     word-spacing: 1rem;
-    font-family: "Inconsolata";
+    font-family: "Rokkitt";
     padding-top: 2.4rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: right;
     font-weight: 600;
     float: left;
@@ -1008,7 +1009,7 @@ hr {
       text-align: left; } }
   .posts li span, .post li span {
     float: right;
-    font-family: "Inconsolata";
+    font-family: "Rokkitt";
     font-size: 1.2rem; }
     @media screen and (max-width: 887px) {
       .posts li span, .post li span {
