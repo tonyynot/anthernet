@@ -16,13 +16,23 @@ author:
   linkedin: alramella
 
 google_analytics: 'UA-60032993-2'
-
+  
 # Build settings
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+# Staticman (comments generator)
+allowedFields: ['name', 'email', 'comment']
+branch: 'gh-pages'
+format: 'yaml'
+moderation: true
+path: _data/posts/{options.post-slug}
+requiredFields: ['name', 'comment']
+transforms:
+  email: 'md5'
 
 gems:
   - jekyll-gist
