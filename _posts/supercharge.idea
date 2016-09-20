@@ -9,12 +9,16 @@ During my first year of doing web development professionally, I have learned so 
 
 Here I will share some of the tools and applications I’ve used that have helped me and my team in various ways. Besides improving your coding skills, being a resourceful and prepared web developer will give you an advantage by increasing productivity and supercharging your development environment.
 
+I should note that not all of these applications are free, but do include free trials.
+
 *******
 
 ## [CodeKit](https://incident57.com/codekit/)
 ![CodeKit]({{ site.url }}/img/codekit.png)
 
 According to the developers behind CodeKit, they claim that this handy application is ‘like steroids for web developers’. I would find it hard to disagree, since CodeKit has built in compiling, Bower configuration and my favorite feature, auto-refresh in browsers whenever a save is made. Another great feature that is helpful is CodeKit comes with setups for Bootstrap, jQuery, Modernizr and Foundation out of the box so it cuts time setting up your project in one of those already easy to use frameworks. You can purchase a licensed copy of CodeKit for under $40 and of course there is a trial version so you can test it out for a few days before deciding if it’s something you would use every day.
+
+Side note: I have since switched to exclusively using Gulp.js as a build system to handle my compiling and browser refresh, but I would still recommend CodeKit for more of a quick start with less of a headache.
 
 *******
 
