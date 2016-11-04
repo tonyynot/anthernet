@@ -38,6 +38,8 @@ Since I have been relatively busy the past month or so, I haven't had much time 
 
 "It always takes longer than you expect, even when you take into account Hofstadter's Law." -Hofstadter's Law
 
+"Everybody has a testing environment. Some people are lucky enough to have a totally separate environment to run production in." -Unknown
+
 "Whatever you do in life, surround yourself with smart people who'll argue with you." -John Wooden
 
 "Innovation is like climbing a mountain. Most teams fail because they pick the wrong mountain to climb" -Sebastian Thrun
