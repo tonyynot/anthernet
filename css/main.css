@@ -1010,7 +1010,7 @@ hr {
   .posts li span, .post li span {
     float: right;
     font-family: "Rokkitt";
-    font-size: 1.2rem; }
+    font-size: 1.5rem; }
     @media screen and (max-width: 887px) {
       .posts li span, .post li span {
         display: block;
@@ -1048,6 +1048,9 @@ hr {
     @media screen and (max-width: 887px) {
       .post p {
         text-align: left; } }
+  .post ul {
+    color: #3B4145;
+    padding-bottom: 2rem; }
   .post code {
     padding: .1em .25em;
     color: #586e75;

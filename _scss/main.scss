@@ -68,7 +68,7 @@ hr {
         margin-top: 2.2rem;
         @include span-columns(8);
 
-         @media screen and (max-width: 887px){
+         @media screen and (max-width: 887px) {
             @include span-columns(12);
             margin-bottom: .5rem;
             text-align: center;
@@ -94,7 +94,7 @@ hr {
         font-weight: 600;
         @include span-columns(4);
 
-        @media screen and (max-width: 887px){
+        @media screen and (max-width: 887px) {
             text-align: center;
             padding-top: 1rem;
             @include span-columns(12);
@@ -116,7 +116,7 @@ hr {
     margin-top: 0;
      @include outer-container(100%);
 
-         @media screen and (max-width: 887px){
+         @media screen and (max-width: 887px) {
             padding-left: 2rem;
             padding-right: 2rem;
         }
@@ -131,6 +131,7 @@ hr {
     padding: 0;
     color: $title;
 }
+
 .posts, .post {
     @include post_link_hover;
 
@@ -152,17 +153,16 @@ hr {
     li {
         padding-top:.5rem;
         line-height: 3rem;
-
-    @media screen and (max-width: 887px){
-        line-height: 1.2rem;
-        text-align: left;
-    }
+        @media screen and (max-width: 887px) {
+            line-height: 1.2rem;
+            text-align: left;
+        }
         span {
             float: right;
             font-family: $navbar_font;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
 
-            @media screen and (max-width: 887px){
+            @media screen and (max-width: 887px) {
                 display: block;
                 float: none;
                 padding-top: 1.7rem;
@@ -175,7 +175,7 @@ hr {
         text-decoration: none;
         font-size: 1.2rem;
         
-            @media screen and (max-width: 887px){
+            @media screen and (max-width: 887px) {
             font-size: 1.2rem;
             }
         }
@@ -192,9 +192,13 @@ hr {
     p {
     line-height: 2.2rem;
     color: $text_main;
-        @media screen and (max-width: 887px){
+        @media screen and (max-width: 887px) {
             text-align: left;
         }
+    }
+    ul {
+        color: $text_main;
+        padding-bottom: 2rem;
     }
 
     // Change colors to vars
@@ -271,7 +275,7 @@ blockquote {
 
     @include span-columns(12);
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         @include span-columns(12 of 12);
     }
  
