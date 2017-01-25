@@ -820,10 +820,12 @@ a:visited {
   text-align: center; }
 
 html {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 *, *::after, *::before {
-  box-sizing: inherit; }
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
 
 body {
   background: #FFFFFF;
@@ -881,6 +883,7 @@ hr {
   max-width: 100% !important;
   border-bottom: 1px solid #333;
   margin-bottom: 3rem;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
   max-width: 1200px;
   margin-left: auto;
@@ -973,6 +976,8 @@ hr {
   color: #3B4145; }
   .posts a:hover, .post a:hover {
     color: #3B4145;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#A44A3F), to(#A44A3F));
+    background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#A44A3F, #A44A3F);
     background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
     background-size: .05em 1px,.05em 1px,1px 1px;
     background-repeat: no-repeat,no-repeat,repeat-x;
@@ -1030,6 +1035,8 @@ hr {
   padding-bottom: 1rem; }
   .post a {
     color: #3B4145;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#A44A3F), to(#A44A3F));
+    background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#A44A3F, #A44A3F);
     background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
     background-size: .05em 1px,.05em 1px,1px 1px;
     background-repeat: no-repeat,no-repeat,repeat-x;
@@ -1037,6 +1044,8 @@ hr {
     background-position: 0 95%,100% 95%,0 95%; }
     .post a:hover {
       color: #A44A3F;
+      background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#A44A3F), to(#A44A3F));
+      background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#A44A3F, #A44A3F);
       background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
       background-size: .05em 1px,.05em 1px,1px 1px;
       background-repeat: no-repeat,no-repeat,repeat-x;
@@ -1056,7 +1065,8 @@ hr {
     color: #586e75;
     background-color: #fdf6e3;
     border: 1px solid #e1cfa1;
-    border-radius: 3px; }
+    -webkit-border-radius: 3px;
+            border-radius: 3px; }
   .post pre {
     padding: .75em 2em;
     margin-bottom: 0;
@@ -1091,6 +1101,8 @@ blockquote {
     color: #A44A3F; }
     .related_posts a:hover {
       color: #3B4145;
+      background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#A44A3F), to(#A44A3F));
+      background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#A44A3F, #A44A3F);
       background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#A44A3F, #A44A3F);
       background-size: .05em 1px,.05em 1px,1px 1px;
       background-repeat: no-repeat,no-repeat,repeat-x;
