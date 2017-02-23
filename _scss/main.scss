@@ -13,6 +13,7 @@ $link_hover: $brick;
 $nav_links: $cutty;
 $title: $celeste;
 $navbar: $aztec;
+$post_date: $basegray;
 
 // Font variables
 $navbar_font: $rokkitt;
@@ -23,7 +24,7 @@ body {
     background: $white;
     font-family: $base_font;
     font-size: 1.2rem;
-    @media screen and (max-width: 887px) {
+    @media screen and (max-width: 664px 4) {
         font-size: 1rem;
     }
 }
@@ -129,7 +130,20 @@ hr {
 }
 .post_date {
     padding: 0;
-    color: $title;
+    color: $post_date;
+    &::after {
+        content: " | ";
+        @media screen and (max-width: 664px) {
+            content: "";
+        }    
+    }
+}
+.post_reading-time {
+    color: $post_date;
+    @media screen and (max-width: 664px) {
+        float: none;
+        display: block;
+    }
 }
 
 .posts, .post {
@@ -246,8 +260,7 @@ blockquote {
         color: $text_main;
         padding-right: .5rem;
     }
-
-@include related_link_hover;
+    @include related_link_hover;
 }
 
 #disqus_thread a {

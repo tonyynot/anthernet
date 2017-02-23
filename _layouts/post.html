@@ -2,7 +2,16 @@
 layout: default
 ---
 <h2>{{ page.title }}</h2>
-<span class="post_date">{{ page.date | date: '%B %d, %Y' }}</span>
+<span class="post_date">{{ page.date | date: '%B %d, %Y' }}</span> 
+<span class="post_reading-time">Reading time - 
+    {% assign words = content | number_of_words %}
+    {% if words < 360 %}
+        1 minute
+    {% else %}
+        {{ words | divided_by: 180 }} minutes
+    {% endif %}
+    </span>
+
 <hr>
 <div class="post">
 

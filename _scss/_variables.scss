@@ -1,16 +1,17 @@
 // Color Variables
-$aztec: #3C3530;
-$white: #FFFFFF;
-$celeste: #D3D0CB;
-$cutty: #547D71;
-$regal: #254055;
-$brick: #A44A3F;
-$tuna: #353946;
-$charcoal: #474747;
-$charade: #3B4145;
-$smoke: #fdf6e3;
-$lilac: #e1cfa1;
-$black: #000000;
+$aztec:     #3C3530;
+$white:     #FFFFFF;
+$celeste:   #D3D0CB;
+$cutty:     #547D71;
+$regal:     #254055;
+$brick:     #A44A3F;
+$tuna:      #353946;
+$charcoal:  #474747;
+$charade:   #3B4145;
+$smoke:     #fdf6e3;
+$lilac:     #e1cfa1;
+$black:     #000000;
+$basegray:  #aaaaaa;
 
 // Google fonts
 // @import url(https://fonts.googleapis.com/css?family=Kanit);
@@ -28,4 +29,4 @@ $inconsolata: 'Inconsolata';
 $secular: 'Secular One';
 
 // Media Queries
-$mobile: new-breakpoint(max-width 664px 4);
+// $mobile: (max-width: 664px 4);
