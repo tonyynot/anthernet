@@ -47,6 +47,6 @@ Avoiding tons of nested divs with long lists of classes such as <code>small-12 m
 ### Theming Made Easy with Sass
 When I was downloading and modifying other Jekyll themes, I found that the things I wanted to change most were font and color variations. With that in mind, I designed this site so that the colors and fonts could easily be changed without having to replace every instance of that color/font in the document. I did this by making variables targeting each property that could be modified. 
 
-With my color and font variables in place, I can assign one variable for multiple classes on the page. For example, let's say we declared <code>$link_color: $red</code>. By having the variable <code>$link_color</code> assigned as the color to multiple classes, changing the declared color variable will also change the color of every property where <code>$link_color</code> is assigned instead of having to do a find/replace all. Easy peasy!
+With my color and font variables in place, I can assign one variable for multiple classes on the page. For example, let's say we declared <code>$link_color: $red</code>. By having the variable <code>$link_color</code> assigned as the color to multiple classes, changing the declared color variable will also change the color of every property where <code>$link_color</code> is assigned instead of having to do a find/replace all.
 
 That's all there is to it! If you have any questions or comments, feel free to [tweet](http://www.twitter.com/tonecodes) at me or comment below.
