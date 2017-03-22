@@ -1065,14 +1065,14 @@ hr {
     padding-bottom: 2rem; }
   .post code {
     padding: .1em .25em;
-    color: #586e75;
-    background-color: #fdf6e3;
+    color: #FFFFFF;
+    background-color: #353946;
     border: 1px solid #e1cfa1;
     border-radius: 3px; }
   .post pre {
     padding: .75em 2em;
     margin-bottom: 0;
-    background-color: #fdf6e3;
+    background-color: #353946;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch; }
 

@@ -218,15 +218,15 @@ hr {
     // Change colors to vars
     code {
         padding: .1em .25em;
-        color: #586e75;
-        background-color: $smoke;
+        color: $white;
+        background-color: $tuna;
         border: 1px solid $lilac;
         border-radius: 3px;
     }
     pre {
         padding: .75em 2em;
         margin-bottom: 0;
-        background-color: $smoke;
+        background-color: $tuna;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }

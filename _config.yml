@@ -4,9 +4,9 @@ description: >
   a curated web developer blog with resources, articles and opinions by Anthony Ramella
 
 # Jekyll-FTP
-username:   anthlufn
-server_url: ftp.anthonyramella.com
-remote_dir: /public_html
+# username:
+# server_url: 
+# remote_dir: 
 
 # Baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://anthonyramella.com" # the base hostname & protocol for your site

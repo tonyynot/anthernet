@@ -11,10 +11,12 @@ BEM is a CSS methodology that aims to make CSS more scalable, reusable and maint
 ## The BEM Structure
 The official BEM naming convention goes as follows:
 
+{% highlight css %}
     .block {}
     .block--modifier {}
     .block__element {}
     .block__element--modifier {}
+{% endhighlight %}
 
 While the double underscores and hyphens look a little goofy at first, they actually make sense considering a name could already have more than one word such as `.sign-up`. When using the BEM naming convention, its the double underscores or hyphens that give a visual cue to the relationship of its containing block.
 
@@ -42,6 +44,7 @@ An element is always part of a block, not another element. This means that eleme
 
 An example of nesting in a preprocessor:
 
+{% highlight css %}
     .navbar {
         ... rules ....
 
@@ -53,6 +56,7 @@ An example of nesting in a preprocessor:
             }
         }
     }
+{% endhighlight %}
 
 [1]: https://www.jernejsila.com/2016/06/29/css-specificity-fundamental-learn/
 [2]: https://en.bem.info/methodology/naming-convention/#element-name
