@@ -93,5 +93,5 @@ setInterval(function() {
 ## Initial troubleshooting
 Since I'm dealing with a local file directory for now, the bot is running locally and is dependent on my computer being on (silly, I know). So what I'm working on doing next is uploading my image directory to Google Drive and have the bot run via Heroku while using Google's Node.js client to determine the path. My first night running the bot, I went to bed and noticed it had stopped running when my computer was inactive (duh). So to fix this issue, I installed [forever](https://github.com/foreverjs/forever) which is a CLI tool that ensures my node script runs continuously.
 
-Here is the link to the repository via [Github](https://github.com/tonyynot/random-image-tweet).
+Here is the link to the repository via [Github](https://github.com/tonyynot/random-image-tweet). A demo of the bot can be found [here](http://twitter.com/blank_waves).
 Please critique everything from concept to code, I found I enjoy building Twitter bots and I'd like to improve this concept to the point where it's an account people would actually follow. Thanks for reading!
