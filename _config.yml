@@ -39,7 +39,7 @@ requiredFields: ['name', 'comment']
 transforms:
   email: 'md5'
 
-gems:
+plugins:
   - jekyll-gist
   - jekyll/tagging
   - jekyll-tagging-related_posts
