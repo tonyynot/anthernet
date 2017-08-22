@@ -44,7 +44,7 @@ An element is always part of a block, not another element. This means that eleme
 
 An example of nesting in a preprocessor:
 
-{% highlight css %}
+{% highlight sass %}
     .navbar {
         ... rules ....
 

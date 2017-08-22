@@ -21,7 +21,7 @@ $base_font: $merriweather;
 
 // Base styles
 body {
-    background: $white;
+    background: $smoke;
     font-family: $base_font;
     font-size: 1.2rem;
     @media screen and (max-width: 664px 4) {
@@ -115,6 +115,7 @@ hr {
     max-width: 100%;
     font-size: inherit;
     margin-top: 0;
+    text-align: left;
      @include outer-container(100%);
 
          @media screen and (max-width: 887px) {
@@ -175,6 +176,7 @@ hr {
             float: right;
             font-family: $navbar_font;
             font-size: 1.5rem;
+            color: $basegray;
 
             @media screen and (max-width: 887px) {
                 display: block;
@@ -218,15 +220,14 @@ hr {
     // Change colors to vars
     code {
         padding: .1em .25em;
-        color: $white;
-        background-color: $tuna;
-        border: 1px solid $lilac;
-        border-radius: 3px;
+        // color: $white;
+        // border: 1px solid $lilac;
+        // border-radius: 3px;
     }
     pre {
         padding: .75em 2em;
         margin-bottom: 0;
-        background-color: $tuna;
+        // background-color: $tuna;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }

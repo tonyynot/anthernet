@@ -26,7 +26,7 @@ google_analytics: 'UA-60032993-2'
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter: pygments
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 # Staticman (comments generator)
@@ -39,7 +39,7 @@ requiredFields: ['name', 'comment']
 transforms:
   email: 'md5'
 
-plugins:
+plugins_dir:
   - jekyll-gist
   - jekyll/tagging
   - jekyll-tagging-related_posts
