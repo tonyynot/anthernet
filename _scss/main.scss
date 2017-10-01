@@ -8,22 +8,22 @@
 @import "mixins";
 
 // Color variables:
-$text_main: $charade;
+$text_main: $charcoal;
 $link_hover: $brick;
 $nav_links: $cutty;
 $title: $celeste;
-$navbar: $aztec;
+$navbar: $charcoal;
 $post_date: $basegray;
 
 // Font variables
 $navbar_font: $rokkitt;
-$base_font: $merriweather;
+$base_font: $inconsolata;
 
 // Base styles
 body {
-    background: $smoke;
+    background: $white;
     font-family: $base_font;
-    font-size: 1.2rem;
+    font-size: 16px;
     @media screen and (max-width: 664px 4) {
         font-size: 1rem;
     }
@@ -112,7 +112,7 @@ hr {
 
 // Site wrapper
 .site {
-    max-width: 100%;
+    min-width: 77%;
     font-size: inherit;
     margin-top: 0;
     text-align: left;
@@ -219,15 +219,20 @@ hr {
 
     // Change colors to vars
     code {
-        padding: .1em .25em;
-        // color: $white;
-        // border: 1px solid $lilac;
-        // border-radius: 3px;
+        padding: .4em .25em;
+        color: $charcoal;
+        font-size: 13px;
+        background-color: $white;
+        border: 1px solid $charcoal;
+        border-radius: 3px;
     }
     pre {
         padding: .75em 2em;
         margin-bottom: 0;
-        // background-color: $tuna;
+        color: $white;
+        font-size: 13px;
+        border-radius: 6px;
+        background-color: $tuna;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
