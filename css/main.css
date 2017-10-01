@@ -4,10 +4,8 @@
 /*
 /*****************************************************************************/
 /* Global Reset */
-@import url(https://fonts.googleapis.com/css?family=Rokkitt);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
-@import url(https://fonts.googleapis.com/css?family=Secular+One);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
 * {
   margin: 0;
   padding: 0; }
@@ -681,7 +679,7 @@ html {
 body {
   background: #FFFFFF;
   font-family: "Inconsolata";
-  font-size: 16px; }
+  font-size: 18px; }
   @media screen and (max-width: 664px 4) {
     body {
       font-size: 1rem; } }
@@ -729,7 +727,7 @@ hr {
   /* Gecko Browsers */ }
 
 .title_nav {
-  background-color: #474747;
+  background-color: #3C3530;
   z-index: 100;
   max-width: 100% !important;
   border-bottom: 1px solid #333;
@@ -744,7 +742,7 @@ hr {
     display: table; }
   .title_nav .title {
     margin-bottom: 0;
-    margin-top: 2.2rem;
+    margin-top: 1rem;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -763,17 +761,16 @@ hr {
           margin-right: 0; } }
     .title_nav .title a {
       color: #D3D0CB;
-      font-size: 2.7rem;
-      font-family: "Rokkitt";
+      font-size: 23px;
+      font-family: "Source Code Pro";
       text-decoration: none; }
     .title_nav .title a:hover {
       color: #A44A3F;
       text-decoration: none; }
   .title_nav .nav_links {
     word-spacing: 1rem;
-    font-family: "Rokkitt";
-    padding-top: 2.4rem;
-    font-size: 1.7rem;
+    font-family: "Source Code Pro";
+    font-size: 18px;
     text-align: right;
     font-weight: 600;
     float: left;
@@ -782,10 +779,12 @@ hr {
     width: 31.76157%; }
     .title_nav .nav_links:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 887px) {
+      .title_nav .nav_links {
+        padding-top: 1rem; } }
     @media screen and (max-width: 887px) {
       .title_nav .nav_links {
         text-align: center;
-        padding-top: 1rem;
         float: left;
         display: block;
         margin-right: 2.35765%;
@@ -802,6 +801,7 @@ hr {
   min-width: 77%;
   font-size: inherit;
   margin-top: 0;
+  margin-bottom: 1rem;
   text-align: left;
   max-width: 100%;
   margin-left: auto;
@@ -875,8 +875,8 @@ hr {
       text-align: left; } }
   .posts li span, .post li span {
     float: right;
-    font-family: "Rokkitt";
-    font-size: 1.5rem;
+    font-family: "Source Code Pro";
+    font-size: 18px;
     color: #aaaaaa; }
     @media screen and (max-width: 887px) {
       .posts li span, .post li span {
@@ -926,14 +926,7 @@ hr {
     border: 1px solid #474747;
     border-radius: 3px; }
   .post pre {
-    padding: .75em 2em;
-    margin-bottom: 0;
-    color: #FFFFFF;
-    font-size: 13px;
-    border-radius: 6px;
-    background-color: #353946;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; }
+    padding: .75em 2em; }
 
 blockquote {
   letter-spacing: .2rem;

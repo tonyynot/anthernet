@@ -17,17 +17,20 @@ $greenterm: #00FF00;
 // Google fonts
 // @import url(https://fonts.googleapis.com/css?family=Kanit);
 // @import url(https://fonts.googleapis.com/css?family=Lora);
-@import url(https://fonts.googleapis.com/css?family=Rokkitt);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
+// @import url(https://fonts.googleapis.com/css?family=Rokkitt);
+// @import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
-@import url(https://fonts.googleapis.com/css?family=Secular+One);
+// @import url(https://fonts.googleapis.com/css?family=Secular+One);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
 // Font Variables
 $kanit: 'Kanit', sans-serif;
 $lora: 'Lora', sans-serif;
 $rokkitt: 'Rokkitt';
 $merriweather: 'Merriweather';
-$inconsolata: 'Inconsolata';
 $secular: 'Secular One';
+
+$sourcecode: 'Source Code Pro';
+$inconsolata: 'Inconsolata';
 
 // Media Queries
 // $mobile: (max-width: 664px 4);

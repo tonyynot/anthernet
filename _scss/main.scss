@@ -12,18 +12,18 @@ $text_main: $charcoal;
 $link_hover: $brick;
 $nav_links: $cutty;
 $title: $celeste;
-$navbar: $charcoal;
+$navbar: $aztec;
 $post_date: $basegray;
 
 // Font variables
-$navbar_font: $rokkitt;
+$navbar_font: $sourcecode;
 $base_font: $inconsolata;
 
 // Base styles
 body {
     background: $white;
     font-family: $base_font;
-    font-size: 16px;
+    font-size: 18px;
     @media screen and (max-width: 664px 4) {
         font-size: 1rem;
     }
@@ -66,7 +66,7 @@ hr {
 
     .title {
         margin-bottom: 0;
-        margin-top: 2.2rem;
+        margin-top: 1rem;
         @include span-columns(8);
 
          @media screen and (max-width: 887px) {
@@ -76,7 +76,7 @@ hr {
         }
             a {
             color: $title;
-            font-size: 2.7rem;
+            font-size: 23px;
             font-family: $navbar_font;
             text-decoration: none;
             }
@@ -89,15 +89,16 @@ hr {
     .nav_links {
         word-spacing: 1rem;
         font-family: $navbar_font;
-        padding-top: 2.4rem;
-        font-size: 1.7rem;
+        font-size: 18px;
         text-align: right;
         font-weight: 600;
         @include span-columns(4);
 
+        @media screen and (min-width: 887px) {
+            padding-top: 1rem;
+        }
         @media screen and (max-width: 887px) {
             text-align: center;
-            padding-top: 1rem;
             @include span-columns(12);
         }
         a {
@@ -115,6 +116,7 @@ hr {
     min-width: 77%;
     font-size: inherit;
     margin-top: 0;
+    margin-bottom: 1rem;
     text-align: left;
      @include outer-container(100%);
 
@@ -175,7 +177,7 @@ hr {
         span {
             float: right;
             font-family: $navbar_font;
-            font-size: 1.5rem;
+            font-size: 18px;
             color: $basegray;
 
             @media screen and (max-width: 887px) {
@@ -228,13 +230,13 @@ hr {
     }
     pre {
         padding: .75em 2em;
-        margin-bottom: 0;
-        color: $white;
-        font-size: 13px;
-        border-radius: 6px;
-        background-color: $tuna;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        // margin-bottom: 0;
+        // color: $white;
+        // font-size: 13px;
+        // border-radius: 6px;
+        // background-color: $tuna;
+        // overflow-x: auto;
+        // -webkit-overflow-scrolling: touch;
     }
 }
 
