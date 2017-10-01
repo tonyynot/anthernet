@@ -26,18 +26,18 @@ Then loading Bourbon into the project with<br>
 <code>$ bourbon install</code>
 
 *Note: Installing Neat is exactly the same*<br>
-<pre>
+{% highlight bash %}
 $ gem install neat 
 $ neat install
-</pre>
+{% endhighlight %}
 
 Inside my <i>_scss</i> folder, I created a file to store my mixins and another file to store my color and font variables. Inside my <i>_main.scss</i>, the Bourbon and Neat .scss files are included along with <i>_variables.scss</i> and <i>_mixins.scss</i> at the top of the stylesheet as such:
-<pre>
+{% highlight sass %}
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "variables";
 @import "mixins";
-</pre>
+{% endhighlight %}
 
 ### Design & Layout
 With everything setup in just a few minutes, I was able to start designing with ease. Having my Gulp build system running BrowserSync, trying out new fonts, colors and grid layouts with Neat was a breeze. It actually made the design part of the build very fun for me and trying out new ideas was a lot less tedious. Using the Neat grid changed the way I approach CSS. Things like nesting pseudo elements, using variables and defining breakpoints and media queries within a class seems to be the most logical way to write CSS. 

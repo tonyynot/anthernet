@@ -22,24 +22,18 @@ It's worth noting that in my dependencies I'm including a config.js file which s
 
 {% highlight javascript %}
 function tweetImage() {
-
     var tweet = new Twit(config);
-    
     // Define images path
     var imagesArray = fs.readdirSync('./images/');
-
     // Shuffle images
     shuffle(imagesArray);
-
     // Pick random image
     var randImage = shuffle.pick(imagesArray);
     console.log("IMAGE CHOSEN: " + randImage);
-
     // Convert content to base64
     var b64content = fs.readFileSync('./images/' + randImage, {
         encoding: 'base64'
     });
-
     // Assign b64 content to tweet
     tweet.post('media/upload', {
         media_data: b64content
@@ -50,34 +44,29 @@ The imagesArray variable is assigned to read all contents of the images director
 
 {% highlight javascript %}
 function(err, data, response) {
-        if (err) {
+   if (err) {
+      console.log('ERROR');
+      console.log(err);
+   } 
+   else {
+      console.log('UPLOADING....');
+      // Post tweet
+      tweet.post('statuses/update', {
+         media_ids: new Array(data.media_id_string)
+      },
+      function(err, data, response) {
+         if (err) {
             console.log('ERROR');
             console.log(err);
-        } 
-
-        else {
-            console.log('UPLOADING....');
-
-            // Post tweet
-            tweet.post('statuses/update', {
-                    media_ids: new Array(data.media_id_string)
-                },
-                function(err, data, response) {
-                    if (err) {
-                        console.log('ERROR');
-                        console.log(err);
-                    } 
-                    else {
-                        console.log('An image has successfully been posted!');
-
-                        // Delete image after tweeting
-                        fs.unlinkSync('./images/' + randImage);
-                    }
-                }
-            );
-        }
-    });
-}
+         } 
+         else {
+            console.log('An image has successfully been posted!');
+            // Delete image after tweeting
+            fs.unlinkSync('./images/' + randImage);
+         }
+      });
+   }
+});
 {% endhighlight %}
 
 The function that posts the image to Twitter is wrapped in a conditional for basic error handling. Once the image has successfully been posted, the file is deleted through node file system so that it cannot be posted again.

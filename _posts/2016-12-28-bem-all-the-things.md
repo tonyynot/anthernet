@@ -45,17 +45,15 @@ An element is always part of a block, not another element. This means that eleme
 An example of nesting in a preprocessor:
 
 {% highlight sass %}
-    .navbar {
-        ... rules ....
-
-        &__tab {
-            ... rules ....
-
-            &--active {
-                ... rules ....
-            }
-        }
-    }
+.navbar {
+   ... rules ....
+   &__tab {
+      ... rules ....
+      &--active {
+         ... rules ....
+      }
+   }
+}
 {% endhighlight %}
 
 [1]: https://www.jernejsila.com/2016/06/29/css-specificity-fundamental-learn/
