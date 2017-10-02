@@ -13,7 +13,7 @@
     padding: 0;
     border: none;
     border-top: medium double #333;
-    color: #333;
+    color: $brick;
     text-align: center;
     margin: 1.9rem 0 0 0;
 
@@ -24,15 +24,15 @@
         position: relative;
         top: -0.8em;
         padding: 0 0.25em;
-        background: $white;
+        background: $altblack;
     }   
 }
 @mixin hover_effect {
 
-        background: linear-gradient($white,$white),linear-gradient($white,$white),linear-gradient($link_hover, $link_hover);
+        background: linear-gradient($altblack,$altblack),linear-gradient($altblack,$altblack),linear-gradient($link_hover, $link_hover);
         background-size: .05em 1px,.05em 1px,1px 1px;
         background-repeat: no-repeat,no-repeat,repeat-x;
-        text-shadow: .03em 0 $white,-.03em 0 $white,0 .03em $white,0 -.03em $white,.06em 0 $white,-.06em 0 $white,.09em 0 $white,-.09em 0 $white,.12em 0 $white,-.12em 0 $white,.15em 0 $white,-.15em 0 $white;
+        text-shadow: .03em 0 $altblack,-.03em 0 $altblack,0 .03em $altblack,0 -.03em $altblack,.06em 0 $altblack,-.06em 0 $altblack,.09em 0 $altblack,-.09em 0 $altblack,.12em 0 $altblack,-.12em 0 $altblack,.15em 0 $altblack,-.15em 0 $altblack;
         background-position: 0 95%,100% 95%,0 95%;
 
 }

@@ -8,22 +8,23 @@
 @import "mixins";
 
 // Color variables:
-$text_main: $charcoal;
+$text_main: $altgray;
 $link_hover: $brick;
 $nav_links: $cutty;
 $title: $celeste;
-$navbar: $aztec;
+$navbar: $regal;
 $post_date: $basegray;
 
 // Font variables
-$navbar_font: $sourcecode;
-$base_font: $inconsolata;
+$navbar_font: $overpass;
+$base_font: $sharetech;
 
 // Base styles
 body {
-    background: $white;
+    background: $altblack;
     font-family: $base_font;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 400;
     @media screen and (max-width: 664px 4) {
         font-size: 1rem;
     }
@@ -32,7 +33,7 @@ body {
 h2 {
     color: $text_main;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 400;
     text-align: left;
     letter-spacing: 2px;
     line-height: 2.2rem;
@@ -98,10 +99,11 @@ header.title_nav {
 
     .nav_links {
         word-spacing: 1rem;
-        font-family: $navbar_font;
+        font-family: $sharetech;
         font-size: 18px;
         text-align: right;
-        font-weight: 600;
+        font-weight: 400;
+        text-transform: uppercase;
         @include span-columns(4);
 
         @media screen and (min-width: 887px) {
@@ -133,6 +135,15 @@ header.title_nav {
      @media screen and (max-width: 887px) {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 400;
+        text-align: left;
+        letter-spacing: .6px;
+        line-height: 2rem;
     }
 }
 
@@ -202,7 +213,8 @@ header.title_nav {
             color: $text_main;
             text-decoration: none;
             font-size: 18px;
-            letter-spacing: 1px;
+            text-transform: uppercase;
+            letter-spacing: 0.1px;
         
             @media screen and (max-width: 887px) {
             font-size: 1.2rem;
@@ -218,17 +230,20 @@ header.title_nav {
 
     @include article_link_hover;
 
+    h2 {
+        font-size: 18px;
+        margin-top: 2.2rem;
+    }
+
     p {
-    line-height: 2.2rem;
-    color: $text_main;
+        color: $text_main;
         @media screen and (max-width: 887px) {
             text-align: left;
             line-height: 1.8rem;
         }
     }
-    ul {
+    ul, ol {
         color: $text_main;
-        padding-bottom: 2rem;
 
         li {
             line-height: 2.2rem;
@@ -237,19 +252,17 @@ header.title_nav {
 
     // Change colors to vars
     code {
-        padding: .4em .25em;
+        padding: .2em .25em;
         font-size: 13px;
         border-radius: 3px;
+
+        &.highlighter-rouge {
+            background-color: $altblack;
+        }
     }
     pre {
-        // padding: .75em 2em;
-        // margin-bottom: 0;
-        // color: $white;
-        // font-size: 13px;
         border-radius: 6px;
-        // background-color: $tuna;
-        // overflow-x: auto;
-        // -webkit-overflow-scrolling: touch;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
@@ -294,7 +307,11 @@ blockquote {
 // About page
 .about_head {
     text-align: center;
-
+    .about_random {
+        span {
+        color: $basegray;
+        }
+    }
     h2 {
         text-align: center;
     }
@@ -305,7 +322,7 @@ blockquote {
     font-size: 80%;
     color: $text_main;
     margin-top: 0;
-    border-top: 4px solid $nav_links;
+    border-top: 4px solid $regal;
     overflow: hidden;
     text-align: center;
     width: 100%;

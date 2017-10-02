@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BEM all the things!
+title: Standardized CSS Naming Conventions with BEM
 description: What is BEM and how does it improve CSS? How to create and maintain more readable and object oriented CSS through the BEM naming metholodology.
 comments: true
 tags: tutorials, how-to, learning, code, css 

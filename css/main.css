@@ -4,8 +4,7 @@
 /*
 /*****************************************************************************/
 /* Global Reset */
-@import url(https://fonts.googleapis.com/css?family=Inconsolata);
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url("https://fonts.googleapis.com/css?family=Overpass+Mono|Share+Tech+Mono");
 * {
   margin: 0;
   padding: 0; }
@@ -677,23 +676,24 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #FFFFFF;
-  font-family: "Inconsolata";
-  font-size: 18px; }
+  background: #222222;
+  font-family: "Share Tech Mono";
+  font-size: 16px;
+  font-weight: 400; }
   @media screen and (max-width: 664px 4) {
     body {
       font-size: 1rem; } }
 
 h2 {
-  color: #474747;
+  color: #c8c8c8;
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 400;
   text-align: left;
   letter-spacing: 2px;
   line-height: 2.2rem; }
 
 h3 {
-  color: #474747;
+  color: #c8c8c8;
   margin-top: 1.9rem; }
 
 a, a:hover, a:visited, a:focus {
@@ -703,7 +703,7 @@ hr {
   padding: 0;
   border: none;
   border-top: medium double #333;
-  color: #333;
+  color: #A44A3F;
   text-align: center;
   margin: 1.9rem 0 0 0; }
   hr:after {
@@ -713,7 +713,7 @@ hr {
     position: relative;
     top: -0.8em;
     padding: 0 0.25em;
-    background: #FFFFFF; }
+    background: #222222; }
 
 @media screen and (max-width: 887px) {
   figure {
@@ -735,7 +735,7 @@ header.title_nav {
   margin-bottom: 2rem; }
 
 .title_nav {
-  background-color: #3C3530;
+  background-color: #254055;
   z-index: 100;
   max-width: 100% !important;
   border-bottom: 1px solid #333;
@@ -770,17 +770,18 @@ header.title_nav {
     .title_nav .title a {
       color: #D3D0CB;
       font-size: 23px;
-      font-family: "Source Code Pro";
+      font-family: "Overpass Mono";
       text-decoration: none; }
     .title_nav .title a:hover {
       color: #A44A3F;
       text-decoration: none; }
   .title_nav .nav_links {
     word-spacing: 1rem;
-    font-family: "Source Code Pro";
+    font-family: "Share Tech Mono";
     font-size: 18px;
     text-align: right;
-    font-weight: 600;
+    font-weight: 400;
+    text-transform: uppercase;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -822,6 +823,13 @@ header.title_nav {
     .site {
       padding-left: 2rem;
       padding-right: 2rem; } }
+  .site h2 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: .6px;
+    line-height: 2rem; }
 
 .page_subtitle {
   margin-bottom: 2rem;
@@ -844,17 +852,17 @@ header.title_nav {
       display: block; } }
 
 .posts a, .post a {
-  color: #474747; }
+  color: #c8c8c8; }
   .posts a:hover, .post a:hover {
-    color: #474747;
-    background: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#A44A3F, #A44A3F);
+    color: #c8c8c8;
+    background: linear-gradient(#222222, #222222), linear-gradient(#222222, #222222), linear-gradient(#A44A3F, #A44A3F);
     background-size: .05em 1px,.05em 1px,1px 1px;
     background-repeat: no-repeat,no-repeat,repeat-x;
-    text-shadow: 0.03em 0 #FFFFFF, -0.03em 0 #FFFFFF, 0 0.03em #FFFFFF, 0 -0.03em #FFFFFF, 0.06em 0 #FFFFFF, -0.06em 0 #FFFFFF, 0.09em 0 #FFFFFF, -0.09em 0 #FFFFFF, 0.12em 0 #FFFFFF, -0.12em 0 #FFFFFF, 0.15em 0 #FFFFFF, -0.15em 0 #FFFFFF;
+    text-shadow: 0.03em 0 #222222, -0.03em 0 #222222, 0 0.03em #222222, 0 -0.03em #222222, 0.06em 0 #222222, -0.06em 0 #222222, 0.09em 0 #222222, -0.09em 0 #222222, 0.12em 0 #222222, -0.12em 0 #222222, 0.15em 0 #222222, -0.15em 0 #222222;
     background-position: 0 95%,100% 95%,0 95%; }
 
 .posts a:visited, .post a:visited {
-  color: #474747; }
+  color: #c8c8c8; }
 
 .posts img, .post img {
   max-width: 100%;
@@ -883,7 +891,7 @@ header.title_nav {
       text-align: left; } }
   .posts li span, .post li span {
     float: right;
-    font-family: "Source Code Pro";
+    font-family: "Overpass Mono";
     font-size: 15px;
     color: #aaaaaa; }
     @media screen and (max-width: 887px) {
@@ -893,10 +901,11 @@ header.title_nav {
         padding-top: 1.7rem;
         padding-bottom: .3rem; } }
   .posts li a, .post li a {
-    color: #474747;
+    color: #c8c8c8;
     text-decoration: none;
     font-size: 18px;
-    letter-spacing: 1px; }
+    text-transform: uppercase;
+    letter-spacing: 0.1px; }
     @media screen and (max-width: 887px) {
       .posts li a, .post li a {
         font-size: 1.2rem; } }
@@ -905,37 +914,41 @@ header.title_nav {
   padding-top: 1rem;
   padding-bottom: 1rem; }
   .post a {
-    color: #474747;
-    background: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#A44A3F, #A44A3F);
+    color: #c8c8c8;
+    background: linear-gradient(#222222, #222222), linear-gradient(#222222, #222222), linear-gradient(#A44A3F, #A44A3F);
     background-size: .05em 1px,.05em 1px,1px 1px;
     background-repeat: no-repeat,no-repeat,repeat-x;
-    text-shadow: 0.03em 0 #FFFFFF, -0.03em 0 #FFFFFF, 0 0.03em #FFFFFF, 0 -0.03em #FFFFFF, 0.06em 0 #FFFFFF, -0.06em 0 #FFFFFF, 0.09em 0 #FFFFFF, -0.09em 0 #FFFFFF, 0.12em 0 #FFFFFF, -0.12em 0 #FFFFFF, 0.15em 0 #FFFFFF, -0.15em 0 #FFFFFF;
+    text-shadow: 0.03em 0 #222222, -0.03em 0 #222222, 0 0.03em #222222, 0 -0.03em #222222, 0.06em 0 #222222, -0.06em 0 #222222, 0.09em 0 #222222, -0.09em 0 #222222, 0.12em 0 #222222, -0.12em 0 #222222, 0.15em 0 #222222, -0.15em 0 #222222;
     background-position: 0 95%,100% 95%,0 95%; }
     .post a:hover {
       color: #A44A3F;
-      background: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#A44A3F, #A44A3F);
+      background: linear-gradient(#222222, #222222), linear-gradient(#222222, #222222), linear-gradient(#A44A3F, #A44A3F);
       background-size: .05em 1px,.05em 1px,1px 1px;
       background-repeat: no-repeat,no-repeat,repeat-x;
-      text-shadow: 0.03em 0 #FFFFFF, -0.03em 0 #FFFFFF, 0 0.03em #FFFFFF, 0 -0.03em #FFFFFF, 0.06em 0 #FFFFFF, -0.06em 0 #FFFFFF, 0.09em 0 #FFFFFF, -0.09em 0 #FFFFFF, 0.12em 0 #FFFFFF, -0.12em 0 #FFFFFF, 0.15em 0 #FFFFFF, -0.15em 0 #FFFFFF;
+      text-shadow: 0.03em 0 #222222, -0.03em 0 #222222, 0 0.03em #222222, 0 -0.03em #222222, 0.06em 0 #222222, -0.06em 0 #222222, 0.09em 0 #222222, -0.09em 0 #222222, 0.12em 0 #222222, -0.12em 0 #222222, 0.15em 0 #222222, -0.15em 0 #222222;
       background-position: 0 95%,100% 95%,0 95%; }
+  .post h2 {
+    font-size: 18px;
+    margin-top: 2.2rem; }
   .post p {
-    line-height: 2.2rem;
-    color: #474747; }
+    color: #c8c8c8; }
     @media screen and (max-width: 887px) {
       .post p {
         text-align: left;
         line-height: 1.8rem; } }
-  .post ul {
-    color: #474747;
-    padding-bottom: 2rem; }
-    .post ul li {
+  .post ul, .post ol {
+    color: #c8c8c8; }
+    .post ul li, .post ol li {
       line-height: 2.2rem; }
   .post code {
-    padding: .4em .25em;
+    padding: .2em .25em;
     font-size: 13px;
     border-radius: 3px; }
+    .post code.highlighter-rouge {
+      background-color: #222222; }
   .post pre {
-    border-radius: 6px; }
+    border-radius: 6px;
+    -webkit-overflow-scrolling: touch; }
 
 blockquote {
   letter-spacing: .2rem;
@@ -960,16 +973,16 @@ blockquote {
   .related_posts li:before {
     font-family: "FontAwesome";
     content: "\f054";
-    color: #474747;
+    color: #c8c8c8;
     padding-right: .5rem; }
   .related_posts a {
     color: #A44A3F; }
     .related_posts a:hover {
-      color: #474747;
-      background: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#A44A3F, #A44A3F);
+      color: #c8c8c8;
+      background: linear-gradient(#222222, #222222), linear-gradient(#222222, #222222), linear-gradient(#A44A3F, #A44A3F);
       background-size: .05em 1px,.05em 1px,1px 1px;
       background-repeat: no-repeat,no-repeat,repeat-x;
-      text-shadow: 0.03em 0 #FFFFFF, -0.03em 0 #FFFFFF, 0 0.03em #FFFFFF, 0 -0.03em #FFFFFF, 0.06em 0 #FFFFFF, -0.06em 0 #FFFFFF, 0.09em 0 #FFFFFF, -0.09em 0 #FFFFFF, 0.12em 0 #FFFFFF, -0.12em 0 #FFFFFF, 0.15em 0 #FFFFFF, -0.15em 0 #FFFFFF;
+      text-shadow: 0.03em 0 #222222, -0.03em 0 #222222, 0 0.03em #222222, 0 -0.03em #222222, 0.06em 0 #222222, -0.06em 0 #222222, 0.09em 0 #222222, -0.09em 0 #222222, 0.12em 0 #222222, -0.12em 0 #222222, 0.15em 0 #222222, -0.15em 0 #222222;
       background-position: 0 95%,100% 95%,0 95%; }
 
 #disqus_thread a {
@@ -977,14 +990,16 @@ blockquote {
 
 .about_head {
   text-align: center; }
+  .about_head .about_random span {
+    color: #aaaaaa; }
   .about_head h2 {
     text-align: center; }
 
 .footer {
   font-size: 80%;
-  color: #474747;
+  color: #c8c8c8;
   margin-top: 0;
-  border-top: 4px solid #547D71;
+  border-top: 4px solid #254055;
   overflow: hidden;
   text-align: center;
   width: 100%;
@@ -1004,7 +1019,7 @@ blockquote {
         margin-right: 0; } }
   .footer .fa {
     font-size: 1.5rem;
-    color: #474747;
+    color: #c8c8c8;
     margin-bottom: 2rem;
     padding-left: .5rem;
     padding-top: 1rem; }

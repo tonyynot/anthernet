@@ -3,7 +3,7 @@ layout: post
 title: Obligatory "Hello world!"
 description: An introduction to my blog with a progress report and some lessons learned after my first 4 months of programming.
 comments: true
-post_author: Anthony Ramella
+author: Anthony Ramella
 tags: learning
 ---
 

@@ -1,4 +1,4 @@
----
+x---
 layout: post
 title: Building a Twitter Bot with Node.js
 description: Building a Twitter bot can be a fun and easy way to learn programming. Here's how I built one using Node and a large library of images.
@@ -17,7 +17,7 @@ var Twit = require('twit')
     shuffle = require('shuffle-array'),
     config = require(path.join(__dirname, 'config.js'));
  {% endhighlight %}
-
+ 
 It's worth noting that in my dependencies I'm including a config.js file which stores my API keys separately. It will be passed through the tweet variable for authentication.
 
 {% highlight javascript %}

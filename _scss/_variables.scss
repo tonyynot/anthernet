@@ -2,35 +2,23 @@
 $aztec:     #3C3530;
 $white:     #FFFFFF;
 $celeste:   #D3D0CB;
+$charcoal:  #474747;
+
 $cutty:     #547D71;
 $regal:     #254055;
 $brick:     #A44A3F;
-$tuna:      #353946;
-$charcoal:  #474747;
-$charade:   #3B4145;
-$smoke:     #fdf6e3;
-$lilac:     #e1cfa1;
 $black:     #000000;
+$altblack:  #222222;
 $basegray:  #aaaaaa;
-$greenterm: #00FF00;
+$altgray:   #c8c8c8;
+
 
 // Google fonts
-// @import url(https://fonts.googleapis.com/css?family=Kanit);
-// @import url(https://fonts.googleapis.com/css?family=Lora);
-// @import url(https://fonts.googleapis.com/css?family=Rokkitt);
-// @import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Inconsolata);
-// @import url(https://fonts.googleapis.com/css?family=Secular+One);
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono|Share+Tech+Mono');
 // Font Variables
-$kanit: 'Kanit', sans-serif;
-$lora: 'Lora', sans-serif;
-$rokkitt: 'Rokkitt';
-$merriweather: 'Merriweather';
-$secular: 'Secular One';
-
+$sharetech: 'Share Tech Mono';
 $sourcecode: 'Source Code Pro';
-$inconsolata: 'Inconsolata';
+$overpass: 'Overpass Mono';
 
 // Media Queries
 // $mobile: (max-width: 664px 4);
