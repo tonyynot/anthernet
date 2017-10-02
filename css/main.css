@@ -773,7 +773,6 @@ header.title_nav {
       font-family: "Overpass Mono";
       text-decoration: none; }
     .title_nav .title a:hover {
-      color: #A44A3F;
       text-decoration: none; }
   .title_nav .nav_links {
     word-spacing: 1rem;
