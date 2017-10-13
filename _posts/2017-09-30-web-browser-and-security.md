@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Web Browser Privacy and Security - Google Chrome
+title: Web Browser Privacy and Security Rundown - Google Chrome
 date: 2017-09-15 00:18:23
 author: Anthony Ramella
 categories: security
@@ -8,7 +8,6 @@ image_preview:
 description: 
 ---
 
-https://nakedsecurity.sophos.com/2017/09/07/whats-under-the-hood-of-the-new-brave-browser/
 
 ## Chrome
 
@@ -28,6 +27,6 @@ Read Mozilla's privacy policy [here](https://www.mozilla.org/en-US/privacy/firef
 
 ## Brave
 
-**Security:** Brave is a browser founded by Brendan Eich, co-founder of the Mozilla Project and creator of JavaScript. It comes with encrypted communication out of the box via [HTTPS Everywhere](https://www.eff.org/https-everywhere), which needs to be downloaded separately as an add-on for other browsers. Some other great default security features are password manager support, ad-blocking, tracker blocking and anti-phishing protection.
+**Security:** Brave is a browser founded by Brendan Eich, co-founder of the Mozilla Project and creator of JavaScript. It comes with encrypted communication out of the box via [HTTPS Everywhere](https://www.eff.org/https-everywhere), which needs to be downloaded separately as an add-on for other browsers. Some other great default security features are password manager support, ad-blocking, tracker blocking and anti-phishing protection. Brave does not support plugins or addons, although because of its impressive features out of the box, there isn't much need for 3rd party extensions.
 
-**Privacy** A unique feature that Brave offers is [WebTorrent integration](https://torrentfreak.com/brave-a-privacy-focused-browser-with-built-in-torrent-streaming-170219/) for built in streaming. Brave makes W3C [DRM](https://en.wikipedia.org/wiki/Digital_rights_management) optional by allowing users to [disable it](https://news.ycombinator.com/item?id=13519006) and even gives a warning about using it.
+**Privacy** A unique feature that Brave offers is [WebTorrent integration](https://torrentfreak.com/brave-a-privacy-focused-browser-with-built-in-torrent-streaming-170219/) for built in streaming. Brave makes W3C [DRM](https://en.wikipedia.org/wiki/Digital_rights_management) optional by allowing users to [disable it](https://news.ycombinator.com/item?id=13519006) and even gives a warning about using it. While ads and tracking are disabled for Brave, the browser does reward users with an Ethereum based digital currency called Basic Attention Tokens (BAT). "BAT will allow publishers, advertisers, and users to connect in an online environment that reduces fraud, privacy violations and “malvertisements” while increasing publisher revenue."[1](https://www.cryptocoinsnews.com/brave-announces-blockchain-digital-advertising-platform-with-ethereum-based-token-rewards-for-users/). Most noteworthy of all, Brave is the recommended browser of [Privacytools.io](https://www.privacytools.io/#browser).
