@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Web Browser Privacy and Security
+title: Know Thy Browser - A Study on Web Browser Security & Privacy
 date: 2017-09-15 00:18:23
 author: Anthony Ramella
 categories: security privacy
 image_preview:
-description: A brief rundown of the privacy and security of third-party browsers. Some solutions are offered and many links are provided.
+description: A brief rundown of the privacy and security of popular third-party browsers. Some solutions are offered and many links are provided.
 comments: true
 ---
 
@@ -33,7 +33,7 @@ SECURITY: Brave is a browser founded by Brendan Eich, co-founder of the Mozilla 
 
 PRIVACY: Braves makes the list of 3 browsers recommended by [privacytools.io](https://www.privacytools.io/#browser), which makes it worth a serious look. A notable feature that Brave has is [WebTorrent integration](https://torrentfreak.com/brave-a-privacy-focused-browser-with-built-in-torrent-streaming-170219/) for built in streaming. Brave makes W3C [DRM](https://en.wikipedia.org/wiki/Digital_rights_management) optional by allowing users to [disable it](https://news.ycombinator.com/item?id=13519006) and even gives a warning about using it. Besides free ad-blocking, what really sets Brave apart from other browsers is that it allows users to collect micro-donations called [Brave Payments](https://brave.com/faq/#brave-payments), rewarding users with [Basic Attention Token](https://basicattentiontoken.org/) (BAT).
 
-"BAT will allow publishers, advertisers, and users to connect in an online environment that reduces fraud, privacy violations and “malvertisements” while increasing publisher revenue.[1]"(https://www.cryptocoinsnews.com/brave-announces-blockchain-digital-advertising-platform-with-ethereum-based-token-rewards-for-users/) BAT offers an anonymous and private p2p ad-tech solution for collecting rich user metrics by eliminating 3rd party intermediaries and rewarding all who participate.
+"BAT will allow publishers, advertisers, and users to connect in an online environment that reduces fraud, privacy violations and “malvertisements” while increasing publisher revenue.[1](https://www.cryptocoinsnews.com/brave-announces-blockchain-digital-advertising-platform-with-ethereum-based-token-rewards-for-users/)" BAT offers an anonymous and private p2p ad-tech solution for collecting rich user metrics by eliminating 3rd party intermediaries and rewarding all who participate.
 
 
 ## [Tor Browser](https://www.torproject.org/projects/torbrowser.html)
