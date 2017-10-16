@@ -1,14 +1,12 @@
 ---
 layout: post
-title: Web Browser Privacy and Security - A Quick Rundown
+title: Web Browser Privacy and Security
 date: 2017-09-15 00:18:23
 author: Anthony Ramella
 categories: security privacy
 image_preview:
-description: 
+description: A brief rundown of the privacy and security of third-party browsers. Some solutions are offered and many links are provided.
 ---
-
-
 
 ## Chrome
 
@@ -36,8 +34,8 @@ Read Mozilla's privacy policy [here](https://www.mozilla.org/en-US/privacy/firef
 
 ## [Tor Browser](https://www.torproject.org/projects/torbrowser.html)
 
-TOR (short for The Onion Router) really deserves it's own writeup, but here's the quick rundown. Tor Browser is the flagship application of The Tor Project and as far as browsing goes, it is the undisputed king when it comes to privacy, security and anonymity. It uses a tech developed by U.S. Naval Research Labratory employees in the 90's called "onion routing", which implements encrypted nested application layers over the user's network connection. Tor Browser was built
+TOR (short for The Onion Router) really deserves it's own writeup, but here's the quick rundown. Tor Browser is the flagship application of The Tor Project and as far as browsing goes, it is the undisputed king when it comes to privacy, security and anonymity. It uses a tech developed by U.S. Naval Research Labratory employees in the 90's called "onion routing", which implements encrypted nested application layers over the user's network connection.
 
-**SECURITY:** As stated on the Tor Project website, "[Tor] protects you by bouncing your communications around a distributed network of relays run by volunteers all around the world". While Tor is the best browser option for anonymity and privacy, it is not an air-tight solution. No matter how many nodes are relayed together, traffic must eventually exit the network. 
+**SECURITY:** As stated on the Tor Project website, "[Tor] protects you by bouncing your communications around a distributed network of relays run by volunteers all around the world". Tor is so secure that the FBI could not even locate or de-anonymize the Tor user who hacked into the Hillary Clinton email server[2](http://www.dailymail.co.uk/news/article-3771474/Clinton-email-server-hit-dark-web-tools-Hillary-worried-hacked-getting-send-link-porn.html). Ultimately, any vulnerabilities come down to how browser is configured and used. A good start would be referring to [Tor's documentation](https://www.torproject.org/docs/documentation.html.en) on installing and configuring Tor for optimal security.
 
-**PRIVACY:**
+**PRIVACY:** Once again, Tor Browser is the king when it comes to privacy browsers and anonymity and even [the NSA agrees](https://www.theguardian.com/world/2013/oct/04/nsa-gchq-attack-tor-network-encryption). However, it's not a perfect solution. [Naked Security points out] that Tor had been mistakenly used as an end-to-end encryption tool, which is certainly is not. Basically, no matter how many nodes are relayed together, traffic must eventually escape the network through exit nodes. Years before Snowden, a Sweedish computer consultant named Dan Egerstad was able to leak hundreds of confidential government emails by using a packet sniffer aimed at POP3 and IMAP traffic coming through Tor exit nodes[3]((http://www.zdnet.com/article/sensitive-government-e-mails-leak-through-tor-exit-nodes/).
