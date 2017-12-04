@@ -1,5 +1,5 @@
 # Site settings
-title: blank_waves
+title: anthernet
 description: >
   a curated web developer blog with resources, articles and opinions by Anthony Ramella
 
@@ -13,7 +13,6 @@ url: "http://anthonyramella.com" # the base hostname & protocol for your site
 permalink: "/blog/:title/"
 author:
   fullname: Anthony Ramella
-  #googleplus: ""
   github: tonyynot
   twitter: tonecodes
   disqus: aramella

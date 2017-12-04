@@ -856,9 +856,9 @@ header.title_nav {
     color: #c8c8c8;
     background: linear-gradient(#222222, #222222), linear-gradient(#222222, #222222), linear-gradient(#A44A3F, #A44A3F);
     background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-repeat: no-repeat, no-repeat, repeat-x;
     text-shadow: 0.03em 0 #222222, -0.03em 0 #222222, 0 0.03em #222222, 0 -0.03em #222222, 0.06em 0 #222222, -0.06em 0 #222222, 0.09em 0 #222222, -0.09em 0 #222222, 0.12em 0 #222222, -0.12em 0 #222222, 0.15em 0 #222222, -0.15em 0 #222222;
-    background-position: 0 95%,100% 95%,0 95%; }
+    background-position: 0 95%, 100% 95%, 0 95%; }
 
 .posts a:visited, .post a:visited {
   color: #c8c8c8; }
@@ -916,16 +916,16 @@ header.title_nav {
     color: #c8c8c8;
     background: linear-gradient(#222222, #222222), linear-gradient(#222222, #222222), linear-gradient(#A44A3F, #A44A3F);
     background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-repeat: no-repeat, no-repeat, repeat-x;
     text-shadow: 0.03em 0 #222222, -0.03em 0 #222222, 0 0.03em #222222, 0 -0.03em #222222, 0.06em 0 #222222, -0.06em 0 #222222, 0.09em 0 #222222, -0.09em 0 #222222, 0.12em 0 #222222, -0.12em 0 #222222, 0.15em 0 #222222, -0.15em 0 #222222;
-    background-position: 0 95%,100% 95%,0 95%; }
+    background-position: 0 95%, 100% 95%, 0 95%; }
     .post a:hover {
       color: #A44A3F;
       background: linear-gradient(#222222, #222222), linear-gradient(#222222, #222222), linear-gradient(#A44A3F, #A44A3F);
       background-size: .05em 1px,.05em 1px,1px 1px;
-      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-repeat: no-repeat, no-repeat, repeat-x;
       text-shadow: 0.03em 0 #222222, -0.03em 0 #222222, 0 0.03em #222222, 0 -0.03em #222222, 0.06em 0 #222222, -0.06em 0 #222222, 0.09em 0 #222222, -0.09em 0 #222222, 0.12em 0 #222222, -0.12em 0 #222222, 0.15em 0 #222222, -0.15em 0 #222222;
-      background-position: 0 95%,100% 95%,0 95%; }
+      background-position: 0 95%, 100% 95%, 0 95%; }
   .post h2 {
     font-size: 18px;
     margin-top: 2.2rem; }
@@ -980,9 +980,9 @@ blockquote {
       color: #c8c8c8;
       background: linear-gradient(#222222, #222222), linear-gradient(#222222, #222222), linear-gradient(#A44A3F, #A44A3F);
       background-size: .05em 1px,.05em 1px,1px 1px;
-      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-repeat: no-repeat, no-repeat, repeat-x;
       text-shadow: 0.03em 0 #222222, -0.03em 0 #222222, 0 0.03em #222222, 0 -0.03em #222222, 0.06em 0 #222222, -0.06em 0 #222222, 0.09em 0 #222222, -0.09em 0 #222222, 0.12em 0 #222222, -0.12em 0 #222222, 0.15em 0 #222222, -0.15em 0 #222222;
-      background-position: 0 95%,100% 95%,0 95%; }
+      background-position: 0 95%, 100% 95%, 0 95%; }
 
 #disqus_thread a {
   color: #A44A3F; }

@@ -31,9 +31,9 @@
 
         background: linear-gradient($altblack,$altblack),linear-gradient($altblack,$altblack),linear-gradient($link_hover, $link_hover);
         background-size: .05em 1px,.05em 1px,1px 1px;
-        background-repeat: no-repeat,no-repeat,repeat-x;
-        text-shadow: .03em 0 $altblack,-.03em 0 $altblack,0 .03em $altblack,0 -.03em $altblack,.06em 0 $altblack,-.06em 0 $altblack,.09em 0 $altblack,-.09em 0 $altblack,.12em 0 $altblack,-.12em 0 $altblack,.15em 0 $altblack,-.15em 0 $altblack;
-        background-position: 0 95%,100% 95%,0 95%;
+        background-repeat: no-repeat, no-repeat, repeat-x;
+        text-shadow: .03em 0 $altblack, -.03em 0 $altblack, 0 .03em $altblack, 0 -.03em $altblack, .06em 0 $altblack, -.06em 0 $altblack, .09em 0 $altblack, -.09em 0 $altblack, .12em 0 $altblack, -.12em 0 $altblack, .15em 0 $altblack, -.15em 0 $altblack;
+        background-position: 0 95%, 100% 95%, 0 95%;
 
 }
 @mixin  post_link_hover {
