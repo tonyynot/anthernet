@@ -1,4 +1,5 @@
 ### anthernet.com
+
 <p>I created this blog to share my experiences and challenges in learning code as well as some helpful insights and resources. It was built with [Jekyll](http://www.jekyllrb.com), a static website generator powered by [Ruby](http://www.ruby-lang.org/en/). I desgined and coded the site myself while learning [Sass](http://sass-lang.com/), [Bourbon](http://bourbon.io/) and [Gulp](http://gulpjs.com/).
 
 Note: This repository is for my personal use only.
