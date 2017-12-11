@@ -17,7 +17,7 @@ $post_date: $basegray;
 
 // Font variables
 $navbar_font: $overpass;
-$base_font: $sharetech;
+$base_font: $firacode;
 
 // Base styles
 body {
@@ -189,8 +189,7 @@ header.title_nav {
         display: block;
     }
     li {
-        padding-top:.5rem;
-        line-height: 3rem;
+        padding:.5rem 0;
         @media screen and (max-width: 887px) {
             line-height: 1.2rem;
             text-align: left;
@@ -213,7 +212,7 @@ header.title_nav {
             color: $text_main;
             text-decoration: none;
             font-size: 18px;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             letter-spacing: 0.1px;
         
             @media screen and (max-width: 887px) {
