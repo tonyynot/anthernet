@@ -21,8 +21,8 @@ Perhaps the best way to describe IOTA is the economy of the internet of things. 
 ## [OmiseGo](https://omisego.network/) [OMG]  
 OmiseGo is a decentralized exchange built on a smart contract framework called [Plasma](http://plasma.io/plasma.pdf), hosting an open-source digital wallet platform from [Omise](https://www.omise.co/), connecting mainstream payments, cross-border remittances, and much more. OmiseGo is both fiat and crypto-friendly, cross-chain compatible, Ethereum based and "designed to enable financial inclusion and disrupt existing institutions". Their slogan is "Unbank the Banked" as they aim to eliminate the need for corporate institutions acting as the middleman when making digital transactions.  
 
-## [Stellar Lumens](https://www.stellar.org/) [XLM]  
-Stellar is an open-source, distributed payments infrastructure. It uses a decentralized protocol that enables you to send money to anyone in the world, for free, instantly, and in any currency. Stellar is a leapfrog technology that connects people, payment systems, and banks with a focus on the developing world. It lets you facilitate multi-currency and asset transactions quickly, reliably, and for a fraction of a penny by using a crypto-asset called Lumens (XLM) as a bridge.  
+## [Raiblocks](https://raiblocks.net/) [XRB]  
+
 
 ## [Request Network](https://request.network/#/) [REQ]  
 Most of us already use Paypal or Venmo to request payments from others. Both these platforms rely on sharing banking information and relying on the bank or another 3rd party to approve the transactions, in turn taking anywhere from 1% - 6% in commission fees. Request Network offers a secure and decentralized p2p solution to this problem, bypassing banks and 3rd party mediators all together. Request Network is built on top of the Ethereum blockchain and is "designed to be flexible, last hundreds of years and work with IoT" according to their website.  
