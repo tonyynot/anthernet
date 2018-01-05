@@ -9,18 +9,19 @@ description: Cryptocurrencies are not only changing how we think about money, bu
 comments: true
 ---
 
-Cryptocurrencies are not only changing how we think about money, but how we use money on a daily basis. However, they are more than just nerdy alternatives to using paper money, they are also disruptive techologies that seek to separate money and state while providing decentralized platforms and solutions to areas that have traditionally been controlled by central banks and governments. With Bitcoin surpassing $1800 in 2017, the entire crypto market has been booming with thousands of new cryptocurrencies that offer unique and promising solutions to current and future technology. 
+Cryptocurrencies are not only changing how we think about money, but how we use money on a daily basis. However, they are more than just nerdy alternatives to using paper money, they are also disruptive techologies that seek to separate money and state while providing decentralized platforms and solutions to areas that have traditionally been controlled by central banks and governments. With the total cryptocurrency market cap reaching $759 billion in 2017, the entire crypto market has been experiencing exponential growth with thousands of new cryptocurrencies that offer unique and promising solutions to current and future technology. 
 
-So here are some cryptocoins to look out for in 2018, all of them currently ranging from $0.11 to $9 (as of December 2017) so if you are a new investor looking to diversify and hold long term, you can actually buy many of these coins at a time unlike some of the more expensive coins. Of course these are all highly speculative technologies in their early phase, as is any other blockchain tech, but even if you are not an investor, some of the solutions these technologies give us a glimse into a world that will undoubtedly be experienced in the near future.  
+So here are some cryptocoins to look out for in 2018, of course these are all highly speculative technologies in their early phase, as is any other blockchain tech, but even if you are not an investor, some of the solutions these technologies give us a glimse into a world that will undoubtedly be experienced in the near future. I encourage any readers to make educated decisions when investing and to be sure you are familiar with the technologies, competition, criticisms, market demand and community for any cryptocurrencies before investing.  
 
 ## [VeChain](https://www.vechain.com/#/) [VET]
-What VeChain aims to do is to build a distributed business ecosystem that is trustless and transparent. This eliminates the trust issue involved in business transactions between two parties. The VeChain Token [VET] is the 
+What VeChain aims to do is to build a distributed business ecosystem that is trustless and transparent. This eliminates the trust issue involved in business transactions between two parties. VeChain is the solution to verifying the authenticity of products in the food, beverage, agricultural and fashion industry by adding the products' RFID to the blockchain. Since the blockchain is trustless and immutable, it cannot be altered or manipulated by a centralized source. 
 
 Read the non-white paper [here](https://cdn.vechain.com/vechain_ico_ideas_of_development_en.pdf)
 
 
 ## [Quantstamp](https://quantstamp.com/) [QSP]
-Quantstamp describes itself as being "the first scalable security-audit protocol designed to find vulnerabilities in Ethereum smart contracts." Those who are familiar with Ethereu
+Quantstamp describes itself as being "the first scalable security-audit protocol designed to find vulnerabilities in Ethereum smart contracts." The team's mission is to help developers produce more reliable code through smart contract auditing. This is a much needed 
+A nice feature of Quant
 The Quanstamp team is an impressive group of 
 
 ## [OmiseGo](https://omisego.network/) [OMG]  
