@@ -29,7 +29,7 @@ Read more about OmiseGo [here](https://themerkle.com/what-is-omisego/)
 Read the OmiseGo white paper [here](https://cdn.omise.co/omg/whitepaper.pdf)  
 
 ## [Raiblocks](https://raiblocks.net/) [XRB]  
-RaiBlocks can be best understood as what Bitcoin is supposed to be. It's main usage is as a currency and technically it functions as the best one on the market. XRB offers instant transactions with zero fees and has infinite scalability. The problem of scaling to mass adoption is an ongoing issue with many cryptocurrencies, most notoriously seen as the core issue behind the [Bitcoin civil war](https://www.wsj.com/articles/bitcoins-civil-war-what-you-need-to-know-1501508664).  
+RaiBlocks can be best understood as what Bitcoin is supposed to be. It's main usage is as a currency and with instant transactions, zero fees and infinite scalability, XRB is the most efficient coin on the market. The problem of scaling to mass adoption is an ongoing issue with many cryptocurrencies, most notoriously seen as the core issue behind the [Bitcoin civil war](https://www.wsj.com/articles/bitcoins-civil-war-what-you-need-to-know-1501508664) but RaiBlocks aims to solve this problem by making XRB ininitely scalable. With no transaction fees it makes XRB an ideal coin for both trading and commerce.  
 Read the Raiblocks white paper [here](https://raiblocks.net/media/RaiBlocks_Whitepaper__English.pdf?source=techstories.org)
 
 ## [Request Network](https://request.network/#/) [REQ]  
