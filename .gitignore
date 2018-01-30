@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 _site
 .idea
 node_modules
@@ -5,3 +6,8 @@ node_modules
 npm-debug.log
 TODO.md
 README-ALT.md
+=======
+.sass-cache
+node_modules
+.DS_STORE
+>>>>>>> 25f1cf5d5226f2aaf5311e3605fda1835dab0f2d
