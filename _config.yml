@@ -11,10 +11,11 @@ user_title: Front-end Engineer
 email: aramella@protonmail.com
 twitter_username: tonecodes
 github_username:  tonyynot
-gplus_username:  lorem_ipsum
+linkedin: alramella
+# gplus_username:  lorem_ipsum
 
 # Google-analytics
-google-analytics:
-  id: ""
+google-analytics: 
+  id: "UA-60032993-3"
 
 exclude: ['package.json', 'src' , 'node_modules']
