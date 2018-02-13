@@ -156,4 +156,3 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['js', 'sass', 'fonts', 'browser-sync', 'watch']);
->>>>>>> 25f1cf5d5226f2aaf5311e3605fda1835dab0f2d
