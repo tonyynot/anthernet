@@ -4,7 +4,7 @@ https://keybase.io/tonyynot
 
 I hereby claim:
 
-  * I am an admin of http://anthonyramella.com
+  * I am an admin of http://anthernet.com
   * I am tonyynot (https://keybase.io/tonyynot) on keybase.
   * I have a public key ASAmoabMGczd4CwYRASYWHukqucqB5-_V7BeG-BOz4UgMAo
 
@@ -26,7 +26,7 @@ To do so, I am signing this object:
       "seqno": 1561360
     },
     "service": {
-      "hostname": "anthonyramella.com",
+      "hostname": "anthernet.com",
       "protocol": "http:"
     },
     "type": "web_service_binding",

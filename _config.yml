@@ -1,5 +1,4 @@
 # Site settings
-<<<<<<< HEAD
 title: anthernet
 description: >
   a curated web developer blog with resources, articles and opinions by Anthony Ramella
@@ -44,25 +43,3 @@ plugins_dir:
   - jekyll/tagging
   - jekyll-tagging-related_posts
   - font-awesome-sass
-=======
-title: Anthony Ramella | Home
-description: Homepage of Anthony Ramella
-# baseurl: "/particle" # the subpath of your site, e.g. /blog
-url: http://tonyynot.me # the base hostname & protocol for your site e.g. http://willianjusten.com.br
-
-# User settings
-username: Anthony Ramella
-user_description: 
-user_title: Front-end Engineer
-email: aramella@protonmail.com
-twitter_username: tonecodes
-github_username:  tonyynot
-linkedin: alramella
-# gplus_username:  lorem_ipsum
-
-# Google-analytics
-google-analytics: 
-  id: "UA-60032993-3"
-
-exclude: ['package.json', 'src' , 'node_modules']
->>>>>>> 25f1cf5d5226f2aaf5311e3605fda1835dab0f2d
