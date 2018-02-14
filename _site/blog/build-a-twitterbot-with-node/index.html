@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Building a Twitter Bot with Node.js // anthernet</title>
+
+        <meta name="description" content="Building a Twitter bot can be a fun and easy way to learn programming. Here's how I built one using Node and a large library of images.">
+        
+        
+        <meta name="keywords" content="tutorials,, how-to,, learning,, code,, css">
+        
+
+        <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1, minimal-ui", name: "viewport">
+
+        <link rel="canonical" href="http://anthonyramella.com/blog/build-a-twitterbot-with-node/">
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="http://anthonyramella.com/favicon.png"/>
+        
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/solarized_dark.css">
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.css">
+
+        
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tonecodes">
+<meta name="twitter:creator" content="@tonecodes">
+
+  <meta name="twitter:title" content="Building a Twitter Bot with Node.js">
+
+
+  <meta name="twitter:url" content="http://anthonyramella.com/blog/build-a-twitterbot-with-node/">
+
+
+  <meta name="twitter:description" content="Building a Twitter bot can be a fun and easy way to learn programming. Here's how I built one using Node and a large library of images.">
+
+
+  <meta name="twitter:image:src" content="http://anthonyramella.com/img/avatar.jpg">
+
+
+<!-- Google plus -->
+<meta name="author" content="">
+<link rel="author" href="">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building a Twitter Bot with Node.js">
+<meta property="og:description" content="Building a Twitter bot can be a fun and easy way to learn programming. Here's how I built one using Node and a large library of images.">
+<meta property="og:url" content="http://anthonyramella.com/blog/build-a-twitterbot-with-node/">
+<meta property="og:site_name" content="anthernet">
+
+        
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-60032993-2', 'auto');
+              ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+   
+    <body>
+        <header class="title_nav">
+          <div class="site">
+              <h1 class="title">
+                <a href="/">anthernet</a>
+              </h1>
+              
+              <div class="nav_links">
+                <a href="/">blog</a>
+                <a href="/about">about</a>
+                <a href="http://www.github.com/tonyynot" target="_blank">code</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="site">
+            
+            <h2>Building a Twitter Bot with Node.js</h2>
+<span class="post_date">March 21, 2017</span> 
+<span class="post_reading-time">Reading time - 
+    
+    
+        4 minutes
+    
+    </span>
+<hr>
+<div class="post">
+
+<p>So I have a huge unorganized local directory of thousands of images that were scraped from Tumblr and various subreddits. The bot uses Node file system and a sorting module to randomly select an image and post it every hour. It then deletes the photo after it’s been posted so there are no duplicates. I should note that this implementation is more of a test run and that I’d like to eventually use the code for some other bots that have a more focused theme.</p>
+
+<p>Here’s how it works.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Twit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'twit'</span><span class="p">)</span>
+    <span class="nx">fs</span>  <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">),</span>
+    <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">),</span>
+    <span class="nx">shuffle</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'shuffle-array'</span><span class="p">),</span>
+    <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'config.js'</span><span class="p">));</span>
+ </code></pre></figure>
+
+<p>It’s worth noting that in my dependencies I’m including a config.js file which stores my API keys separately. It will be passed through the tweet variable for authentication.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">tweetImage</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">tweet</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Twit</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+    <span class="c1">// Define images path</span>
+    <span class="kd">var</span> <span class="nx">imagesArray</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readdirSync</span><span class="p">(</span><span class="s1">'./images/'</span><span class="p">);</span>
+    <span class="c1">// Shuffle images</span>
+    <span class="nx">shuffle</span><span class="p">(</span><span class="nx">imagesArray</span><span class="p">);</span>
+    <span class="c1">// Pick random image</span>
+    <span class="kd">var</span> <span class="nx">randImage</span> <span class="o">=</span> <span class="nx">shuffle</span><span class="p">.</span><span class="nx">pick</span><span class="p">(</span><span class="nx">imagesArray</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"IMAGE CHOSEN: "</span> <span class="o">+</span> <span class="nx">randImage</span><span class="p">);</span>
+    <span class="c1">// Convert content to base64</span>
+    <span class="kd">var</span> <span class="nx">b64content</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">'./images/'</span> <span class="o">+</span> <span class="nx">randImage</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">encoding</span><span class="p">:</span> <span class="s1">'base64'</span>
+    <span class="p">});</span>
+    <span class="c1">// Assign b64 content to tweet</span>
+    <span class="nx">tweet</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'media/upload'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">media_data</span><span class="p">:</span> <span class="nx">b64content</span>
+    <span class="p">},</span></code></pre></figure>
+
+<p>The imagesArray variable is assigned to read all contents of the images directory. The array is then shuffled using the shuffle-array package which also selects a random image to which is then encoded to base64.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'ERROR'</span><span class="p">);</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+   <span class="p">}</span> 
+   <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'UPLOADING....'</span><span class="p">);</span>
+      <span class="c1">// Post tweet</span>
+      <span class="nx">tweet</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'statuses/update'</span><span class="p">,</span> <span class="p">{</span>
+         <span class="na">media_ids</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">media_id_string</span><span class="p">)</span>
+      <span class="p">},</span>
+      <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'ERROR'</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+         <span class="p">}</span> 
+         <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'An image has successfully been posted!'</span><span class="p">);</span>
+            <span class="c1">// Delete image after tweeting</span>
+            <span class="nx">fs</span><span class="p">.</span><span class="nx">unlinkSync</span><span class="p">(</span><span class="s1">'./images/'</span> <span class="o">+</span> <span class="nx">randImage</span><span class="p">);</span>
+         <span class="p">}</span>
+      <span class="p">});</span>
+   <span class="p">}</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>The function that posts the image to Twitter is wrapped in a conditional for basic error handling. Once the image has successfully been posted, the file is deleted through node file system so that it cannot be posted again.</p>
+
+<p>Lastly, the tweetImage function is ran in a 1 hour interval:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">tweetImage</span><span class="p">();</span>
+<span class="p">},</span> <span class="mi">600000</span> <span class="o">*</span> <span class="mi">6</span><span class="p">);</span> <span class="c1">// Tweets in 1 hour intervals</span></code></pre></figure>
+
+<h2 id="initial-troubleshooting">Initial troubleshooting</h2>
+<p>Since I’m dealing with a local file directory for now, the bot is running locally and is dependent on my machine running (silly, I know). So what I’m working on doing next is uploading my image directory to Google Drive and have the bot run on a server while using Google’s Node.js client to determine the path. My first night running the bot, I went to bed and noticed it had stopped running when my computer was inactive (duh). So to fix this issue, I installed <a href="https://github.com/foreverjs/forever">forever</a> which is a CLI tool that ensures my node server runs continuously.</p>
+
+<p>Here is the link to the repository via <a href="https://github.com/tonyynot/random-image-tweet">Github</a>. A demo of the bot can be found <a href="http://twitter.com/blank_waves">here</a>.
+I found I enjoy building Twitter bots and I’d like to improve this concept to the point where it’s an account people would actually follow. Thanks for reading!</p>
+
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Building a Twitter Bot with Node.js%20via%20@tonecodes"
+  data-size="large">
+Tweet</a>
+</div>
+<hr> 
+
+<div class="related_posts">
+  <h3>Related Posts</h3>
+  <ul>
+  
+    <li><a href="/blog/facebook-is-creepy/">Facebook is an Exploitative, Dopamine Dealing Data Tyrant</a></li>
+  
+    <li><a href="/blog/content-moderation-algorithms/">Content Moderation Algorithms</a></li>
+  
+    <li><a href="/blog/link-dump-08/">Link Dump 08 // Decentralize All the Things</a></li>
+  
+    <li><a href="/blog/blockchain-tech-in-2018/">5 Cryptocurrencies to Look Out for in 2018</a></li>
+  
+    <li><a href="/blog/web-browser-privacy-and-security/">Know Thy Browser - A Study on Web Browser Security & Privacy</a></li>
+  
+  </ul>
+</div>
+
+
+            <div class="footer">
+    <p>
+     <ul class="social_links">
+      
+          <a href="https://github.com/tonyynot" class="social_links" target="_blank">
+              <i class="fa fa-github"></i>
+          </a>
+      
+
+      
+          <a href="https://twitter.com/tonecodes" class="social_links" target="_blank">
+              <i class="fa fa-twitter"></i>
+          </a>
+      
+
+      
+          <a href="https://instagram.com/blankwaves" class="social_links" target="_blank">
+              <i class="fa fa-instagram"></i>
+          </a>
+      
+
+      
+          <a href="https://www.linkedin.com/in/alramella" class="social_links" target="_blank">
+              <i class="fa fa-linkedin"></i>
+          </a>
+      
+      
+  </ul>
+  Copyright &copy; 2016 Anthony Ramella<br>
+  <small>Donate Bitcoin: 19VpVJ6EqNgCoC75Am8EMWbZpuBjfMucp7</small>
+    </p>
+</div>
+
+<!-- Syntax highlighting -->
+<script src="/assets/vendor/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Github Gist Embed -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+
+<!-- Twitter widget -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<!-- Target blank -->
+<script type="text/javascript">
+  var links = document.links;
+
+for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+   if (links[i].hostname != window.location.hostname) {
+       links[i].target = '_blank';
+   } 
+}
+</script>
+
+
+        </div>
+    </body>
+</html>

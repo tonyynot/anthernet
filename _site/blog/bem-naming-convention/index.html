@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Standardized CSS Naming Conventions with BEM // anthernet</title>
+
+        <meta name="description" content="What is BEM and how does it improve CSS? How to create and maintain more readable and object oriented CSS through the BEM naming metholodology.">
+        
+        
+        <meta name="keywords" content="tutorials,, how-to,, learning,, code,, css">
+        
+
+        <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1, minimal-ui", name: "viewport">
+
+        <link rel="canonical" href="http://anthonyramella.com/blog/bem-naming-convention/">
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="http://anthonyramella.com/favicon.png"/>
+        
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/solarized_dark.css">
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.css">
+
+        
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tonecodes">
+<meta name="twitter:creator" content="@tonecodes">
+
+  <meta name="twitter:title" content="Standardized CSS Naming Conventions with BEM">
+
+
+  <meta name="twitter:url" content="http://anthonyramella.com/blog/bem-naming-convention/">
+
+
+  <meta name="twitter:description" content="What is BEM and how does it improve CSS? How to create and maintain more readable and object oriented CSS through the BEM naming metholodology.">
+
+
+  <meta name="twitter:image:src" content="http://anthonyramella.com/img/avatar.jpg">
+
+
+<!-- Google plus -->
+<meta name="author" content="">
+<link rel="author" href="">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Standardized CSS Naming Conventions with BEM">
+<meta property="og:description" content="What is BEM and how does it improve CSS? How to create and maintain more readable and object oriented CSS through the BEM naming metholodology.">
+<meta property="og:url" content="http://anthonyramella.com/blog/bem-naming-convention/">
+<meta property="og:site_name" content="anthernet">
+
+        
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-60032993-2', 'auto');
+              ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+   
+    <body>
+        <header class="title_nav">
+          <div class="site">
+              <h1 class="title">
+                <a href="/">anthernet</a>
+              </h1>
+              
+              <div class="nav_links">
+                <a href="/">blog</a>
+                <a href="/about">about</a>
+                <a href="http://www.github.com/tonyynot" target="_blank">code</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="site">
+            
+            <h2>Standardized CSS Naming Conventions with BEM</h2>
+<span class="post_date">December 28, 2016</span> 
+<span class="post_reading-time">Reading time - 
+    
+    
+        3 minutes
+    
+    </span>
+<hr>
+<div class="post">
+
+<h2 id="what-is-bem">What is BEM?</h2>
+<p>BEM is a CSS methodology that aims to make CSS more scalable, reusable and maintainable. The implementation varies which is why it is important to establish standards that your team can agree upon. BEM stands for Block, Element, Modifier and is focused on organizing CSS classes by breaking down a site into blocks. The naming convention used in BEM is hierarchical so understanding those conventions as a team will help optimize the front-end development process. BEM methodology demands specificity and in turn prevents having to use <code class="highlighter-rouge">!important</code> which is bad practice anyway. This allows other developers working with the code to quickly and easily identify what that code is doing just by looking at its name.</p>
+
+<h2 id="the-bem-structure">The BEM Structure</h2>
+<p>The official BEM naming convention goes as follows:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nc">.block</span> <span class="p">{}</span>
+    <span class="nc">.block--modifier</span> <span class="p">{}</span>
+    <span class="nc">.block__element</span> <span class="p">{}</span>
+    <span class="nc">.block__element--modifier</span> <span class="p">{}</span></code></pre></figure>
+
+<p>While the double underscores and hyphens look a little goofy at first, they actually make sense considering a name could already have more than one word such as <code class="highlighter-rouge">.sign-up</code>. When using the BEM naming convention, its the double underscores or hyphens that give a visual cue to the relationship of its containing block.</p>
+
+<h2 id="blocks">Blocks</h2>
+<p>The first step to establishing the BEM structure is to determine what blocks require naming. The block “encapsulates a standalone entity that is meaningful on its own”<a href="http://getbem.com/naming/">1</a>. Blocks are the standalone chunks of code that are modular and house their own set of elements. For example, the header, body, sidebar, footer and content area are all considered blocks and will have elements associated to them.</p>
+
+<p>The idea of a block is that it should be modular enough that it can be used across the entire site without having to modify the code in any way. For this reason, there are a couple rules to take into consideration:</p>
+<ul>
+  <li>Never use an ID to name blocks or elements. The specific nature of the BEM naming convention works best with classes and if ID’s are mixed in, it confuses the purpose of the BEM methodology.</li>
+  <li>Do not use positioning rules in BEM blocks. This means a block should not contain rules such as <code class="highlighter-rouge">float</code>, <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">width</code>.</li>
+</ul>
+
+<h2 id="elements-and-modifiers">Elements and Modifiers</h2>
+<p>Elements are bits of code that are associated to a block. Each element is written after the block and is connected by two underscores. All elements are working within the context of their assigned block, hence the block designation before the element name.</p>
+
+<p><code class="highlighter-rouge">.block__element {}</code></p>
+
+<p>In a more practical usage, this translates to something like this: <code class="highlighter-rouge">.navbar__tab {}</code> with <code class="highlighter-rouge">navbar</code> being the block and <code class="highlighter-rouge">tab</code> being the element.</p>
+
+<p>Modifiers, simply stated, modify the state of an existing block or element. If a pre-existing block or element requires an alternate version, a modifier is used to designate that difference. For example, <code class="highlighter-rouge">navbar__tab--active</code> with <code class="highlighter-rouge">active</code> modifying the <code class="highlighter-rouge">tab</code> element.</p>
+
+<h2 id="nesting-with-sass">Nesting with Sass</h2>
+<p>Elements can be nested inside each other.
+You can have any number of nesting levels.
+An element is always part of a block, not another element. This means that element names can’t define a hierarchy such as <code class="highlighter-rouge">block__elem1__elem2</code>.</p>
+
+<p>An example of nesting in a preprocessor:</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nc">.navbar</span> <span class="err">{</span>
+   <span class="nc">...</span> <span class="nt">rules</span> <span class="nc">....</span>
+   <span class="k">&amp;</span><span class="nt">__tab</span> <span class="err">{</span>
+      <span class="nc">...</span> <span class="nt">rules</span> <span class="nc">....</span>
+      <span class="k">&amp;</span><span class="nt">--active</span> <span class="err">{</span>
+         <span class="nc">...</span> <span class="nt">rules</span> <span class="nc">....</span>
+      <span class="err">}</span>
+   <span class="err">}</span>
+<span class="err">}</span></code></pre></figure>
+
+
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Standardized CSS Naming Conventions with BEM%20via%20@tonecodes"
+  data-size="large">
+Tweet</a>
+</div>
+<hr> 
+
+<div class="related_posts">
+  <h3>Related Posts</h3>
+  <ul>
+  
+    <li><a href="/blog/facebook-is-creepy/">Facebook is an Exploitative, Dopamine Dealing Data Tyrant</a></li>
+  
+    <li><a href="/blog/content-moderation-algorithms/">Content Moderation Algorithms</a></li>
+  
+    <li><a href="/blog/link-dump-08/">Link Dump 08 // Decentralize All the Things</a></li>
+  
+    <li><a href="/blog/blockchain-tech-in-2018/">5 Cryptocurrencies to Look Out for in 2018</a></li>
+  
+    <li><a href="/blog/web-browser-privacy-and-security/">Know Thy Browser - A Study on Web Browser Security & Privacy</a></li>
+  
+  </ul>
+</div>
+
+
+            <div class="footer">
+    <p>
+     <ul class="social_links">
+      
+          <a href="https://github.com/tonyynot" class="social_links" target="_blank">
+              <i class="fa fa-github"></i>
+          </a>
+      
+
+      
+          <a href="https://twitter.com/tonecodes" class="social_links" target="_blank">
+              <i class="fa fa-twitter"></i>
+          </a>
+      
+
+      
+          <a href="https://instagram.com/blankwaves" class="social_links" target="_blank">
+              <i class="fa fa-instagram"></i>
+          </a>
+      
+
+      
+          <a href="https://www.linkedin.com/in/alramella" class="social_links" target="_blank">
+              <i class="fa fa-linkedin"></i>
+          </a>
+      
+      
+  </ul>
+  Copyright &copy; 2016 Anthony Ramella<br>
+  <small>Donate Bitcoin: 19VpVJ6EqNgCoC75Am8EMWbZpuBjfMucp7</small>
+    </p>
+</div>
+
+<!-- Syntax highlighting -->
+<script src="/assets/vendor/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Github Gist Embed -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+
+<!-- Twitter widget -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<!-- Target blank -->
+<script type="text/javascript">
+  var links = document.links;
+
+for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+   if (links[i].hostname != window.location.hostname) {
+       links[i].target = '_blank';
+   } 
+}
+</script>
+
+
+        </div>
+    </body>
+</html>

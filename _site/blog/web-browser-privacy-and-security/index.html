@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Know Thy Browser - A Study on Web Browser Security & Privacy // anthernet</title>
+
+        <meta name="description" content="A brief rundown of the privacy and security of popular third-party browsers. Some solutions are offered and many links are provided.">
+        
+        
+        <meta name="keywords" content="">
+        
+
+        <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1, minimal-ui", name: "viewport">
+
+        <link rel="canonical" href="http://anthonyramella.com/blog/web-browser-privacy-and-security/">
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="http://anthonyramella.com/favicon.png"/>
+        
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/solarized_dark.css">
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.css">
+
+        
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tonecodes">
+<meta name="twitter:creator" content="@tonecodes">
+
+  <meta name="twitter:title" content="Know Thy Browser - A Study on Web Browser Security & Privacy">
+
+
+  <meta name="twitter:url" content="http://anthonyramella.com/blog/web-browser-privacy-and-security/">
+
+
+  <meta name="twitter:description" content="A brief rundown of the privacy and security of popular third-party browsers. Some solutions are offered and many links are provided.">
+
+
+  <meta name="twitter:image:src" content="http://anthonyramella.com/img/avatar.jpg">
+
+
+<!-- Google plus -->
+<meta name="author" content="">
+<link rel="author" href="">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Know Thy Browser - A Study on Web Browser Security & Privacy">
+<meta property="og:description" content="A brief rundown of the privacy and security of popular third-party browsers. Some solutions are offered and many links are provided.">
+<meta property="og:url" content="http://anthonyramella.com/blog/web-browser-privacy-and-security/">
+<meta property="og:site_name" content="anthernet">
+
+        
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-60032993-2', 'auto');
+              ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+   
+    <body>
+        <header class="title_nav">
+          <div class="site">
+              <h1 class="title">
+                <a href="/">anthernet</a>
+              </h1>
+              
+              <div class="nav_links">
+                <a href="/">blog</a>
+                <a href="/about">about</a>
+                <a href="http://www.github.com/tonyynot" target="_blank">code</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="site">
+            
+            <h2>Know Thy Browser - A Study on Web Browser Security & Privacy</h2>
+<span class="post_date">September 14, 2017</span> 
+<span class="post_reading-time">Reading time - 
+    
+    
+        5 minutes
+    
+    </span>
+<hr>
+<div class="post">
+
+<h2 id="chrome"><a href="https://www.google.com/chrome/index.html">Chrome</a></h2>
+
+<p>SECURITY: Google Chrome is a freeware browser based on the open-source <a href="http://www.chromium.org/Home">Chromium project</a>. Some proprietary components have been added to optimize features such as upgrading, crash reports, a PDF viewer, media codec support and a randomly generated token that sends basic installation data back to Google. Although Chrome itself is not open-sourced, a nice feature is that Google does offer a very lucrative <a href="https://www.google.com/about/appsecurity/chrome-rewards/">bounty program</a> for reporting vulnerabilities along with its own Project Zero. Recently, Google has made it so that Chrome now quietly <a href="https://boingboing.net/2017/01/30/google-quietly-makes-optiona.html">installs a mandatory DRM module</a> without an option to disable it. This makes it difficult and dangerous for security researchers to investigate the possibility of vulnerabilities in Chrome <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=686430">[more information]</a>.</p>
+
+<p>PRIVACY: While Chrome offers some decent security features aside from the numeous plugins that should be added to enhance its security, it also has perhaps the worst reputation among popular web browsers in terms of privacy. Chrome comes installed with an RLZ identifier which sends an encoded string to Google used to measure promotional campaigns. This cannot be turned off as a setting, but Google kindly will provide the source code so you can decode it yourself! Also there is no word from Google whether RLZ can be disabled on mobile Chrome. The Chrome developers have also turned off the “Do Not Track” option which can and should be manually <a href="https://support.google.com/chrome/answer/2790761">turned on</a> so your browsing data isn’t collected. According to Chrome’s privacy policy can be found <a href="https://www.google.com/chrome/browser/privacy/index.html">here</a>.</p>
+
+<p>NOTE: If you must use Chrome as your primary browser, I would highly recommend creating separate profiles for certain browsing activity. One for browsing trusted sites, another for mostly trusted sites (with <a href="https://www.superantispyware.com/blog/2017/05/10/our-top-5-google-chrome-extension-picks-for-better-web-security/">these</a> security enhancment extensions installed) and a third with JavaScript and cookies disabled for browsing untrusted sites.</p>
+
+<h2 id="firefox"><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a></h2>
+
+<p>SECURITY: Firefox lets you create different user profiles called <a href="https://testpilot.firefox.com/experiments/containers">containers</a> which can be used in the same way as the previously suggested Chrome profiles. Since Firefox switched to HTTPS support, any login that doesn’t support HTTPS displays prompt in the password field reminding the user that their login could be compromised. On top of being free and open-sourced, Mozilla also offers a <a href="https://www.mozilla.org/en-US/security/bug-bounty/">bug bounty</a> reward for Firefox.</p>
+
+<p>PRIVACY: Mozilla makes it very clear that they put a high priority on privacy. On top of being completely open source, Mozilla will not sell browsing data to other companies since they are a non-profit. Firefox uses <a href="https://developer.mozilla.org/en-US/Firefox/Privacy/Tracking_Protection">tracking protection</a> during private sessions but it can be enabled on the default profile as well. Unfortunately, some previous versions of Firefox used a legacy web extension that offered a lot of freedom for developers at the expense of being quite invasive by introducing several vulnerabilities which are covered in <a href="https://www.exploit-db.com/docs/24541.pdf">this paper</a>. Considering Firefox has limited protection out of the box compared to a browser like Brave or Tor, there are some addons that can greatly improve the browser’s security. It is recommended to use <a href="https://github.com/TheCreeper/PrivacyFox">TheCreeper/PrivacyFox</a> to enhance privacy settings for Firefox.</p>
+
+<p>Read Mozilla’s privacy policy <a href="https://www.mozilla.org/en-US/privacy/firefox/">here</a>.</p>
+
+<h2 id="brave"><a href="https://www.brave.com/download/">Brave</a></h2>
+
+<p>SECURITY: Brave is a browser founded by Brendan Eich, co-founder of the Mozilla Project and creator of JavaScript. Brave currently does not support addons or plugins, but it offers plenty of attractive built-in features. It comes with encrypted communication out of the box via <a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a>, which needs to be downloaded separately as an add-on for other browsers. Some other great default security features are password manager support, ad-blocking, tracker blocking and anti-phishing protection.</p>
+
+<p>PRIVACY: Braves makes the list of 3 browsers recommended by <a href="https://www.privacytools.io/#browser">privacytools.io</a>, which makes it worth a serious look. A notable feature that Brave has is <a href="https://torrentfreak.com/brave-a-privacy-focused-browser-with-built-in-torrent-streaming-170219/">WebTorrent integration</a> for built in streaming. Brave makes W3C <a href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM</a> optional by allowing users to <a href="https://news.ycombinator.com/item?id=13519006">disable it</a> and even gives a warning about using it. Besides free ad-blocking, what really sets Brave apart from other browsers is that it allows users to collect micro-donations called <a href="https://brave.com/faq/#brave-payments">Brave Payments</a>, rewarding users with <a href="https://basicattentiontoken.org/">Basic Attention Token</a> (BAT).</p>
+
+<p>“BAT will allow publishers, advertisers, and users to connect in an online environment that reduces fraud, privacy violations and “malvertisements” while increasing publisher revenue.<a href="https://www.cryptocoinsnews.com/brave-announces-blockchain-digital-advertising-platform-with-ethereum-based-token-rewards-for-users/">1</a>” BAT offers an anonymous and private p2p ad-tech solution for collecting rich user metrics by eliminating 3rd party intermediaries and rewarding all who participate.</p>
+
+<h2 id="tor-browser"><a href="https://www.torproject.org/projects/torbrowser.html">Tor Browser</a></h2>
+
+<p>TOR (short for The Onion Router) really deserves it’s own writeup, but here’s the quick rundown. Tor Browser is the flagship application of The Tor Project and as far as browsing goes, it is the undisputed king when it comes to privacy, security and anonymity. It uses a tech developed by U.S. Naval Research Labratory employees in the 90’s called “onion routing”, which implements encrypted nested application layers over the user’s network connection.</p>
+
+<p>SECURITY: As stated on the Tor Project website, “[Tor] protects you by bouncing your communications around a distributed network of relays run by volunteers all around the world”. Tor is so secure that the FBI could not even locate or de-anonymize the Tor user who hacked into the Hillary Clinton email server. Ultimately, any vulnerabilities come down to how browser is configured and used. A good start would be referring to <a href="https://www.torproject.org/docs/documentation.html.en">Tor’s documentation</a> on installing and configuring Tor for optimal security.</p>
+
+<p>PRIVACY: Once again, Tor Browser is the king when it comes to privacy browsers and anonymity and even <a href="https://www.theguardian.com/world/2013/oct/04/nsa-gchq-attack-tor-network-encryption">the NSA agrees</a>. However, it’s not a perfect solution. <a href="https://nakedsecurity.sophos.com/2015/06/25/can-you-trust-tors-exit-nodes/">Naked Security points out</a> that Tor had been mistakenly used as an end-to-end encryption tool, which is certainly is not. Basically, no matter how many nodes are relayed together, traffic must eventually escape the network through exit nodes. Years before Snowden, a Sweedish computer consultant named Dan Egerstad was able to leak hundreds of confidential government emails by using a packet sniffer aimed at POP3 and IMAP traffic coming through <a href="http://www.zdnet.com/article/sensitive-government-e-mails-leak-through-tor-exit-nodes/">Tor exit nodes</a>.</p>
+
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Know Thy Browser - A Study on Web Browser Security & Privacy%20via%20@tonecodes"
+  data-size="large">
+Tweet</a>
+</div>
+<hr> 
+
+<div class="related_posts">
+  <h3>Related Posts</h3>
+  <ul>
+  
+    <li><a href="/blog/facebook-is-creepy/">Facebook is an Exploitative, Dopamine Dealing Data Tyrant</a></li>
+  
+    <li><a href="/blog/content-moderation-algorithms/">Content Moderation Algorithms</a></li>
+  
+    <li><a href="/blog/link-dump-08/">Link Dump 08 // Decentralize All the Things</a></li>
+  
+    <li><a href="/blog/blockchain-tech-in-2018/">5 Cryptocurrencies to Look Out for in 2018</a></li>
+  
+    <li><a href="/blog/build-a-twitterbot-with-node/">Building a Twitter Bot with Node.js</a></li>
+  
+  </ul>
+</div>
+
+
+            <div class="footer">
+    <p>
+     <ul class="social_links">
+      
+          <a href="https://github.com/tonyynot" class="social_links" target="_blank">
+              <i class="fa fa-github"></i>
+          </a>
+      
+
+      
+          <a href="https://twitter.com/tonecodes" class="social_links" target="_blank">
+              <i class="fa fa-twitter"></i>
+          </a>
+      
+
+      
+          <a href="https://instagram.com/blankwaves" class="social_links" target="_blank">
+              <i class="fa fa-instagram"></i>
+          </a>
+      
+
+      
+          <a href="https://www.linkedin.com/in/alramella" class="social_links" target="_blank">
+              <i class="fa fa-linkedin"></i>
+          </a>
+      
+      
+  </ul>
+  Copyright &copy; 2016 Anthony Ramella<br>
+  <small>Donate Bitcoin: 19VpVJ6EqNgCoC75Am8EMWbZpuBjfMucp7</small>
+    </p>
+</div>
+
+<!-- Syntax highlighting -->
+<script src="/assets/vendor/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Github Gist Embed -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+
+<!-- Twitter widget -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<!-- Target blank -->
+<script type="text/javascript">
+  var links = document.links;
+
+for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+   if (links[i].hostname != window.location.hostname) {
+       links[i].target = '_blank';
+   } 
+}
+</script>
+
+
+        </div>
+    </body>
+</html>

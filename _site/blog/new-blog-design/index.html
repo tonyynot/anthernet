@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>How I Designed and Coded This Blog // anthernet</title>
+
+        <meta name="description" content="Using Jekyll, Bourbon, Gulp and a lot of free time, I redesigned my blog in just a weekend.">
+        
+        
+        <meta name="keywords" content="design, code, jekyll, gulp, tutorials">
+        
+
+        <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1, minimal-ui", name: "viewport">
+
+        <link rel="canonical" href="http://anthonyramella.com/blog/new-blog-design/">
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="http://anthonyramella.com/favicon.png"/>
+        
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/solarized_dark.css">
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.css">
+
+        
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tonecodes">
+<meta name="twitter:creator" content="@tonecodes">
+
+  <meta name="twitter:title" content="How I Designed and Coded This Blog">
+
+
+  <meta name="twitter:url" content="http://anthonyramella.com/blog/new-blog-design/">
+
+
+  <meta name="twitter:description" content="Using Jekyll, Bourbon, Gulp and a lot of free time, I redesigned my blog in just a weekend.">
+
+
+  <meta name="twitter:image:src" content="http://anthonyramella.com/img/avatar.jpg">
+
+
+<!-- Google plus -->
+<meta name="author" content="">
+<link rel="author" href="">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How I Designed and Coded This Blog">
+<meta property="og:description" content="Using Jekyll, Bourbon, Gulp and a lot of free time, I redesigned my blog in just a weekend.">
+<meta property="og:url" content="http://anthonyramella.com/blog/new-blog-design/">
+<meta property="og:site_name" content="anthernet">
+
+        
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-60032993-2', 'auto');
+              ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+   
+    <body>
+        <header class="title_nav">
+          <div class="site">
+              <h1 class="title">
+                <a href="/">anthernet</a>
+              </h1>
+              
+              <div class="nav_links">
+                <a href="/">blog</a>
+                <a href="/about">about</a>
+                <a href="http://www.github.com/tonyynot" target="_blank">code</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="site">
+            
+            <h2>How I Designed and Coded This Blog</h2>
+<span class="post_date">March 29, 2016</span> 
+<span class="post_reading-time">Reading time - 
+    
+    
+        3 minutes
+    
+    </span>
+<hr>
+<div class="post">
+
+<p>It has been well over a year that I’ve been using Jekyll as a static site generator for my blog and up until now, I’ve been downloading and modifying various themes. I decided to start with a fresh base install of Jekyll and roll my own theme using Sass to process my CSS.</p>
+
+<h2 id="setting-up-jekyll-and-gulp">Setting up Jekyll and Gulp</h2>
+<p>I wanted to use a task runner for my build, specifically Gulp.js to handle my Sass compiling and BrowserSync to auto refresh my changes on each save. I came across <a href="https://github.com/shakyShane/jekyll-gulp-sass-browser-sync">this</a> Github repo which provided an excellent gulpfile with the default Jekyll build files. In order to get my build system up and running, I ran the following installations:</p>
+
+<p>Jekyll - <code class="highlighter-rouge">$ gem install jekyll</code><br />
+NodeJS - use the installer found <a href="https://nodejs.org/en/">here</a>.<br />
+GulpJS - <code class="highlighter-rouge">$ npm install -g gulp</code> (mac users should use <code class="highlighter-rouge">sudo</code>)</p>
+
+<p>I did have to run <code class="highlighter-rouge">sudo npm install</code> for each of the dependencies listed in the gulpfile. Once that was done, running a simple <code class="highlighter-rouge">gulp</code> command got my Jekyll build up and running with BrowserSync and Sass compiling.</p>
+
+<h2 id="installing-bourbon-and-neat">Installing Bourbon and Neat</h2>
+<p>Now that I had my build system up and running, I started thinking about design and layout. All I knew was I wanted to keep both the design and code minimal. This meant no Bootstrap or Foundation. I remembered trying to use <a href="http://bourbon.io">Bourbon</a> and the <a href="http://neat.bourbon.io/">Neat</a> grid a while back but not understanding enough about the grid system and Sass to be able to properly implement it into my project. So I revisted Bourbon and Neat this time and was surprised with how quick and easy it is to use.</p>
+
+<p>Installation is as simple as running a gem install:<br />
+<code class="highlighter-rouge">$ gem install bourbon</code>
+Then loading Bourbon into the project with<br /> 
+<code class="highlighter-rouge">$ bourbon install</code></p>
+
+<p><em>Note: Installing Neat is exactly the same</em><br /></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gem install neat 
+<span class="gp">$ </span>neat install</code></pre></figure>
+
+<p>Inside my <i>_scss</i> folder, I created a file to store my mixins and another file to store my color and font variables. Inside my <i>_main.scss</i>, the Bourbon and Neat .scss files are included along with <i>_variables.scss</i> and <i>_mixins.scss</i> at the top of the stylesheet as such:</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@import</span> <span class="s">"bourbon/bourbon";</span>
+<span class="k">@import</span> <span class="s">"neat/neat";</span>
+<span class="k">@import</span> <span class="s">"variables";</span>
+<span class="k">@import</span> <span class="s">"mixins";</span></code></pre></figure>
+
+<h2 id="design--layout">Design &amp; Layout</h2>
+<p>With everything setup in just a few minutes, I was able to start designing with ease. Having my Gulp build system running BrowserSync, trying out new fonts, colors and grid layouts with Neat was a breeze. It actually made the design part of the build very fun for me and trying out new ideas was a lot less tedious. Using the Neat grid changed the way I approach CSS. Things like nesting pseudo elements, using variables and defining breakpoints and media queries within a class seems to be the most logical way to write CSS.</p>
+
+<p>Avoiding tons of nested divs with long lists of classes such as <code class="highlighter-rouge">small-12 medium-10 large-6 columns</code> kept my markup semantic and clean. The Neat grid makes it as simple as using <code class="highlighter-rouge">@include span-columns(12);</code> inside the class itself. For media breakpoints, just throw in <code class="highlighter-rouge">@media screen and (max-width: 887px){...}</code>.</p>
+
+<h2 id="theming-made-easy-with-sass">Theming Made Easy with Sass</h2>
+<p>When I was downloading and modifying other Jekyll themes, I found that the things I wanted to change most were font and color variations. With that in mind, I designed this site so that the colors and fonts could easily be changed without having to replace every instance of that color/font in the document. I did this by making variables targeting each property that could be modified.</p>
+
+<p>With my color and font variables in place, I can assign one variable for multiple classes on the page. For example, let’s say we declared <code class="highlighter-rouge">$link_color: $red</code>. By having the variable <code class="highlighter-rouge">$link_color</code> assigned as the color to multiple classes, changing the declared color variable will also change the color of every property where <code class="highlighter-rouge">$link_color</code> is assigned instead of having to do a find/replace all.</p>
+
+<p>That’s all there is to it! If you have any questions or comments, feel free to <a href="http://www.twitter.com/tonecodes">tweet</a> at me or comment below.</p>
+
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=How I Designed and Coded This Blog%20via%20@tonecodes"
+  data-size="large">
+Tweet</a>
+</div>
+<hr> 
+
+<div class="related_posts">
+  <h3>Related Posts</h3>
+  <ul>
+  
+    <li><a href="/blog/facebook-is-creepy/">Facebook is an Exploitative, Dopamine Dealing Data Tyrant</a></li>
+  
+    <li><a href="/blog/content-moderation-algorithms/">Content Moderation Algorithms</a></li>
+  
+    <li><a href="/blog/link-dump-08/">Link Dump 08 // Decentralize All the Things</a></li>
+  
+    <li><a href="/blog/blockchain-tech-in-2018/">5 Cryptocurrencies to Look Out for in 2018</a></li>
+  
+    <li><a href="/blog/web-browser-privacy-and-security/">Know Thy Browser - A Study on Web Browser Security & Privacy</a></li>
+  
+  </ul>
+</div>
+
+
+            <div class="footer">
+    <p>
+     <ul class="social_links">
+      
+          <a href="https://github.com/tonyynot" class="social_links" target="_blank">
+              <i class="fa fa-github"></i>
+          </a>
+      
+
+      
+          <a href="https://twitter.com/tonecodes" class="social_links" target="_blank">
+              <i class="fa fa-twitter"></i>
+          </a>
+      
+
+      
+          <a href="https://instagram.com/blankwaves" class="social_links" target="_blank">
+              <i class="fa fa-instagram"></i>
+          </a>
+      
+
+      
+          <a href="https://www.linkedin.com/in/alramella" class="social_links" target="_blank">
+              <i class="fa fa-linkedin"></i>
+          </a>
+      
+      
+  </ul>
+  Copyright &copy; 2016 Anthony Ramella<br>
+  <small>Donate Bitcoin: 19VpVJ6EqNgCoC75Am8EMWbZpuBjfMucp7</small>
+    </p>
+</div>
+
+<!-- Syntax highlighting -->
+<script src="/assets/vendor/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Github Gist Embed -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+
+<!-- Twitter widget -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<!-- Target blank -->
+<script type="text/javascript">
+  var links = document.links;
+
+for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+   if (links[i].hostname != window.location.hostname) {
+       links[i].target = '_blank';
+   } 
+}
+</script>
+
+
+        </div>
+    </body>
+</html>

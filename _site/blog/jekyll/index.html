@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Create Simple Static Websites with Jekyll // anthernet</title>
+
+        <meta name="description" content="Get up and running with Jekyll in 4 easy steps. Includes instructions, resources and some additional info on why Jekyll is so great.">
+        
+        
+        <meta name="keywords" content="code, learning">
+        
+
+        <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1, minimal-ui", name: "viewport">
+
+        <link rel="canonical" href="http://anthonyramella.com/blog/jekyll/">
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="http://anthonyramella.com/favicon.png"/>
+        
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/solarized_dark.css">
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.css">
+
+        
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tonecodes">
+<meta name="twitter:creator" content="@tonecodes">
+
+  <meta name="twitter:title" content="Create Simple Static Websites with Jekyll">
+
+
+  <meta name="twitter:url" content="http://anthonyramella.com/blog/jekyll/">
+
+
+  <meta name="twitter:description" content="Get up and running with Jekyll in 4 easy steps. Includes instructions, resources and some additional info on why Jekyll is so great.">
+
+
+  <meta name="twitter:image:src" content="http://anthonyramella.com/img/avatar.jpg">
+
+
+<!-- Google plus -->
+<meta name="author" content="">
+<link rel="author" href="">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Create Simple Static Websites with Jekyll">
+<meta property="og:description" content="Get up and running with Jekyll in 4 easy steps. Includes instructions, resources and some additional info on why Jekyll is so great.">
+<meta property="og:url" content="http://anthonyramella.com/blog/jekyll/">
+<meta property="og:site_name" content="anthernet">
+
+        
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-60032993-2', 'auto');
+              ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+   
+    <body>
+        <header class="title_nav">
+          <div class="site">
+              <h1 class="title">
+                <a href="/">anthernet</a>
+              </h1>
+              
+              <div class="nav_links">
+                <a href="/">blog</a>
+                <a href="/about">about</a>
+                <a href="http://www.github.com/tonyynot" target="_blank">code</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="site">
+            
+            <h2>Create Simple Static Websites with Jekyll</h2>
+<span class="post_date">July 20, 2015</span> 
+<span class="post_reading-time">Reading time - 
+    
+    
+        3 minutes
+    
+    </span>
+<hr>
+<div class="post">
+
+<h2 id="what-is-jekyll-and-why-should-i-care">What is Jekyll and Why Should I Care?</h2>
+<p>Jekyll is a static site generator powered by Ruby. It is commonly used as a blog platform although it is powerful enough to be used to generate small websites. Since it runs a template directory featuring raw text files through a <a href="http://daringfireball.net/projects/markdown/">Markdown</a> converter and <a href="http://liquidmarkup.org/">Liquid</a> template renderer, it makes fast static sites with minimal code.</p>
+
+<p>Using Jekyll has helped me grown comfortable using the command line. Since it is installed via <a href="https://rubygems.org/">RubyGems</a>, it will give you some hands on with Ruby while learning some command line tricks over time. Also, Jekyll sites can be deployed on <a href="https://pages.github.com/">GitHub Pages</a> which will require some working knowledge of Git. By using Jekyll, you will learn how Git works by using GitHub Pages to host your site for free. While this all may sound a bit overwhelming, getting started with Jekyll is actually amazingly easy. The rest comes together quickly.</p>
+
+<h2 id="installing-jekyll">Installing Jekyll</h2>
+<p>Before getting started with Jekyll, there are a couple system requirements that are needed. Both requirements also have a pretty quick and straight forward installation.</p>
+
+<ul>
+  <li>
+    <p><a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> |
+This comes with OS X machines out of the box. Although you may want to make sure you are up to date on the latest version if you haven’t already.</p>
+  </li>
+  <li>
+    <p><a href="https://rubygems.org/pages/download/">RubyGems</a> |
+It is recommended that the latest version of RubyGems is installed which takes seconds to get.</p>
+  </li>
+</ul>
+
+<p>Now that we are all up to date with Ruby and RubyGems, let’s setup Jekyll. Once you have your terminal open, run these 4 commands.</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>gem install jekyll
+<span class="gp">$ </span>jekyll new myblog
+<span class="gp">$ </span><span class="nb">cd </span>myblog
+<span class="gp">$ </span>jekyll serve</code></pre></figure>
+
+<ol>
+  <li>Installs Jekyll to your system.</li>
+  <li>Creates a new directory with the Jekyll core files and default template.</li>
+  <li>Changes the working directory to the newly created “myblog”.</li>
+  <li>Starts a local port to serve the Jekyll files on localhost:4000</li>
+</ol>
+
+<p>These steps will get you fully up and running with Jekyll within seconds. You’ll have to use your <code class="highlighter-rouge">_config.yml</code> file in your “myblog” directory that was created in order to configure metadata, site title, url, syntax highlighting as well as various includes for your site. For more information on how to get properly configured with Jekyll, check out the docs on the <a href="http://jekyllrb.com/docs/configuration/">_config.yml</a> file.</p>
+
+<h2 id="jekyll-resources">Jekyll Resources</h2>
+<p><a href="http://jekyllthemes.org/">JekyllThemes.org</a> Provides a variety of Jekyll themes you can fork or download to help launch your site.<br /></p>
+
+<p><a href="https://try.github.io/levels/1/challenges/1">tryGit</a> Learn the basics of Git in 15 minutes.</p>
+
+<p><a href="https://gist.github.com/jedschneider/2890453">Working with GitHub Pages</a> Will help you get setup hosting your blog through GitHub pages for free.</p>
+
+<p><a href="http://jekyllbootstrap.com/">JekyllBootstrap</a> Generates a Jekyll scaffold and publishes your blog on GitHub Pages quick and easy. Also has a variety of themes to choose from.</p>
+
+<p><a href="http://jekyllrb.com/docs/resources/">Jekyll Resources</a> Links to more great Jekyll resources.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Jekyll is a great blog platform for developers who might want to start a simple static portfolio or personal site without having to worry about complicated designs or hacking Wordpress themes. While I would also suggest getting some hands on with a CMS, Jekyll is a very lightweight and minimal platform that has a much smaller learning curve. Plus, you can even pick up some command line, git and Ruby basics along the way.</p>
+
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Create Simple Static Websites with Jekyll%20via%20@tonecodes"
+  data-size="large">
+Tweet</a>
+</div>
+<hr> 
+
+<div class="related_posts">
+  <h3>Related Posts</h3>
+  <ul>
+  
+    <li><a href="/blog/facebook-is-creepy/">Facebook is an Exploitative, Dopamine Dealing Data Tyrant</a></li>
+  
+    <li><a href="/blog/content-moderation-algorithms/">Content Moderation Algorithms</a></li>
+  
+    <li><a href="/blog/link-dump-08/">Link Dump 08 // Decentralize All the Things</a></li>
+  
+    <li><a href="/blog/blockchain-tech-in-2018/">5 Cryptocurrencies to Look Out for in 2018</a></li>
+  
+    <li><a href="/blog/web-browser-privacy-and-security/">Know Thy Browser - A Study on Web Browser Security & Privacy</a></li>
+  
+  </ul>
+</div>
+
+
+            <div class="footer">
+    <p>
+     <ul class="social_links">
+      
+          <a href="https://github.com/tonyynot" class="social_links" target="_blank">
+              <i class="fa fa-github"></i>
+          </a>
+      
+
+      
+          <a href="https://twitter.com/tonecodes" class="social_links" target="_blank">
+              <i class="fa fa-twitter"></i>
+          </a>
+      
+
+      
+          <a href="https://instagram.com/blankwaves" class="social_links" target="_blank">
+              <i class="fa fa-instagram"></i>
+          </a>
+      
+
+      
+          <a href="https://www.linkedin.com/in/alramella" class="social_links" target="_blank">
+              <i class="fa fa-linkedin"></i>
+          </a>
+      
+      
+  </ul>
+  Copyright &copy; 2016 Anthony Ramella<br>
+  <small>Donate Bitcoin: 19VpVJ6EqNgCoC75Am8EMWbZpuBjfMucp7</small>
+    </p>
+</div>
+
+<!-- Syntax highlighting -->
+<script src="/assets/vendor/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Github Gist Embed -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+
+<!-- Twitter widget -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<!-- Target blank -->
+<script type="text/javascript">
+  var links = document.links;
+
+for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+   if (links[i].hostname != window.location.hostname) {
+       links[i].target = '_blank';
+   } 
+}
+</script>
+
+
+        </div>
+    </body>
+</html>
