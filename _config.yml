@@ -5,8 +5,8 @@ description: >
 
 # Jekyll-FTP
 # username:
-# server_url: 
-# remote_dir: 
+# server_url:
+# remote_dir:
 
 # Baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://anthonyramella.com" # the base hostname & protocol for your site
@@ -16,11 +16,11 @@ author:
   github: tonyynot
   twitter: tonecodes
   disqus: aramella
-  instagram: blankwaves
-  linkedin: alramella
+  # instagram: blankwaves
+  # linkedin: alramella
 
 google_analytics: 'UA-60032993-2'
-  
+
 # Build settings
 markdown: kramdown
 kramdown:
