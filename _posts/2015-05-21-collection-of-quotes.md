@@ -1,12 +1,12 @@
 ---
 layout: post
 title: A Collection of Quotes
-description: Since I have been relatively busy the past month or so, I haven't had much time to write so I thought I'd share these insightful quotes I have been collecting. The quotes are on miscelaneous topics that I've found useful in one way or another.
+description: Since I have been relatively busy the past month or so, I haven't had much time to write so I thought I'd share these insightful quotes I have been collecting. The quotes are on miscellaneous topics that I've found useful in one way or another.
 comments: true
 tags: learning
 ---
 
-Since I have been relatively busy the past month or so, I haven't had much time to write so I thought I'd share these insightful quotes I have been collecting. The quotes are on miscelaneous topics that I've found useful in one way or another. My plan is that this page is updated intermittently and the list of quotes grows over time.
+Since I have been relatively busy the past month or so, I haven't had much time to write so I thought I'd share these insightful quotes I have been collecting. The quotes are on miscellaneous topics that I've found useful in one way or another. My plan is that this page is updated intermittently and the list of quotes grows over time.
 
 "You didn’t come into this world. You came out of it, like a wave from the ocean. You are not a stranger here." -Alan Watts
 
