@@ -2,8 +2,8 @@
 layout: default
 ---
 <h2>{{ page.title }}</h2>
-<span class="post_date">{{ page.date | date: '%B %d, %Y' }}</span> 
-<span class="post_reading-time">Reading time - 
+<span class="post_date">{{ page.date | date: '%B %d, %Y' }}</span>
+<span class="post_reading-time">Reading time -
     {% assign words = content | number_of_words %}
     {% if words < 360 %}
         1 minute
@@ -20,7 +20,7 @@ layout: default
   data-size="large">
 Tweet</a>
 </div>
-<hr> 
+<hr>
 {% if site.related_posts.size >= 1 %}
 <div class="related_posts">
   <h3>Related Posts</h3>
@@ -31,3 +31,5 @@ Tweet</a>
   </ul>
 </div>
 {% endif %}
+
+{% include externals/disqus.html %}
