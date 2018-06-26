@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Open Files in Sublime Text 3 from the Command Line // anthernet</title>
+
+        <meta name="description" content="a curated web developer blog with resources, articles and opinions by Anthony Ramella
+">
+        
+        
+        <meta name="keywords" content="productivity, tools">
+        
+
+        <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1, minimal-ui", name: "viewport">
+
+        <link rel="canonical" href="http://anthonyramella.com/blog/sublime-text-command-line/">
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="http://anthonyramella.com/favicon.png"/>
+        
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/solarized_dark.css">
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.css">
+
+        
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tonecodes">
+<meta name="twitter:creator" content="@tonecodes">
+
+  <meta name="twitter:title" content="Open Files in Sublime Text 3 from the Command Line">
+
+
+  <meta name="twitter:url" content="http://anthonyramella.com/blog/sublime-text-command-line/">
+
+
+  <meta name="twitter:description" content="a curated web developer blog with resources, articles and opinions by Anthony Ramella
+">
+
+
+  <meta name="twitter:image:src" content="http://anthonyramella.com/img/avatar.jpg">
+
+
+<!-- Google plus -->
+<meta name="author" content="">
+<link rel="author" href="">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Open Files in Sublime Text 3 from the Command Line">
+<meta property="og:description" content="a curated web developer blog with resources, articles and opinions by Anthony Ramella
+">
+<meta property="og:url" content="http://anthonyramella.com/blog/sublime-text-command-line/">
+<meta property="og:site_name" content="anthernet">
+
+        
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-60032993-2', 'auto');
+              ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+   
+    <body>
+        <header class="title_nav">
+          <div class="site">
+              <h1 class="title">
+                <a href="/">anthernet</a>
+              </h1>
+              
+              <div class="nav_links">
+                <a href="/">blog</a>
+                <a href="/about">about</a>
+                <a href="http://www.github.com/tonyynot" target="_blank">code</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="site">
+            
+            <h2>Open Files in Sublime Text 3 from the Command Line</h2>
+<span class="post_date">July 06, 2015</span> 
+<span class="post_reading-time">Reading time - 
+    
+    
+        2 minutes
+    
+    </span>
+<hr>
+<div class="post">
+
+<p>Sublime Text 3 comes with a command line tool called <code class="highlighter-rouge">subl</code> which can be used to open files in Sublime Text. However, you first have to do some configurations in order to enable this tool. If you are a heavy command line user, this tool is an absolute life saver.</p>
+
+<h2 id="setting-up-the-load-path">Setting up the load $PATH</h2>
+<p>The first step is to create a <a href="https://en.wikipedia.org/wiki/Symbolic_link">symlink</a> that will allow you to run <code class="highlighter-rouge">subl</code> from the command line. In the documentation on this tool, it is assumed you have <code class="highlighter-rouge">~/bin</code> (or <code class="highlighter-rouge">/Users/username/</code>) in your load path, which <i>would</i> be located in 
+<code class="highlighter-rouge">/Applications/Sublime Text.app Contents/SharedSupport/bin/subl</code>. However, since the <code class="highlighter-rouge">/usr/local/bin</code> is already in your load path by default on OS X, it serves as a better place to assign the <code class="highlighter-rouge">subl</code> symlink.</p>
+
+<p>To check your load $PATH, you want to run <code class="highlighter-rouge">echo $PATH</code> in the terminal.</p>
+
+<p>Your results might vary slightly but it will most likely return <code class="highlighter-rouge">/usr/local/bin</code> at the end of the line, which is included by default on OS X.</p>
+
+<h2 id="installation">Installation</h2>
+<p>The first and only step to the installation is to simply run this line in your terminal:</p>
+
+<p><code class="highlighter-rouge">ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime</code></p>
+
+<p>As a side note, I codefer to name the symlink “<code class="highlighter-rouge">sublime</code>” instead of “<code class="highlighter-rouge">subl</code>” just to be more specific. Plus, terminal symlinks can be auto-completed by codessing tab once the initial bit of the command has been typed. If the extra keystroke is a bit much for you, feel free to change the line above to the “<code class="highlighter-rouge">subl</code>” symlink at the end of <code class="highlighter-rouge">/usr/local/bin/</code>.</p>
+
+<h2 id="launching">Launching</h2>
+
+<p>In your terminal, go to your Documents directory by running:</p>
+
+<p><code class="highlighter-rouge">cd ~/Documents</code></p>
+
+<p>Next, to test that the symlink is working, open the contents of your Documents folder in Sublime Text. So this will simply be the symlink followed by the file name you want to open, in this case we are opening all contents of the Documents folder.</p>
+
+<p><code class="highlighter-rouge">sublime .</code></p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>This is a really handy tool to have as a heavy user of the command line. It allows you to remain in the command line while opening directories or files without having to launch your Finder to search around. It is also very useful when opening hidden files in Sublime Text. I found myself using it more frequently than I imagined and I hope it helps your workflow like it has mine.</p>
+
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Open Files in Sublime Text 3 from the Command Line%20via%20@tonecodes"
+  data-size="large">
+Tweet</a>
+</div>
+<hr> 
+
+<div class="related_posts">
+  <h3>Related Posts</h3>
+  <ul>
+  
+    <li><a href="/blog/facebook-is-creepy/">Facebook is an Exploitative, Dopamine Dealing Data Tyrant</a></li>
+  
+    <li><a href="/blog/content-moderation-algorithms/">Content Moderation Algorithms</a></li>
+  
+    <li><a href="/blog/link-dump-08/">Link Dump 08 // Decentralize All the Things</a></li>
+  
+    <li><a href="/blog/blockchain-tech-in-2018/">5 Cryptocurrencies to Look Out for in 2018</a></li>
+  
+    <li><a href="/blog/web-browser-privacy-and-security/">Know Thy Browser - A Study on Web Browser Security & Privacy</a></li>
+  
+  </ul>
+</div>
+
+
+            <div class="footer">
+    <p>
+     <ul class="social_links">
+      
+          <a href="https://github.com/tonyynot" class="social_links" target="_blank">
+              <i class="fa fa-github"></i>
+          </a>
+      
+
+      
+          <a href="https://twitter.com/tonecodes" class="social_links" target="_blank">
+              <i class="fa fa-twitter"></i>
+          </a>
+      
+
+      
+          <a href="https://instagram.com/blankwaves" class="social_links" target="_blank">
+              <i class="fa fa-instagram"></i>
+          </a>
+      
+
+      
+          <a href="https://www.linkedin.com/in/alramella" class="social_links" target="_blank">
+              <i class="fa fa-linkedin"></i>
+          </a>
+      
+      
+  </ul>
+  Copyright &copy; 2016 Anthony Ramella<br>
+  <small>Donate Bitcoin: 19VpVJ6EqNgCoC75Am8EMWbZpuBjfMucp7</small>
+    </p>
+</div>
+
+<!-- Syntax highlighting -->
+<script src="/assets/vendor/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Github Gist Embed -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+
+<!-- Twitter widget -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<!-- Target blank -->
+<script type="text/javascript">
+  var links = document.links;
+
+for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+   if (links[i].hostname != window.location.hostname) {
+       links[i].target = '_blank';
+   } 
+}
+</script>
+
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/tonyynot
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://anthonyramella.com
+  * I am tonyynot (https://keybase.io/tonyynot) on keybase.
+  * I have a public key ASAmoabMGczd4CwYRASYWHukqucqB5-_V7BeG-BOz4UgMAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ac17bba5e6b1c2e184a9676f2a9d9145b4c040c08e8354986dcc9dfd203516360a",
+      "host": "keybase.io",
+      "kid": "012026a1a6cc19ccdde02c18440498587ba4aae72a079fbf57b05e1be04ecf8520300a",
+      "uid": "440dc1e3d14312e2839debdac160b319",
+      "username": "tonyynot"
+    },
+    "merkle_root": {
+      "ctime": 1507754841,
+      "hash": "bab7f1de62d6c9285b0cae982944761fb6ad3f142992bafb22887e4a4d7e3b8d5d59a00f8de649b37e8435254eac68c9baa626ced695bfedbd8dc48a98a1f6e2",
+      "hash_meta": "b2ac3010c8f5df30c7f9b91a21bdbfa0f17ef0adf065cf6b15977f58b58c6770",
+      "seqno": 1561360
+    },
+    "service": {
+      "hostname": "anthonyramella.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.33"
+  },
+  "ctime": 1507754880,
+  "expire_in": 504576000,
+  "prev": "48411f80faf23eb302f27896eda54bf41f32fe570b520392f628a9ba8211bd6a",
+  "seqno": 31,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgJqGmzBnM3eAsGEQEmFh7pKrnKgefv1ewXhvgTs+FIDAKp3BheWxvYWTFA0p7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYWMxN2JiYTVlNmIxYzJlMTg0YTk2NzZmMmE5ZDkxNDViNGMwNDBjMDhlODM1NDk4NmRjYzlkZmQyMDM1MTYzNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMjZhMWE2Y2MxOWNjZGRlMDJjMTg0NDA0OTg1ODdiYTRhYWU3MmEwNzlmYmY1N2IwNWUxYmUwNGVjZjg1MjAzMDBhIiwidWlkIjoiNDQwZGMxZTNkMTQzMTJlMjgzOWRlYmRhYzE2MGIzMTkiLCJ1c2VybmFtZSI6InRvbnl5bm90In0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTA3NzU0ODQxLCJoYXNoIjoiYmFiN2YxZGU2MmQ2YzkyODViMGNhZTk4Mjk0NDc2MWZiNmFkM2YxNDI5OTJiYWZiMjI4ODdlNGE0ZDdlM2I4ZDVkNTlhMDBmOGRlNjQ5YjM3ZTg0MzUyNTRlYWM2OGM5YmFhNjI2Y2VkNjk1YmZlZGJkOGRjNDhhOThhMWY2ZTIiLCJoYXNoX21ldGEiOiJiMmFjMzAxMGM4ZjVkZjMwYzdmOWI5MWEyMWJkYmZhMGYxN2VmMGFkZjA2NWNmNmIxNTk3N2Y1OGI1OGM2NzcwIiwic2Vxbm8iOjE1NjEzNjB9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiYW50aG9ueXJhbWVsbGEuY29tIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4zMyJ9LCJjdGltZSI6MTUwNzc1NDg4MCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiI0ODQxMWY4MGZhZjIzZWIzMDJmMjc4OTZlZGE1NGJmNDFmMzJmZTU3MGI1MjAzOTJmNjI4YTliYTgyMTFiZDZhIiwic2Vxbm8iOjMxLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQOLhL8ksKXxtUaFu5wwkBsKfEsNPUpHv7KLGUddqASjFzDmmnr1dzjnusyBiHuxsRdAj9dsxc+8vMZI9cXXgGwSoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDddJ7k8h2CMhFW0RAD+vxB4/lePH7G9VVZxKEesO/hOaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tonyynot
+
+==================================================================
