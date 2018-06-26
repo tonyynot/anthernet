@@ -4,7 +4,7 @@ https://keybase.io/tonyynot
 
 I hereby claim:
 
-  * I am an admin of http://anthernet.com
+  * I am an admin of https://anthernet.com
   * I am tonyynot (https://keybase.io/tonyynot) on keybase.
   * I have a public key ASAmoabMGczd4CwYRASYWHukqucqB5-_V7BeG-BOz4UgMAo
 
