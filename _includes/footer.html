@@ -1,4 +1,33 @@
-<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
-{% include google-analytics.html %}
+<div class="footer">
+     <ul class="social_links">
+      {% if site.author.github %}
+          <a href="https://github.com/{{ site.author.github }}" class="social_links" target="_blank">
+              <i class="fa fa-github"></i>
+          </a>
+      {% endif %}
+
+      {% if site.author.twitter %}
+          <a href="https://twitter.com/{{ site.author.twitter }}" class="social_links" target="_blank">
+              <i class="fa fa-twitter"></i>
+          </a>
+      {% endif %}
+
+      {% if site.author.instagram %}
+          <a href="https://instagram.com/{{ site.author.instagram }}" class="social_links" target="_blank">
+              <i class="fa fa-instagram"></i>
+          </a>
+      {% endif %}
+
+      {% if site.author.linkedin %}
+          <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="social_links" target="_blank">
+              <i class="fa fa-linkedin"></i>
+          </a>
+      {% endif %}
+
+  </ul>
+  BTC: 3BmbwiAYkPCJBGmbH4nznXLLod67QpUtdq<br>
+  ETH: 0x3e13FbdE20a1bd2fdc7FF00C2CD50a22a2FE7998<br>
+  Copyright &copy; 2018 {{ site.title }}<br>
+</div>
+
+{% include externals/scripts.html %}

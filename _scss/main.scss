@@ -1,0 +1,347 @@
+// Styesheets
+@import "reset";
+@import "syntax";
+@import "404";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "variables";
+@import "mixins";
+
+// Color variables:
+$text_main: $altgray;
+$link_hover: $brick;
+$nav_links: $cutty;
+$title: $celeste;
+$navbar: $regal;
+$post_date: $basegray;
+
+// Font variables
+$navbar_font: $overpass;
+$base_font: $firacode;
+
+// Base styles
+body {
+    background: $altblack;
+    font-family: $base_font;
+    font-size: 16px;
+    font-weight: 400;
+    @media screen and (max-width: 664px 4) {
+        font-size: 1rem;
+    }
+}
+
+h2 {
+    color: $text_main;
+    font-size: 26px;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 2px;
+    line-height: 2.2rem;
+}
+
+h3 {
+    color: $text_main;
+    margin-top: 1.9rem;
+}
+
+a, a:hover, a:visited, a:focus {
+    text-decoration: none;
+}
+
+hr {
+    @include hz_rule;
+}
+
+figure {
+    @media screen and (max-width: 887px) {
+        margin: 0 auto;
+    }
+}
+
+// Highlight color
+::selection {
+    background: $nav_links; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: $nav_links; /* Gecko Browsers */
+}
+
+// Header and nav
+header.title_nav {
+    margin-bottom: 2rem;
+}
+.title_nav {
+
+    @include navbox;
+    @include outer-container;
+
+    .title {
+        margin-bottom: 0;
+        margin-top: 1rem;
+        @include span-columns(8);
+
+         @media screen and (max-width: 887px) {
+            @include span-columns(12);
+            margin-bottom: .5rem;
+            text-align: center;
+        }
+            a {
+            color: $title;
+            font-size: 23px;
+            font-family: $navbar_font;
+            text-decoration: none;
+            }
+                a:hover {
+                // color: $link_hover;
+                text-decoration: none;
+                }
+    }
+
+    .nav_links {
+        word-spacing: 1rem;
+        font-family: $sharetech;
+        font-size: 18px;
+        text-align: right;
+        font-weight: 400;
+        text-transform: uppercase;
+        @include span-columns(4);
+
+        @media screen and (min-width: 887px) {
+            padding-top: 1rem;
+        }
+        @media screen and (max-width: 887px) {
+            text-align: center;
+            @include span-columns(12);
+        }
+        a {
+            color: $nav_links;
+        }
+            a:hover {
+                color: $link_hover;
+                text-decoration: none;
+                }
+    }
+}
+
+// Site wrapper
+.site {
+    min-width: 77%;
+    font-size: inherit;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+    @include outer-container(100%);
+
+     @media screen and (max-width: 887px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 400;
+        text-align: left;
+        letter-spacing: .6px;
+        line-height: 2rem;
+    }
+}
+
+// Index post listing
+.page_subtitle {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.post_date {
+    padding: 0;
+    color: $post_date;
+    &::after {
+        content: " | ";
+        @media screen and (max-width: 664px) {
+            content: "";
+        }    
+    }
+}
+.post_reading-time {
+    color: $post_date;
+    @media screen and (max-width: 664px) {
+        float: none;
+        display: block;
+    }
+}
+
+.posts, .post {
+    @include post_link_hover;
+
+    a:visited {
+        color: $text_main;
+    }
+    img {
+
+        @include outer-container(100%);
+        @include image_container;
+        text-align: center;
+        margin: auto;
+        display: block;
+    }
+    small {
+        text-align: center;
+        display: block;
+    }
+    li {
+        padding:.5rem 0;
+        @media screen and (max-width: 887px) {
+            line-height: 1.2rem;
+            text-align: left;
+        }
+        span {
+            float: right;
+            font-family: $navbar_font;
+            font-size: 15px;
+            color: $basegray;
+
+            @media screen and (max-width: 887px) {
+                display: block;
+                float: none;
+                padding-top: 1.7rem;
+                padding-bottom: .3rem;
+            }
+        }
+
+        a {
+            color: $text_main;
+            text-decoration: none;
+            font-size: 18px;
+            // text-transform: uppercase;
+            letter-spacing: 0.1px;
+        
+            @media screen and (max-width: 887px) {
+            font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+// Post article
+.post {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include article_link_hover;
+
+    h2 {
+        font-size: 18px;
+        margin-top: 2.2rem;
+    }
+
+    p {
+        color: $text_main;
+        @media screen and (max-width: 887px) {
+            text-align: left;
+            line-height: 1.8rem;
+        }
+    }
+    ul, ol {
+        color: $text_main;
+
+        li {
+            line-height: 2.2rem;
+        }
+    }
+
+    // Change colors to vars
+    code {
+        padding: .2em .25em;
+        font-size: 13px;
+        border-radius: 3px;
+
+        &.highlighter-rouge {
+            background-color: $altblack;
+        }
+    }
+    pre {
+        border-radius: 6px;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+// Post
+blockquote {
+    letter-spacing: .2rem;
+    margin:0px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0px;
+    font-style: italic;
+    text-align: center;
+    position: relative;
+}
+.related_posts {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: left;
+    a {
+        font-size: 18px;
+    }
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        margin-top: 1rem;
+    }
+    li:before {
+        font-family: "FontAwesome";
+        content: "\f054";
+        color: $text_main;
+        padding-right: .5rem;
+    }
+    @include related_link_hover;
+}
+
+#disqus_thread a {
+    color: $link_hover;
+}
+
+// About page
+.about_head {
+    text-align: center;
+    .about_random {
+        span {
+        color: $basegray;
+        }
+    }
+    h2 {
+        text-align: center;
+    }
+}
+
+// Footer
+.footer {
+    font-size: 80%;
+    color: $text_main;
+    margin-top: 0;
+    border-top: 1px solid $regal;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+
+    @include span-columns(12);
+
+    @media screen and (max-width: 768px) {
+        @include span-columns(12 of 12);
+    }
+ 
+    .fa {
+        font-size: 1.5rem;
+        color: $text_main;
+        margin-bottom: 2rem;
+        padding-left: .5rem;
+        padding-top: 1rem;
+
+        &:hover {
+            text-decoration: none;
+            color: $link_hover;
+        }   
+    }
+}

@@ -1,0 +1,53 @@
+---
+layout: post
+title: Supercharge Your Mac Development Environment
+description:
+comments: true
+tags: productivity tools
+---
+During my first year of doing web development professionally, I have learned so many great things that I still haven’t completely processed it all. What I highly anticipated doing before starting web development full time, was spending most if not all of my time writing code. However, I found this to be only part of the job. What has really helped my ability to code comfortably on a daily basis is having my development environment set up in a way where I can enhance productivity while understanding and enjoying the tools I’m using.
+
+Here I will share some of the tools and applications I’ve used that have helped me and my team in various ways. Besides improving your coding skills, being a resourceful and prepared web developer will give you an advantage by increasing productivity and supercharging your development environment.
+
+I should note that not all of these applications are free, but do include free trials.
+
+*******
+
+## [CodeKit](https://incident57.com/codekit/)
+![CodeKit]({{ site.url }}/img/codekit.png)
+
+According to the developers behind CodeKit, they claim that this handy application is ‘like steroids for web developers’. I would find it hard to disagree, since CodeKit has built in compiling, Bower configuration and my favorite feature, auto-refresh in browsers whenever a save is made. Another great feature that is helpful is CodeKit comes with setups for Bootstrap, jQuery, Modernizr and Foundation out of the box so it cuts time setting up your project in one of those already easy to use frameworks. You can purchase a licensed copy of CodeKit for under $40 and of course there is a trial version so you can test it out for a few days before deciding if it’s something you would use every day.
+
+Side note: I have since switched to exclusively using Gulp.js as a build system to handle my compiling and browser refresh, but I would still recommend CodeKit for more of a quick start with less of a headache.
+
+*******
+
+## [Tower](http://www.git-tower.com/) / Client for Git
+![Tower]({{ site.url }}/img/tower-git.png)
+
+If you're like me and prefer using the terminal for git commands, this app might not be something you’re willing to throw your money at. But before you dismiss this as a horrible sales pitch and move on with your life, hear me out. If you are a professional developer working on a team, Tower will make your everyday version control much more practical and stress free. After switching from doing virtually all my version control managing from the terminal to using a client, my workflow has improved greatly. I realized how important it is to be able to see visuals of your branches and commit history, especially when working on larger projects with frequent commits. Sure there are free version control clients available, but Tower is super easy to use and even makes nightmarish git merge conflicts less painful. The UI is logical and makes complication actions easy to access. Tower is around $60 but if you are working in a team environment, its an essential tool to have. My team uses it and we all love it.
+
+*******
+
+## [Zero Dark Matrix](https://chrome.google.com/webstore/detail/devtools-theme-zero-dark/bomhdjeadceaggdgfoefmpeafkjhegbo?hl=en-US) / Theme for Chrome DevTools
+![Zero Dark]({{ site.url }}/img/zerodark.png)
+
+To put it bluntly, I can't stand reading code with a white background. It strains my eyes after a while, especially when my code editor and terminal windows have dark backgrounds. Zero Dark Matrix is a theme for Chrome Dev Tools that will give you a nice dark editor window with some great colors that make your inspector much easier on the eyes. While this isn't something that will increase productivity, it has served me well as I spend lots of time in Chrome DevTools. The Zero Dark Matrix theme helps maintain that easy legibility that doesn't require you to adjust your eyes to a blaring white window.
+
+_*For setup, see the instructions on the link above for the Zero Dark Matrix extension._
+
+*******
+
+## [Sip](https://itunes.apple.com/us/app/sip/id507257563?mt=12) / Color Picker
+![Sip]({{ site.url }}/img/sip_ss.png)
+This is a great lightweight tool for Mac users which runs in the toolbar. Sip works great for two reasons. First, it allows you to grab the hex code of any color on your screen with 2 clicks and will automatically copy that hex code to your clipboard. Second, it is a quick and easy way to test if you are working with the correct color in your CSS. Even though I use a [package](https://github.com/abe33/atom-pigments) that displays the color of any hex in my code editor, when working with another similar color it may be hard to tell if you are using the right one. Sip quickly solves that problem and a free version can be downloaded at the App Store.
+
+*******
+
+## [Transmit](https://panic.com/transmit/) / FTP Client
+![Transmit FTP]({{ site.url }}/img/transmit.png)
+Simply stated, Transmit is a super fast and easy way to transfer files to and from your FTP. It has a familiar feel as it is very similar to working in Finder. Your local files are displayed on the left and FTP on the right with drag and drop functionality. The UI is simple, clean and not too complicated, needing very little time to learn. While a license for Transmit costs $34, there is also a free demo version you can try out before purchasing. Again, not a free app but an excellent tool to have if you work on a team that can provide a licensed copy for you. Even if you don't work on a team but do a lot of FTP transfers, I would highly recommend purchasing Transmit to boost your productivity.
+
+*******
+
+What are some other Mac applications that have helped supercharge your development environment? Comment, share and discuss below.

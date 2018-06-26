@@ -1,0 +1,80 @@
+@mixin navbox {
+    background-color: $navbar;
+    z-index: 100;
+    max-width: 100% !important;
+    border-bottom: 1px solid #333;
+    margin-bottom: 3rem;
+    -webkit-box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+    -moz-box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+    box-shadow: 0px 2px 4px rgba(000,000,000,0.8);
+}
+
+@mixin hz_rule {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: $brick;
+    text-align: center;
+    margin: 1.9rem 0 0 0;
+
+    &:after {
+        font-family: "FontAwesome";
+        content: "\f1d0";
+        display: inline-block;
+        position: relative;
+        top: -0.8em;
+        padding: 0 0.25em;
+        background: $altblack;
+    }   
+}
+@mixin hover_effect {
+
+        background: linear-gradient($altblack,$altblack),linear-gradient($altblack,$altblack),linear-gradient($link_hover, $link_hover);
+        background-size: .05em 1px,.05em 1px,1px 1px;
+        background-repeat: no-repeat, no-repeat, repeat-x;
+        text-shadow: .03em 0 $altblack, -.03em 0 $altblack, 0 .03em $altblack, 0 -.03em $altblack, .06em 0 $altblack, -.06em 0 $altblack, .09em 0 $altblack, -.09em 0 $altblack, .12em 0 $altblack, -.12em 0 $altblack, .15em 0 $altblack, -.15em 0 $altblack;
+        background-position: 0 95%, 100% 95%, 0 95%;
+
+}
+@mixin  post_link_hover {
+    a {
+        color: $text_main;
+
+        &:hover {
+            color: $text_main;
+            @include hover_effect;
+        }
+    }  
+}
+
+@mixin related_link_hover {
+    a {
+        color: $link_hover;
+       
+        &:hover {
+            color: $text_main;
+            @include hover_effect;
+        }
+    }
+}
+
+@mixin article_link_hover {
+    a {
+        color: $text_main;
+        @include hover_effect;
+        
+        &:hover {
+            color: $link_hover;
+            @include hover_effect;
+        }
+    }
+}
+
+@mixin image_container {
+    display: block;
+    margin: 0 0 1rem;
+    // border-radius: .25rem;
+    //     -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    //     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    //     box-shadow:         3px 3px 5px 6px #ccc;
+}
