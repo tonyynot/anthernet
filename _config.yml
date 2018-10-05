@@ -1,7 +1,7 @@
 # Site settings
 title: anthernet
 description: >
-  a curated web developer blog with resources, articles and opinions by Anthony Ramella
+  coding resources // decentralized solutions // digital freedom
 
 # Jekyll-FTP
 # username:
@@ -9,15 +9,14 @@ description: >
 # remote_dir:
 
 # Baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://anthonyramella.com" # the base hostname & protocol for your site
+url: "http://anthernet.com" # the base hostname & protocol for your site
 permalink: "/blog/:title/"
 author:
-  fullname: Anthony Ramella
   github: tonyynot
   twitter: tonecodes
-  disqus: aramella
+  # disqus: 
   # instagram: blankwaves
-  # linkedin: alramella
+  # linkedin:
 
 google_analytics: 'UA-60032993-2'
 
