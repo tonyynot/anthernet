@@ -95,7 +95,7 @@
 <span class="post_reading-time">Reading time -
     
     
-        1 minute
+        10 minutes
     
     </span>
 <hr>
@@ -117,6 +117,303 @@
 <h2 id="your-awesome-new-bash_profile">Your awesome new .bash_profile</h2>
 <p>The following is a compiled .bash_profile that I came across on GitHub and forked it for future reference. It’s a very concise and well commented document that has a ton of useful aliases. <a href="https://gist.github.com/natelandau/10654137">Here</a> is the link to the file via GitHub Gist thanks to <a href="https://github.com/natelandau">Nathaniel Landau</a> who compiled the file.</p>
 
+<noscript><pre>#  ---------------------------------------------------------------------------
+#
+#  Description:  This file holds all my BASH configurations and aliases
+#
+#  Sections:
+#  1.   Environment Configuration
+#  2.   Make Terminal Better (remapping defaults and adding functionality)
+#  3.   File and Folder Management
+#  4.   Searching
+#  5.   Process Management
+#  6.   Networking
+#  7.   System Operations &amp; Information
+#  8.   Web Development
+#  9.   Reminders &amp; Notes
+#
+#  ---------------------------------------------------------------------------
+
+#   -------------------------------
+#   1.  ENVIRONMENT CONFIGURATION
+#   -------------------------------
+
+#   Change Prompt
+#   ------------------------------------------------------------
+    export PS1=&quot;________________________________________________________________________________\n| \w @ \h (\u) \n| =&gt; &quot;
+    export PS2=&quot;| =&gt; &quot;
+
+#   Set Paths
+#   ------------------------------------------------------------
+    export PATH=&quot;$PATH:/usr/local/bin/&quot;
+    export PATH=&quot;/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH&quot;
+
+#   Set Default Editor (change &#39;Nano&#39; to the editor of your choice)
+#   ------------------------------------------------------------
+    export EDITOR=/usr/bin/nano
+
+#   Set default blocksize for ls, df, du
+#   from this: http://hints.macworld.com/comment.php?mode=view&amp;cid=24491
+#   ------------------------------------------------------------
+    export BLOCKSIZE=1k
+
+#   Add color to terminal
+#   (this is all commented out as I use Mac Terminal Profiles)
+#   from http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
+#   ------------------------------------------------------------
+#   export CLICOLOR=1
+#   export LSCOLORS=ExFxBxDxCxegedabagacad
+
+
+#   -----------------------------
+#   2.  MAKE TERMINAL BETTER
+#   -----------------------------
+
+alias cp=&#39;cp -iv&#39;                           # Preferred &#39;cp&#39; implementation
+alias mv=&#39;mv -iv&#39;                           # Preferred &#39;mv&#39; implementation
+alias mkdir=&#39;mkdir -pv&#39;                     # Preferred &#39;mkdir&#39; implementation
+alias ll=&#39;ls -FGlAhp&#39;                       # Preferred &#39;ls&#39; implementation
+alias less=&#39;less -FSRXc&#39;                    # Preferred &#39;less&#39; implementation
+cd() { builtin cd &quot;$@&quot;; ll; }               # Always list directory contents upon &#39;cd&#39;
+alias cd..=&#39;cd ../&#39;                         # Go back 1 directory level (for fast typers)
+alias ..=&#39;cd ../&#39;                           # Go back 1 directory level
+alias ...=&#39;cd ../../&#39;                       # Go back 2 directory levels
+alias .3=&#39;cd ../../../&#39;                     # Go back 3 directory levels
+alias .4=&#39;cd ../../../../&#39;                  # Go back 4 directory levels
+alias .5=&#39;cd ../../../../../&#39;               # Go back 5 directory levels
+alias .6=&#39;cd ../../../../../../&#39;            # Go back 6 directory levels
+alias edit=&#39;subl&#39;                           # edit:         Opens any file in sublime editor
+alias f=&#39;open -a Finder ./&#39;                 # f:            Opens current directory in MacOS Finder
+alias ~=&quot;cd ~&quot;                              # ~:            Go Home
+alias c=&#39;clear&#39;                             # c:            Clear terminal display
+alias which=&#39;type -all&#39;                     # which:        Find executables
+alias path=&#39;echo -e ${PATH//:/\\n}&#39;         # path:         Echo all executable Paths
+alias show_options=&#39;shopt&#39;                  # Show_options: display bash options settings
+alias fix_stty=&#39;stty sane&#39;                  # fix_stty:     Restore terminal settings when screwed up
+alias cic=&#39;set completion-ignore-case On&#39;   # cic:          Make tab-completion case-insensitive
+mcd () { mkdir -p &quot;$1&quot; &amp;&amp; cd &quot;$1&quot;; }        # mcd:          Makes new Dir and jumps inside
+trash () { command mv &quot;$@&quot; ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
+ql () { qlmanage -p &quot;$*&quot; &gt;&amp; /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
+alias DT=&#39;tee ~/Desktop/terminalOut.txt&#39;    # DT:           Pipe content to file on MacOS Desktop
+
+#   lr:  Full Recursive Directory Listing
+#   ------------------------------------------
+alias lr=&#39;ls -R | grep &quot;:$&quot; | sed -e &#39;\&#39;&#39;s/:$//&#39;\&#39;&#39; -e &#39;\&#39;&#39;s/[^-][^\/]*\//--/g&#39;\&#39;&#39; -e &#39;\&#39;&#39;s/^/   /&#39;\&#39;&#39; -e &#39;\&#39;&#39;s/-/|/&#39;\&#39;&#39; | less&#39;
+
+#   mans:   Search manpage given in agument &#39;1&#39; for term given in argument &#39;2&#39; (case insensitive)
+#           displays paginated result with colored search terms and two lines surrounding each hit.             Example: mans mplayer codec
+#   --------------------------------------------------------------------
+    mans () {
+        man $1 | grep -iC2 --color=always $2 | less
+    }
+
+#   showa: to remind yourself of an alias (given some part of it)
+#   ------------------------------------------------------------
+    showa () { /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v &#39;^\s*$&#39; | less -FSRXc ; }
+
+
+#   -------------------------------
+#   3.  FILE AND FOLDER MANAGEMENT
+#   -------------------------------
+
+zipf () { zip -r &quot;$1&quot;.zip &quot;$1&quot; ; }          # zipf:         To create a ZIP archive of a folder
+alias numFiles=&#39;echo $(ls -1 | wc -l)&#39;      # numFiles:     Count of non-hidden files in current dir
+alias make1mb=&#39;mkfile 1m ./1MB.dat&#39;         # make1mb:      Creates a file of 1mb size (all zeros)
+alias make5mb=&#39;mkfile 5m ./5MB.dat&#39;         # make5mb:      Creates a file of 5mb size (all zeros)
+alias make10mb=&#39;mkfile 10m ./10MB.dat&#39;      # make10mb:     Creates a file of 10mb size (all zeros)
+
+#   cdf:  &#39;Cd&#39;s to frontmost window of MacOS Finder
+#   ------------------------------------------------------
+    cdf () {
+        currFolderPath=$( /usr/bin/osascript &lt;&lt;EOT
+            tell application &quot;Finder&quot;
+                try
+            set currFolder to (folder of the front window as alias)
+                on error
+            set currFolder to (path to desktop folder as alias)
+                end try
+                POSIX path of currFolder
+            end tell
+EOT
+        )
+        echo &quot;cd to \&quot;$currFolderPath\&quot;&quot;
+        cd &quot;$currFolderPath&quot;
+    }
+
+#   extract:  Extract most know archives with one command
+#   ---------------------------------------------------------
+    extract () {
+        if [ -f $1 ] ; then
+          case $1 in
+            *.tar.bz2)   tar xjf $1     ;;
+            *.tar.gz)    tar xzf $1     ;;
+            *.bz2)       bunzip2 $1     ;;
+            *.rar)       unrar e $1     ;;
+            *.gz)        gunzip $1      ;;
+            *.tar)       tar xf $1      ;;
+            *.tbz2)      tar xjf $1     ;;
+            *.tgz)       tar xzf $1     ;;
+            *.zip)       unzip $1       ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1        ;;
+            *)     echo &quot;&#39;$1&#39; cannot be extracted via extract()&quot; ;;
+             esac
+         else
+             echo &quot;&#39;$1&#39; is not a valid file&quot;
+         fi
+    }
+
+
+#   ---------------------------
+#   4.  SEARCHING
+#   ---------------------------
+
+alias qfind=&quot;find . -name &quot;                 # qfind:    Quickly search for file
+ff () { /usr/bin/find . -name &quot;$@&quot; ; }      # ff:       Find file under the current directory
+ffs () { /usr/bin/find . -name &quot;$@&quot;&#39;*&#39; ; }  # ffs:      Find file whose name starts with a given string
+ffe () { /usr/bin/find . -name &#39;*&#39;&quot;$@&quot; ; }  # ffe:      Find file whose name ends with a given string
+
+#   spotlight: Search for a file using MacOS Spotlight&#39;s metadata
+#   -----------------------------------------------------------
+    spotlight () { mdfind &quot;kMDItemDisplayName == &#39;$@&#39;wc&quot;; }
+
+
+#   ---------------------------
+#   5.  PROCESS MANAGEMENT
+#   ---------------------------
+
+#   findPid: find out the pid of a specified process
+#   -----------------------------------------------------
+#       Note that the command name can be specified via a regex
+#       E.g. findPid &#39;/d$/&#39; finds pids of all processes with names ending in &#39;d&#39;
+#       Without the &#39;sudo&#39; it will only find processes of the current user
+#   -----------------------------------------------------
+    findPid () { lsof -t -c &quot;$@&quot; ; }
+
+#   memHogsTop, memHogsPs:  Find memory hogs
+#   -----------------------------------------------------
+    alias memHogsTop=&#39;top -l 1 -o rsize | head -20&#39;
+    alias memHogsPs=&#39;ps wwaxm -o pid,stat,vsize,rss,time,command | head -10&#39;
+
+#   cpuHogs:  Find CPU hogs
+#   -----------------------------------------------------
+    alias cpu_hogs=&#39;ps wwaxr -o pid,stat,%cpu,time,command | head -10&#39;
+
+#   topForever:  Continual &#39;top&#39; listing (every 10 seconds)
+#   -----------------------------------------------------
+    alias topForever=&#39;top -l 9999999 -s 10 -o cpu&#39;
+
+#   ttop:  Recommended &#39;top&#39; invocation to minimize resources
+#   ------------------------------------------------------------
+#       Taken from this macosxhints article
+#       http://www.macosxhints.com/article.php?story=20060816123853639
+#   ------------------------------------------------------------
+    alias ttop=&quot;top -R -F -s 10 -o rsize&quot;
+
+#   my_ps: List processes owned by my user:
+#   ------------------------------------------------------------
+    my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ; }
+
+
+#   ---------------------------
+#   6.  NETWORKING
+#   ---------------------------
+
+alias myip=&#39;curl ip.appspot.com&#39;                    # myip:         Public facing IP Address
+alias netCons=&#39;lsof -i&#39;                             # netCons:      Show all open TCP/IP sockets
+alias flushDNS=&#39;dscacheutil -flushcache&#39;            # flushDNS:     Flush out the DNS Cache
+alias lsock=&#39;sudo /usr/sbin/lsof -i -P&#39;             # lsock:        Display open sockets
+alias lsockU=&#39;sudo /usr/sbin/lsof -nP | grep UDP&#39;   # lsockU:       Display only open UDP sockets
+alias lsockT=&#39;sudo /usr/sbin/lsof -nP | grep TCP&#39;   # lsockT:       Display only open TCP sockets
+alias ipInfo0=&#39;ipconfig getpacket en0&#39;              # ipInfo0:      Get info on connections for en0
+alias ipInfo1=&#39;ipconfig getpacket en1&#39;              # ipInfo1:      Get info on connections for en1
+alias openPorts=&#39;sudo lsof -i | grep LISTEN&#39;        # openPorts:    All listening connections
+alias showBlocked=&#39;sudo ipfw list&#39;                  # showBlocked:  All ipfw rules inc/ blocked IPs
+
+#   ii:  display useful host related informaton
+#   -------------------------------------------------------------------
+    ii() {
+        echo -e &quot;\nYou are logged on ${RED}$HOST&quot;
+        echo -e &quot;\nAdditionnal information:$NC &quot; ; uname -a
+        echo -e &quot;\n${RED}Users logged on:$NC &quot; ; w -h
+        echo -e &quot;\n${RED}Current date :$NC &quot; ; date
+        echo -e &quot;\n${RED}Machine stats :$NC &quot; ; uptime
+        echo -e &quot;\n${RED}Current network location :$NC &quot; ; scselect
+        echo -e &quot;\n${RED}Public facing IP Address :$NC &quot; ;myip
+        #echo -e &quot;\n${RED}DNS Configuration:$NC &quot; ; scutil --dns
+        echo
+    }
+
+
+#   ---------------------------------------
+#   7.  SYSTEMS OPERATIONS &amp; INFORMATION
+#   ---------------------------------------
+
+alias mountReadWrite=&#39;/sbin/mount -uw /&#39;    # mountReadWrite:   For use when booted into single-user
+
+#   cleanupDS:  Recursively delete .DS_Store files
+#   -------------------------------------------------------------------
+    alias cleanupDS=&quot;find . -type f -name &#39;*.DS_Store&#39; -ls -delete&quot;
+
+#   finderShowHidden:   Show hidden files in Finder
+#   finderHideHidden:   Hide hidden files in Finder
+#   -------------------------------------------------------------------
+    alias finderShowHidden=&#39;defaults write com.apple.finder ShowAllFiles TRUE&#39;
+    alias finderHideHidden=&#39;defaults write com.apple.finder ShowAllFiles FALSE&#39;
+
+#   cleanupLS:  Clean up LaunchServices to remove duplicates in the &quot;Open With&quot; menu
+#   -----------------------------------------------------------------------------------
+    alias cleanupLS=&quot;/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user &amp;&amp; killall Finder&quot;
+
+#    screensaverDesktop: Run a screensaver on the Desktop
+#   -----------------------------------------------------------------------------------
+    alias screensaverDesktop=&#39;/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background&#39;
+
+#   ---------------------------------------
+#   8.  WEB DEVELOPMENT
+#   ---------------------------------------
+
+alias apacheEdit=&#39;sudo edit /etc/httpd/httpd.conf&#39;      # apacheEdit:       Edit httpd.conf
+alias apacheRestart=&#39;sudo apachectl graceful&#39;           # apacheRestart:    Restart Apache
+alias editHosts=&#39;sudo edit /etc/hosts&#39;                  # editHosts:        Edit /etc/hosts file
+alias herr=&#39;tail /var/log/httpd/error_log&#39;              # herr:             Tails HTTP error logs
+alias apacheLogs=&quot;less +F /var/log/apache2/error_log&quot;   # Apachelogs:   Shows apache error logs
+httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
+
+#   httpDebug:  Download a web page and show info on what took time
+#   -------------------------------------------------------------------
+    httpDebug () { /usr/bin/curl $@ -o /dev/null -w &quot;dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n&quot; ; }
+
+
+#   ---------------------------------------
+#   9.  REMINDERS &amp; NOTES
+#   ---------------------------------------
+
+#   remove_disk: spin down unneeded disk
+#   ---------------------------------------
+#   diskutil eject /dev/disk1s3
+
+#   to change the password on an encrypted disk image:
+#   ---------------------------------------
+#   hdiutil chpass /path/to/the/diskimage
+
+#   to mount a read-only disk image as read-write:
+#   ---------------------------------------
+#   hdiutil attach example.dmg -shadow /tmp/example.shadow -noverify
+
+#   mounting a removable drive (of type msdos or hfs)
+#   ---------------------------------------
+#   mkdir /Volumes/Foo
+#   ls /dev/disk*   to find out the device to use in the mount command)
+#   mount -t msdos /dev/disk1s1 /Volumes/Foo
+#   mount -t hfs /dev/disk1s1 /Volumes/Foo
+
+#   to create a file of a given size: /usr/sbin/mkfile or /usr/bin/hdiutil
+#   ---------------------------------------
+#   e.g.: mkfile 10m 10MB.dat
+#   e.g.: hdiutil create -size 10m 10MB.dmg
+#   the above create files that are almost all zeros - if random bytes are desired
+#   then use: ~/Dev/Perl/randBytes 1048576 &gt; 10MB.dat</pre></noscript>
 <script src="https://gist.github.com/natelandau/10654137.js"> </script>
 
 
