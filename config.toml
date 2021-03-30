@@ -1,0 +1,37 @@
+baseURL = "https://anthernet.com"
+languageCode = "en-us"
+title = "anthernet"
+theme="archie"
+copyright="© tonyynot"
+
+# Code Highlight
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+paginate=3
+
+[params]
+    mode="dark" # color-mode → light,dark or auto
+        useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
+            subtitle = "boomer ramblings about tech"
+
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/tonyynot/"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
